@@ -1,57 +1,8 @@
 {
-  "users": [
+
+  "usas": [
     {
-      "username": "Grady",
-      "email": "grady@22.com",
-      "password": "22",
-      "id": 1
-    },
-    {
-      "username": "Toby",
-      "email": "toby@22.com",
-      "password": "22",
-      "id": 2
-    },
-    {
-      "username": "Andrew",
-      "email": "andrew@22.com",
-      "password": "22",
-      "id": 3
-    },
-    {
-      "username": "Nate",
-      "email": "nate@22.com",
-      "password": "22",
-      "id": 4
-    },
-    {
-      "username": "Laney",
-      "email": "laney@22.com",
-      "password": "22",
-      "id": 5
-    },
-    {
-      "username": "Mary Mac",
-      "email": "marymac@22.com",
-      "password": "22",
-      "id": 6
-    },
-    {
-      "username": "Molly Patrick",
-      "email": "mollypatrick@22.com",
-      "password": "22",
-      "id": 7
-    },
-    {
-      "username": "grandma",
-      "email": "grandma@22.com",
-      "password": "22",
-      "id": 8
-    }
-  ],
-  "state": [
-    {
-      "state_id": 0,
+      "id": 0,
       "name": "Delaware",
       "Statehood": "December 7, 1787",
       "Capital": "Dover",
@@ -61,7 +12,7 @@
       "Bird": "Blue hen chicken"
     },
     {
-      "state_id": 1,
+      "id": 1,
       "name": "Pennsylvania",
       "Statehood": "December 12, 1787",
       "Capital": "Harrisburg",
@@ -71,7 +22,7 @@
       "Bird": "Ruffed Goose"
     },
     {
-      "state_id": 2,
+      "id": 2,
       "name": "New Jersey",
       "Statehood": "December 18, 1787",
       "Capital": "Trenton",
@@ -81,7 +32,7 @@
       "Bird": "Eastern Goldfinch"
     },
     {
-      "state_id": 3,
+      "id": 3,
       "name": "Georgia",
       "Statehood": "January 2, 1788",
       "Capital": "Atlanta",
@@ -91,7 +42,7 @@
       "Bird": "Brown thrasher"
     },
     {
-      "state_id": 4,
+      "id": 4,
       "name": "Connecticut",
       "Statehood": "January 9, 1788",
       "Capital": "Hartford",
@@ -101,7 +52,7 @@
       "Bird": "American Robin"
     },
     {
-      "state_id": 5,
+      "id": 5,
       "name": "Massachusetts",
       "Statehood": "February 6, 1788",
       "Capital": "Boston",
@@ -111,7 +62,7 @@
       "Bird": "Chickadee"
     },
     {
-      "state_id": 6,
+      "id": 6,
       "name": "Maryland",
       "Statehood": "April 28, 1788",
       "Capital": "Annapolis",
@@ -121,7 +72,7 @@
       "Bird": "Baltimore Oriole"
     },
     {
-      "state_id": 7,
+      "id": 7,
       "name": "South Carolina",
       "Statehood": "May 23, 1788",
       "Capital": "Columbia",
@@ -131,7 +82,7 @@
       "Bird": "Carolina wren"
     },
     {
-      "state_id": 8,
+      "id": 8,
       "name": "New Hampshire",
       "Statehood": "June 21, 1788",
       "Capital": "Concord",
@@ -141,7 +92,7 @@
       "Bird": "Purple finch"
     },
     {
-      "state_id": 9,
+      "id": 9,
       "name": "Virginia",
       "Statehood": "June 25, 1788",
       "Capital": "Richmond",
@@ -151,7 +102,7 @@
       "Bird": "Cardinal"
     },
     {
-      "state_id": 10,
+      "id": 10,
       "name": "New York",
       "Statehood": "July 26,1788",
       "Capital": "Albany",
@@ -161,7 +112,7 @@
       "Bird": "Bluebird"
     },
     {
-      "state_id": 11,
+      "id": 11,
       "name": "North Carolina",
       "Statehood": "November 21, 1789",
       "Capital": "Raleigh",
@@ -171,7 +122,7 @@
       "Bird": "Cardinal"
     },
     {
-      "state_id": 12,
+      "id": 12,
       "name": "Rhode Island",
       "Statehood": "May 29, 1790",
       "Capital": "Providence",
@@ -181,7 +132,7 @@
       "Bird": "Rhode Island Red"
     },
     {
-      "state_id": 13,
+      "id": 13,
       "name": "Vermont",
       "Statehood": "March 4, 1791",
       "Capital": "Montpelier",
@@ -191,7 +142,7 @@
       "Bird": "Hermit thrush"
     },
     {
-      "state_id": 14,
+      "id": 14,
       "name": "Kentucky",
       "Statehood": "June 1, 1792",
       "Capital": "Frankfort",
@@ -201,7 +152,7 @@
       "Bird": "Cardinal"
     },
     {
-      "state_id": 15,
+      "id": 15,
       "name": "Tennessee",
       "Statehood": "June 1, 1796",
       "Capital": "Nashville",
@@ -211,7 +162,7 @@
       "Bird": "Mockingbird"
     },
     {
-      "state_id": 16,
+      "id": 16,
       "name": "Ohio",
       "Statehood": "March 1, 1803",
       "Capital": "Columbus",
@@ -221,7 +172,7 @@
       "Bird": "Cardinal"
     },
     {
-      "state_id": 17,
+      "id": 17,
       "name": "Louisiana",
       "Statehood": "April 30, 1812",
       "Capital": "Baton Rouge",
@@ -231,7 +182,7 @@
       "Bird": "Eastern brown pelican"
     },
     {
-      "state_id": 18,
+      "id": 18,
       "name": "Indiana",
       "Statehood": "December 11, 1816",
       "Capital": "Indianapolis",
@@ -241,7 +192,7 @@
       "Bird": "Cardinal"
     },
     {
-      "state_id": 19,
+      "id": 19,
       "name": "Mississippi",
       "Statehood": "December 10, 1817",
       "Capital": "Jackson",
@@ -251,7 +202,7 @@
       "Bird": "Mockingbird"
     },
     {
-      "state_id": 20,
+      "id": 20,
       "name": "Illinois",
       "Statehood": "December 3, 1818",
       "Capital": "Springfield ",
@@ -261,7 +212,7 @@
       "Bird": "Cardinal"
     },
     {
-      "state_id": 21,
+      "id": 21,
       "name": "Alabama",
       "Statehood": "December 14, 1819",
       "Capital": "Montgomery",
@@ -271,7 +222,7 @@
       "Bird": "Yellowhammer"
     },
     {
-      "state_id": 22,
+      "id": 22,
       "name": "Maine",
       "Statehood": "March 15, 1820",
       "Capital": "Augusta",
@@ -281,7 +232,7 @@
       "Bird": "Chickadee"
     },
     {
-      "state_id": 23,
+      "id": 23,
       "name": "Missouri",
       "Statehood": "August 10, 1821",
       "Capital": "Jefferson City",
@@ -291,7 +242,7 @@
       "Bird": "Bluebird"
     },
     {
-      "state_id": 24,
+      "id": 24,
       "name": "Arkansas",
       "Statehood": "June 15, 1836",
       "Capital": "Little Rock",
@@ -301,7 +252,7 @@
       "Bird": "Mockingbird"
     },
     {
-      "state_id": 25,
+      "id": 25,
       "name": "Michigan",
       "Statehood": "January 26, 1837",
       "Capital": "Lansing",
@@ -311,7 +262,7 @@
       "Bird": "Robin"
     },
     {
-      "state_id": 26,
+      "id": 26,
       "name": "Florida",
       "Statehood": "March 3, 1845",
       "Capital": "Tallahassee",
@@ -321,7 +272,7 @@
       "Bird": "Mockingbird"
     },
     {
-      "state_id": 27,
+      "id": 27,
       "name": "Texas",
       "Statehood": "December 29, 1845",
       "Capital": "Austin",
@@ -331,7 +282,7 @@
       "Bird": "Mockingbird"
     },
     {
-      "state_id": 28,
+      "id": 28,
       "name": "Iowa",
       "Statehood": "December 28, 1846",
       "Capital": "Des Moines",
@@ -341,7 +292,7 @@
       "Bird": "Eastern goldfinch"
     },
     {
-      "state_id": 29,
+      "id": 29,
       "name": "Wisconsin",
       "Statehood": "May 29, 1848",
       "Capital": "Madison",
@@ -351,7 +302,7 @@
       "Bird": "Robin"
     },
     {
-      "state_id": 30,
+      "id": 30,
       "name": "California",
       "Statehood": "September 9, 1850",
       "Capital": "Sacramento",
@@ -361,7 +312,7 @@
       "Bird": "Californa valley quail"
     },
     {
-      "state_id": 31,
+      "id": 31,
       "name": "Minnesota",
       "Statehood": "May 11, 1858",
       "Capital": "St. Paul",
@@ -371,7 +322,7 @@
       "Bird": "Common loom"
     },
     {
-      "state_id": 32,
+      "id": 32,
       "name": "Oregon",
       "Statehood": "February 14, 1859",
       "Capital": "Salem",
@@ -381,7 +332,7 @@
       "Bird": "Western meadowlark"
     },
     {
-      "state_id": 33,
+      "id": 33,
       "name": "Kansas",
       "Statehood": "January 29, 1861",
       "Capital": "Topeka",
@@ -391,7 +342,7 @@
       "Bird": "Western meadowlark"
     },
     {
-      "state_id": 34,
+      "id": 34,
       "name": "West Virginia",
       "Statehood": "June 20, 1863",
       "Capital": "Charleston",
@@ -401,7 +352,7 @@
       "Bird": "Cardinal"
     },
     {
-      "state_id": 35,
+      "id": 35,
       "name": "Nevada",
       "Statehood": "October 31, 1864",
       "Capital": "Carson City",
@@ -411,7 +362,7 @@
       "Bird": "Mountain Bluebird"
     },
     {
-      "state_id": 36,
+      "id": 36,
       "name": "Nebraska",
       "Statehood": "March 1, 1867",
       "Capital": "Lincoln",
@@ -421,7 +372,7 @@
       "Bird": "Western meadowlark"
     },
     {
-      "state_id": 37,
+      "id": 37,
       "name": "Colorado",
       "Statehood": "August 1, 1876",
       "Capital": "Denver",
@@ -431,7 +382,7 @@
       "Bird": "Lark bunting"
     },
     {
-      "state_id": 38,
+      "id": 38,
       "name": "North Dakota",
       "Statehood": "November 2, 1889",
       "Capital": "Bismarck",
@@ -441,7 +392,7 @@
       "Bird": "Western meadowlark"
     },
     {
-      "state_id": 39,
+      "id": 39,
       "name": "South Dakota",
       "Statehood": "November 2, 1889",
       "Capital": "Pierre",
@@ -451,7 +402,7 @@
       "Bird": "Ring-necked pheasant"
     },
     {
-      "state_id": 40,
+      "id": 40,
       "name": "Montana",
       "Statehood": "November 8, 1889",
       "Capital": "Helena",
@@ -461,7 +412,7 @@
       "Bird": "Western meadowlark"
     },
     {
-      "state_id": 41,
+      "id": 41,
       "name": "Washington",
       "Statehood": "November 11, 1889",
       "Capital": "Olympia",
@@ -471,7 +422,7 @@
       "Bird": "Willow goldfinch"
     },
     {
-      "state_id": 42,
+      "id": 42,
       "name": "Idaho",
       "Statehood": "July 3, 1890",
       "Capital": "Boise",
@@ -481,7 +432,7 @@
       "Bird": "Mountain bluebird"
     },
     {
-      "state_id": 43,
+      "id": 43,
       "name": "Wyoming",
       "Statehood": "July 10, 1890",
       "Capital": "Cheyenne",
@@ -491,7 +442,7 @@
       "Bird": "Meadowlark"
     },
     {
-      "state_id": 44,
+      "id": 44,
       "name": "Utah",
       "Statehood": "January 4, 1896",
       "Capital": "Salt Lake City",
@@ -501,7 +452,7 @@
       "Bird": "Seagull"
     },
     {
-      "state_id": 45,
+      "id": 45,
       "name": "Oklahoma",
       "Statehood": "November 16, 1907",
       "Capital": "Oklahoma City",
@@ -511,7 +462,7 @@
       "Bird": "Scissor-tailed flycatcher"
     },
     {
-      "state_id": 46,
+      "id": 46,
       "name": "New Mexico",
       "Statehood": "January 6, 1912",
       "Capital": "Santa Fe",
@@ -521,7 +472,7 @@
       "Bird": "Roadrunner"
     },
     {
-      "state_id": 47,
+      "id": 47,
       "name": "Arizona",
       "Statehood": "February 14, 1912",
       "Capital": "Phoenix",
@@ -531,7 +482,7 @@
       "Bird": "Cactus wren"
     },
     {
-      "state_id": 48,
+      "id": 48,
       "name": "Alaska",
       "Statehood": "January 3, 1959",
       "Capital": "Juneau",
@@ -541,7 +492,7 @@
       "Bird": ""
     },
     {
-      "state_id": 49,
+      "id": 49,
       "name": "Hawaii",
       "Statehood": "August 21, 1959",
       "Capital": "Honolulu",
@@ -551,7 +502,7 @@
       "Bird": "Hawaiian goose"
     },
     {
-      "state_id": 50,
+      "id": 50,
       "name": "District of Columbia",
       "Statehood": "1 of 6 U.S. territories ",
       "Capital": "Capital of the United States of America",
@@ -561,7 +512,7 @@
       "Bird": "Wood thrush"
     },
     {
-      "state_id": 51,
+      "id": 51,
       "name": "Puerto Rico",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "San Juan",
@@ -571,7 +522,7 @@
       "Bird": "Reinita"
     },
     {
-      "state_id": 52,
+      "id": 52,
       "name": "Guam",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Hagatna (Agana)",
@@ -581,7 +532,7 @@
       "Bird": "Marianas rose crown fruit dove"
     },
     {
-      "state_id": 53,
+      "id": 53,
       "name": "American_Samoa",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Pago Pago",
@@ -591,7 +542,7 @@
       "Bird": "Willow ptarmigan"
     },
     {
-      "state_id": 54,
+      "id": 54,
       "name": "US Virgin Islands",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Charlotte Amalie, St. Thomas",
@@ -601,7 +552,7 @@
       "Bird": "Yellow breast or banana quit"
     },
     {
-      "state_id": 55,
+      "id": 55,
       "name": "Northern Mariana Islands",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Saipan",
@@ -611,122 +562,123 @@
       "Bird": "Mariana fruit-dove"
     }
   ],
-  "jokes": [
+  "users": [
     {
-      "setup": "California",
-      "punchline": "California dreamin'",
-      "state_id": "",
-      "id": 19
+      "name": "Grandma",
+      "email": "grandma@22.com",
+      "password": "22",
+      "id": 0
     },
     {
-      "setup": "Wyoming",
-      "punchline": "never been",
-      "state_id": "",
-      "id": 20
+      "name": "Grady",
+      "email": "grady@22.com",
+      "password": "22",
+      "id": 1
     },
     {
-      "setup": "South Dakota",
-      "punchline": "badlands",
-      "state_id": "",
-      "id": 21
+      "name": "Aunt Julie",
+      "email": "julie@22.com",
+      "password": "22",
+      "id": 2
     },
     {
-      "setup": "Florida",
-      "punchline": "panhandle",
-      "state_id": "",
-      "id": 22
+      "name": "Uncle Pat",
+      "email": "pat@22.com",
+      "password": "22",
+      "id": 3
+    },
+    {
+      "name": "Aunt Felicia",
+      "email": "auntFe@22.com",
+      "password": "22",
+      "id": 4
+    },
+    {
+      "name": "Uncle Seth",
+      "email": "seth@22.com",
+      "password": "22",
+      "id": 5
+    },
+    {
+      "name": "Aunt Laura",
+      "email": "grandma@22.com",
+      "password": "22",
+      "id": 6
+    },
+    {
+      "name": "Odell",
+      "email": "odell@22.com",
+      "password": "22",
+      "id": 7
+    },
+    {
+      "name": "Mamaw and Papaw Hatch",
+      "email": "hatch@22.com",
+      "password": "22",
+      "id": 8
+    },
+    {
+      "name": "Honey and Papa McCarty",
+      "email": "honey@22.com",
+      "password": "22",
+      "id": 9
     }
+
+  ],
+
+  "collections": [
+
+    {
+      "id": 1,
+      "collectorsName": "Toby"
+    },
+    {
+      "id": 2,
+      "collectorsName": "Nate"
+    },
+    {
+      "id": 3,
+      "collectorsName": "Andrew"
+    },
+    {
+      "id": 4,
+      "collectorsName": "Laney"
+    },
+    {
+      "id": 5,
+      "collectorsName": "Mary Mac"
+    },
+    {
+      "id": 6,
+      "collectorsName": "MollyPatrick"
+    }
+
   ],
   "quarter": [
     {
-      "quarter_id": 1,
-      "user_id": 1,
-      "state_id": 49
-    },
-    {
-      "quarter_id": 2,
-      "user_id": 1,
-      "state_id": 33
-    },
-    {
-      "quarter_id": 3,
-      "user_id": 1,
-      "state_id": 44
-    },
-    {
-      "quarter_id": 4,
-      "user_id": 1,
-      "state_id": 55
-    },
-    {
-      "quarter_id": 5,
-      "user_id": 2,
-      "state_id": 11
-    },
-    {
-      "quarter_id": 6,
-      "user_id": 2,
-      "state_id": 14
-    },
-    {
-      "quarter_id": 7,
-      "user_id": 2,
-      "state_id": 37
-    },
-    {
-      "quarter_id": 8,
-      "user_id": 2,
-      "state_id": 50
-    },
-    {
-      "quarter_id": 9,
-      "user_id": 1,
-      "state_id": 28
-    },
-    {
-      "quarter_id": 10,
-      "user_id": 1,
-      "state_id": 16
-    },
-    {
-      "quarter_id": 11,
-      "user_id": 1,
-      "state_id": 36
-    },
-    {
-      "quarter_id": 12,
-      "user_id": 1,
-      "state_id": 1
-    },
-    {
-      "quarter_id": 13,
-      "user_id": 2,
-      "state_id": 0
-    },
-    {
-      "quarter_id": 14,
+      "id": 0,
+      "usa_id": 48,
+      "collection_id": 3,
       "user_id": 3,
-      "state_id": 17
+      "notes": "bloop"
     },
     {
-      "quarter_id": 15,
-      "user_id": 4,
-      "state_id": 52
-    },
+      "id": 1,
+      "usa_id": 44,
+      "collection_id": 3,
+      "user_id": 3,
+      "notes": "bloop2"
+    }
+
+  ],
+
+  "familyCollection": [
     {
-      "quarter_id": 16,
-      "user_id": 5,
-      "state_id": 10
-    },
-    {
-      "quarter_id": 17,
-      "user_id": 6,
-      "state_id": 20
-    },
-    {
-      "quarter_id": 18,
-      "user_id": 7,
-      "state_id": 53
+      "id": 0,
+      "user_id": 3,
+      "collection_id": 3,
+      "name": "Uncle Pat >> Andrew"
+
     }
   ]
 }

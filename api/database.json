@@ -1,16 +1,7 @@
 {
 
   "usas": [
-    {
-      "id": 0,
-      "name": "Delaware",
-      "Statehood": "December 7, 1787",
-      "Capital": "Dover",
-      "Nicknames": "First State, Diamond State",
-      "Motto": "Liberty and Independence",
-      "Flower": "Peach Blossom",
-      "Bird": "Blue hen chicken"
-    },
+
     {
       "id": 1,
       "name": "Pennsylvania",
@@ -560,17 +551,22 @@
       "Motto": "",
       "Flower": "Flores Mayo",
       "Bird": "Mariana fruit-dove"
+    },
+    {
+      "id": 56,
+      "name": "Delaware",
+      "Statehood": "December 7, 1787",
+      "Capital": "Dover",
+      "Nicknames": "First State, Diamond State",
+      "Motto": "Liberty and Independence",
+      "Flower": "Peach Blossom",
+      "Bird": "Blue hen chicken"
     }
   ],
   "users": [
+
     {
-      "name": "Grandma",
-      "email": "grandma@22.com",
-      "password": "22",
-      "id": 0
-    },
-    {
-      "name": "Grady",
+      "name": "Uncle Grady",
       "email": "grady@22.com",
       "password": "22",
       "id": 1
@@ -622,6 +618,12 @@
       "email": "honey@22.com",
       "password": "22",
       "id": 9
+    },
+    {
+      "name": "Grandma",
+      "email": "grandma@22.com",
+      "password": "22",
+      "id": 10
     }
 
   ],
@@ -650,23 +652,23 @@
     },
     {
       "id": 6,
-      "collectorsName": "MollyPatrick"
+      "collectorsName": "Molly Patrick"
     }
 
   ],
-  "quarter": [
+  "quarters": [
     {
-      "id": 0,
-      "usa_id": 48,
-      "collection_id": 3,
-      "user_id": 3,
+      "id": 1,
+      "usaId": 48,
+      "collectionId": 3,
+      "userId": 3,
       "notes": "bloop"
     },
     {
-      "id": 1,
-      "usa_id": 44,
-      "collection_id": 3,
-      "user_id": 3,
+      "id": 2,
+      "usaId": 44,
+      "collectionId": 3,
+      "userId": 3,
       "notes": "bloop2"
     }
 
@@ -674,7 +676,7 @@
 
   "familyCollection": [
     {
-      "id": 0,
+      "id": 1,
       "user_id": 3,
       "collection_id": 3,
       "name": "Uncle Pat >> Andrew"

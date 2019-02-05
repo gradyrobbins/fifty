@@ -1,5 +1,4 @@
-//from Former Nutshell project Data Managers. 
-//only one data manager is needed - DRY by passing in props
+//from Former Nutshell project Data Managers.
 
 const remoteURL = "http://localhost:5002"
 

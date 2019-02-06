@@ -3,10 +3,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import DataManager from './modules/DataManager'
-// import HomePage from './components/homepage/HomePage'
-// import App from './../App.js'
 import Login from './components/login/LoginForm'
-// import Home from './home'
 
 export default class ApplicationViews extends Component {
 
@@ -52,7 +49,7 @@ export default class ApplicationViews extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* <Route exact path="/" component={App} /> */}
+        <Route exact path="/" component={Login} />
         <Route exact path="/login" component={Login} />
 
       </React.Fragment >

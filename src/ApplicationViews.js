@@ -1,10 +1,10 @@
 import { Route, Redirect} from 'react-router-dom'
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'
+// import { BrowserRouter as Router } from 'react-router-dom'
 
 import DataManager from './modules/DataManager'
 import Login from './components/login/LoginForm'
-
+import Home from './components/home/Home'
 export default class ApplicationViews extends Component {
 
   // Check if credentials are in local storage
@@ -49,8 +49,9 @@ export default class ApplicationViews extends Component {
   render() {
     return (
       <React.Fragment>
-        <Route exact path="/" component={Login} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
+        {/* <Route exact path="/home" component={Home} /> */}
 
       </React.Fragment >
     )

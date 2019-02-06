@@ -35,7 +35,7 @@ export default class Login extends Component {
 
             if (users) {
                 localStorage.setItem("credentials", JSON.stringify(users))
-                document.location.href = 'http://localhost:3000/bloop'
+                document.location.href = 'http://localhost:3000/home'
             } else {
                 alert("invalid credentials")
                 document.location.href = 'http://localhost:3000/login'

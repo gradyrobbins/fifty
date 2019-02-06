@@ -11,21 +11,14 @@ class CollectionsList extends Component {
                                this.props.history.push("/messages/new")
                             }}>Add a new message</button> */}
             <section className="collections">
-            <h2>Collection for : </h2>
+            <h2>View Collection for : </h2>
             {
                 this.props.collections.map(collection =>
-                    <div className="message" key={collection.id}>
+                    <div key={collection.id} className="collection" >
                         <br/>
-                        <a href=""> {collection.collectorsName} </a>
-                        {/* <strong>{message.person_sending_the_message} </strong> says: {message.message}
-                        <br />
-                        <button className="btn btn-primary" id={message.id} onClick={() => {console.log(`edit button # ${message.id} clicked`)}}> Edit this message </button>
-                        <br />
-                        <button className="btn btn-primary" onClick={() => {
-                            console.log(`delete button # ${message.id} clicked`)
-                            this.props.deleteMessage(message.id)
-                            // this.props.stickMessagesOnDom()
-                            }}> Delete this message </button> */}
+                        <button className="btn btn-primary"  id={collection.id} onClick={() => {console.log(`edit button # ${collection.id} clicked`)}}> {collection.collectorsName}  </button>
+
+                        <br/>
                     </div>
 
                 )

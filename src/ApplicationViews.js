@@ -6,6 +6,7 @@ import DataManager from './modules/DataManager'
 import Login from './components/login/LoginForm'
 import HomePage from './components/home/HomePage'
 import CollectionsList from './components/Collections/CollectionsList'
+import NavBar from './components/nav/NavBar'
 export default class ApplicationViews extends Component {
 
   // Check if credentials are in local storage
@@ -51,7 +52,21 @@ export default class ApplicationViews extends Component {
   render() {
     return (
       <React.Fragment>
-        <Route exact path="/" component={HomePage} />
+        {/* <Route exact path="/"
+        component={HomePage} /> */}
+
+        <Route
+        exact path="/" render={props => {
+          return <React.Fragment>
+            <NavBar />
+            <HomePage />
+
+          </React.Fragment>
+        }}
+        />
+
+
+
         <Route exact path="/login" component={Login} />
         {/* <Route exact path="/register" component={ComingSoon} /> */}
         {/* <Route exact path="/learn" component={ComingSoon} /> */}

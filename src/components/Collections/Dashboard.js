@@ -22,12 +22,12 @@ class Dashboard extends Component {
                         <Link className="nav-link" to="/collections/Laney">Laney</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/collections/MaryMac">Mary Mac</Link>
+                        <Link className="nav-link" to="/collections/Mary_Mac">Mary Mac</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/collections/MollyPatrick">Molly Patrick</Link>
+                        <Link className="nav-link" to="/collections/Molly_Patrick">Molly Patrick</Link>
                     </li>
-                    
+
                     <button onClick={() => {
                     localStorage.clear("credentials")
                     document.location.href='http://localhost:3000'

@@ -16,7 +16,7 @@ export default Object.create(null, {
             .then(result => result.json())
         }
     },
-    //commented out; not in use
+    //commented out; not in use 2/8/19
     // getAllUserData: {
     //     value: (resource, id) => {
     //         return fetch(`${remoteURL}/${resource}?user_id=${id}`)

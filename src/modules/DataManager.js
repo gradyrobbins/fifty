@@ -24,6 +24,16 @@ export default Object.create(null, {
         }
     },
 
+    getASpecificCollection: {
+        value: (id) => {
+            return fetch(`${remoteURL}/quarters?collectionId=${id}`)
+            .then(result => result.json())
+        }
+    },
+
+
+
+
     delete: {
         value: (resource, id) => {
             return fetch(`${remoteURL}/${resource}/${id}`, {

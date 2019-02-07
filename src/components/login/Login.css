@@ -1,23 +1,28 @@
-.loginForm {
-    display: table-caption;
-}
-
-.forms {
-    text-align: -webkit-center;
+.containerDiv {
     display: flex;
 }
 
+.loginForm {
+    display: table-caption;
+    /* margin: 440px 0 0 0;
+    padding: 400px 0 0 0 */
+
+}
+
+
+.forms {
+    text-align: -webkit-center;
+    justify-content: flex-end;
+    align-items: baseline;
+    background-color: burlywood;
+    border-radius: 5%;
+}
+
 body {
-    /* background-image: url("./../../img/coverImage.jpg"); */
+    /* background-image: url("./../img/coverImage.jpg"); */
     background-repeat: no-repeat;
     background-position: center ;
     background-size:1200px 1200px;
-    /* resize: both */
-
-  }
-
-
-.loginForm {
-    justify-content: center;
+    resize: both
 
   }

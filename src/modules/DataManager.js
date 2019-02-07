@@ -16,13 +16,13 @@ export default Object.create(null, {
             .then(result => result.json())
         }
     },
-
-    getAllUserData: {
-        value: (resource, id) => {
-            return fetch(`${remoteURL}/${resource}?user_id=${id}`)
-            .then(result => result.json())
-        }
-    },
+    //commented out; not in use
+    // getAllUserData: {
+    //     value: (resource, id) => {
+    //         return fetch(`${remoteURL}/${resource}?user_id=${id}`)
+    //         .then(result => result.json())
+    //     }
+    // },
 
     getASpecificCollection: {
         value: (id) => {

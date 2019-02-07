@@ -34,7 +34,7 @@ class HasCard extends Component {
                         <br/>
                         <p>Notes: {quarter.notes}</p>
                         <br/>
-                        <button key={quarter.id} id="edit" onClick={() => {console.log(`edit button clicked - NO UNIQUE ID YET`)
+                        <button key={quarter.id} id="edit" onClick={() => {console.log(`edit button clicked `)
 
                             }}> Edit this quarter id {quarter.id}</button>
                     </div>

@@ -1,0 +1,41 @@
+
+body {
+    background-image: url('./../img/coverImage.jpg');
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size:1200px 1200px;
+    resize: both
+}
+
+.LandingPage {
+    display: flex;
+    /* background-color: burlywood; */
+}
+
+.landingButtons {
+    display: flex;
+    justify-items: flex-end;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5%;
+}
+
+.loginButton {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5%;
+}
+
+.registerButton {
+    /* background-color: darkgray; */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5%;
+}
+
+.learnButton {
+    /* background-color: darkgray; */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5%;
+}

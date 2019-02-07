@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CollectionsList2 from './../CollectionsList2'
+import CollectionsList2 from '../Dashboard'
 
 class HasCard extends Component {
     render() {

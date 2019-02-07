@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 
 import DataManager from './modules/DataManager'
 import Login from './components/login/LoginForm'
-import HomePage from './components/home/HomePage'
+import LandingPage from './components/landing/LandingPage'
 // import CollectionsList from './components/Collections/CollectionsList'
-import CollectionsList2 from './components/Collections/CollectionsList2'
+import Dashboard from './components/Collections/Dashboard'
 import HasCard from './components/Collections/Has/HasCard'
 // import NavBar from './components/nav/NavBar'
 export default class ApplicationViews extends Component {
@@ -64,7 +64,7 @@ export default class ApplicationViews extends Component {
 
         <Route exact path="/" render={props => {
           return <React.Fragment>
-            <HomePage />
+            <LandingPage />
           </React.Fragment>
         }}
         />
@@ -89,7 +89,7 @@ export default class ApplicationViews extends Component {
               /> }}
         /> */}
         <Route exact path="/home" render={props => {
-            return <CollectionsList2
+            return <Dashboard
               {...props}
               collections={this.state.collections}
               getASpecificCollection={this.getASpecificCollection}
@@ -98,7 +98,7 @@ export default class ApplicationViews extends Component {
 
           <Route exact path="/collections/Andrew" render={props => {
             return <React.Fragment>
-              <CollectionsList2 />
+              <Dashboard />
               <HasCard
             {...props}
             collections={this.state.collections}

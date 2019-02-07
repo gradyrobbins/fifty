@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 
-class CollectionsList2 extends Component {
+class Dashboard extends Component {
     render() {
 
         return (
@@ -37,4 +37,4 @@ class CollectionsList2 extends Component {
     }
 }
 
-export default CollectionsList2
+export default Dashboard

@@ -27,7 +27,7 @@ export default class ApplicationViews extends Component {
       users: users
     }))
 
-    addQ = quarter => DataManager.add("quarter", quarter)
+    addQ = quarter => DataManager.add("quarters", quarter)
     .then(() => DataManager.getAll("quarters"))
     .then(quarters => this.setState({
       quarters: quarters
@@ -97,13 +97,16 @@ export default class ApplicationViews extends Component {
               />
 
           <Route exact path="/collections/Andrew" render={props => {
-            return <HasCard
+            return <React.Fragment>
+              <CollectionsList2 />
+              <HasCard
             {...props}
             collections={this.state.collections}
-
-            />
+            addQ={this.addQ}
+            /> </React.Fragment>
           }}
           />
+
       </React.Fragment >
     )
 

@@ -13,6 +13,9 @@ class Dashboard extends Component {
                         <Link className="nav-link" to="/collections/Toby">Toby</Link>
                     </li>
                     <li className="nav-item">
+                        <Link className="nav-link" to="/collections/1">Toby1</Link>
+                    </li>
+                    <li className="nav-item">
                         <Link className="nav-link" to="/collections/Nate">Nate</Link>
                     </li>
                     <li className="nav-item">

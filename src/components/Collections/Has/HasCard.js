@@ -5,7 +5,7 @@ import './HasCard.css'
 class HasCard extends Component {
     render() {
         console.log("this.props.collections =", this.props.collections)
-        let idx = 11
+        
         return (
             <React.Fragment>
                 <br/>
@@ -18,8 +18,8 @@ class HasCard extends Component {
             <div>
 
             <button className="AddQuarter" onClick={(id) => {console.log("add button clicked")
-                            this.props.addQ(this.idx)
-                               this.props.history.push("/collections/")
+                            // this.props.addQ(this.idx)
+                            //    this.props.history.push("/collections/")
                         }}>Add a new quarter</button>
                         <br/>
                         <br/>

@@ -110,14 +110,24 @@ export default class ApplicationViews extends Component {
               // getASpecificCollection={this.getASpecificCollection}
               /> }}
               />
-        <Route path="/collections/:collectionId(/d+)" render={props => {
-            return <Dashboard
+
+          {/* the below `dynamic routing` was suggested by EmLem 2/8/19 thurs */}
+        {/* <Route path="/collections/:collectionId(/d+)" render={props => {
+            return <React.Fragment>
+              <Dashboard
               {...props}
               collections={this.state.collections}
-              // getASpecificCollection={this.getASpecificCollection}
-              /> }}
-              
 
+              // getASpecificCollection={this.getASpecificCollection}
+              />
+
+              {/* <HasCard
+              {...props}
+              collections={this.state.quarters}
+              addQ={this.addQ}
+              /> */} */}
+            </React.Fragment>
+            }}
               />
 
           <Route exact path="/collections/Toby" render={props => {

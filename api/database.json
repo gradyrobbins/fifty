@@ -659,56 +659,56 @@
   "quarters": [
     {
       "id": 1,
-      "usaId": 48,
+      "usaId": 8,
       "collectionId": 1,
       "userId": 3,
       "notes": "Toby"
     },
     {
       "id": 2,
-      "usaId": 44,
+      "usaId": 4,
       "collectionId": 1,
       "userId": 3,
-      "notes": "Toby"
+      "notes": "Toby2"
     },
     {
       "id": 3,
-      "usaId": 48,
+      "usaId": 18,
       "collectionId": 2,
       "userId": 3,
       "notes": "Nate"
     },
     {
       "id": 4,
-      "usaId": 44,
+      "usaId": 14,
       "collectionId": 2,
       "userId": 3,
       "notes": "Nate2"
     },
     {
       "id": 5,
-      "usaId": 48,
+      "usaId": 28,
       "collectionId": 3,
       "userId": 3,
       "notes": "Andrew"
     },
     {
       "id": 6,
-      "usaId": 44,
+      "usaId": 24,
       "collectionId": 3,
       "userId": 3,
       "notes": "Andrew2"
     },
     {
       "id": 7,
-      "usaId": 48,
+      "usaId": 38,
       "collectionId": 4,
       "userId": 3,
       "notes": "Laney"
     },
     {
       "id": 8,
-      "usaId": 44,
+      "usaId": 34,
       "collectionId": 4,
       "userId": 3,
       "notes": "Laney2"
@@ -729,14 +729,14 @@
     },
     {
       "id": 11,
-      "usaId": 48,
+      "usaId": 55,
       "collectionId": 6,
       "userId": 3,
       "notes": "Molly Patrick"
     },
     {
       "id": 12,
-      "usaId": 44,
+      "usaId": 40,
       "collectionId": 6,
       "userId": 3,
       "notes": "Molly Patrick 2"

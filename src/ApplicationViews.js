@@ -88,7 +88,7 @@ export default class ApplicationViews extends Component {
 
               /> }}
         /> */}
-        <Route exact path="/home" render={props => {
+        <Route exact path="/collections" render={props => {
             return <Dashboard
               {...props}
               collections={this.state.collections}

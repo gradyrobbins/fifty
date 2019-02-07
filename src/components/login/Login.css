@@ -4,9 +4,6 @@
 
 .loginForm {
     display: table-caption;
-    /* margin: 440px 0 0 0;
-    padding: 400px 0 0 0 */
-
 }
 
 
@@ -14,7 +11,7 @@
     text-align: -webkit-center;
     justify-content: flex-end;
     align-items: baseline;
-    background-color: burlywood;
+    background-color: lightgray;
     border-radius: 5%;
 }
 

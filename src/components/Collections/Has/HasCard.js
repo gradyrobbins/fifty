@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CollectionsList2 from '../Dashboard'
+import Dashboard from '../Dashboard'
 
 class HasCard extends Component {
     render() {
@@ -8,15 +8,23 @@ class HasCard extends Component {
         return (
             <React.Fragment>
                 <br/>
-                <CollectionsList2 />
+                <Dashboard />
                 <br/>
+                <br/>
+                <br/>
+                <br/>
+
             <div>
             <button id="AddMessage" onClick={(id) => {console.log("add button clicked")
                             // this.props.addQ(id)
                             //    this.props.history.push("/collections/")
-                            }}>Add a new quarter</button>
+                        }}>Add a new quarter</button>
             <section className="HAScollections">
+                        <br/>
+                        <br/>
             <h2>Has: </h2>
+                        <br/>
+                        <br/>
             {
                 this.props.collections.map(quarter =>
 

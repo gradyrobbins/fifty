@@ -5,9 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 class Dashboard extends Component {
     render() {
-
         return (
-            <nav className="navbar navbar-light fixed-top light-blue flex-md-nowrap p-0 shadow">
+            <nav className="navbar navbar-dark bg-dark fixed-top flex-md-nowrap">
+                {/* <p>WELCOME, *getlocalStorage.name*</p> */}
                 <ul className="nav nav-pills">
                     <li className="nav-item">
                         <Link className="nav-link" to="/collections/Toby">Toby</Link>
@@ -27,10 +27,12 @@ class Dashboard extends Component {
                     <li className="nav-item">
                         <Link className="nav-link" to="/collections/MollyPatrick">Molly Patrick</Link>
                     </li>
-                    {/* the below link DOESNOT remove credentials from session storage */}
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/">LOGOUT</Link>
-                    </li>
+                    
+                    <button onClick={() => {
+                    localStorage.clear("credentials")
+                    document.location.href='http://localhost:3000'
+                }}
+                    className="logoutButton">LOG OUT</button>
                 </ul>
             </nav>
         )

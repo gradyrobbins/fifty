@@ -7,6 +7,7 @@ import LandingPage from './components/landing/LandingPage'
 // import CollectionsList from './components/Collections/CollectionsList'
 import Dashboard from './components/Collections/Dashboard'
 import HasCard from './components/Collections/Has/HasCard'
+import NeedsCard from './components/Collections/Needs/NeedsCard'
 // import NavBar from './components/nav/NavBar'
 export default class ApplicationViews extends Component {
 
@@ -112,7 +113,7 @@ export default class ApplicationViews extends Component {
               />
 
           {/* the below `dynamic routing` was suggested by EmLem 2/8/19 thurs */}
-        {/* <Route path="/collections/:collectionId(/d+)" render={props => {
+         {/* <Route path="/collections/:collectionId(/d+)" render={props => {
             return <React.Fragment>
               <Dashboard
               {...props}
@@ -121,14 +122,14 @@ export default class ApplicationViews extends Component {
               // getASpecificCollection={this.getASpecificCollection}
               />
 
-              {/* <HasCard
+               <HasCard
               {...props}
               collections={this.state.quarters}
               addQ={this.addQ}
-              /> */} */}
+              />
             </React.Fragment>
             }}
-              />
+              /> */}
 
           <Route exact path="/collections/Toby" render={props => {
             return <React.Fragment>
@@ -138,6 +139,7 @@ export default class ApplicationViews extends Component {
             collections={this.state.TobysQuarters}
             addQ={this.addQ}
             />
+              <NeedsCard />
             </React.Fragment>
           }}
           />
@@ -149,6 +151,7 @@ export default class ApplicationViews extends Component {
                 collections={this.state.NatesQuarters}
                 addQ={this.addQ}
               />
+          <NeedsCard />
             </React.Fragment>
           }}
           />
@@ -159,7 +162,9 @@ export default class ApplicationViews extends Component {
             {...props}
             collections={this.state.AndrewsQuarters}
             addQ={this.addQ}
-            /> </React.Fragment>
+            />
+            <NeedsCard />
+            </React.Fragment>
           }}
           />
           <Route exact path="/collections/Laney" render={props => {
@@ -170,6 +175,7 @@ export default class ApplicationViews extends Component {
               collections={this.state.LaneysQuarters}
               addQ={this.addQ}
               />
+          <NeedsCard />
             </React.Fragment>
           }}
           />
@@ -181,6 +187,7 @@ export default class ApplicationViews extends Component {
             collections={this.state.MaryMacsQuarters}
             addQ={this.addQ}
             />
+            <NeedsCard />
             </React.Fragment>
           }}
           />
@@ -192,6 +199,7 @@ export default class ApplicationViews extends Component {
                 collections={this.state.MollysQuarters}
                 addQ={this.addQ}
               />
+            <NeedsCard />
             </React.Fragment>
           }}
           />

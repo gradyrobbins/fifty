@@ -5,7 +5,7 @@ import './HasCard.css'
 class HasCard extends Component {
     render() {
         console.log("this.props.collections =", this.props.collections)
-        
+
         return (
             <React.Fragment>
                 <br/>
@@ -43,23 +43,7 @@ class HasCard extends Component {
                 )
             }
             </section>
-            <section className="NEEDScollections">
-            <h2>NEEDS: </h2>
-            <br/>
-            <h4>Logic, Functions, and data passed via props go here to be mapped over</h4>
-            {/* {
-                this.props.collections.map(quarter =>
-
-                    <div key={quarter.id} className="collection" >
-                        <p>StateId #: {quarter.usaId} </p>
-                        <br/>
-                        <p>Notes: {quarter.notes}</p>
-                        <br/>
-                    </div>
-
-                )
-            } */}
-            </section>
+            
              </div>
              </React.Fragment>
         )

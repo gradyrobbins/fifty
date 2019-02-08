@@ -8,7 +8,6 @@ import LandingPage from './components/landing/LandingPage'
 import Dashboard from './components/Collections/Dashboard'
 import HasCard from './components/Collections/Has/HasCard'
 import NeedsCard from './components/Collections/Needs/NeedsCard'
-// import NavBar from './components/nav/NavBar'
 export default class ApplicationViews extends Component {
 
   // Check if credentials are in local storage
@@ -39,10 +38,20 @@ export default class ApplicationViews extends Component {
       quarters: quarters
     }))
 
-    // getAndrewsCollection = () => DataManager.getASpecificCollection(3)
-    // .then(collection => this.setState({
-    //   collections: collection
-    // }))
+    addQ = quarter => DataManager.add("quarters", quarter)
+    .then(() => DataManager.getAll("quarters"))
+    .then(quarters => this.setState({
+      quarters: quarters
+    }))
+
+    deleteQ = id => DataManager.delete("quarters", id)
+    .then(() => DataManager.getAll("quarters"))
+    .then(quarters => this.setState({
+      quarters: quarters
+    }))
+
+
+
 
   componentDidMount() {
 
@@ -113,7 +122,9 @@ export default class ApplicationViews extends Component {
               />
 
           {/* the below `dynamic routing` was suggested by EmLem 2/8/19 thurs */}
-         {/* <Route path="/collections/:collectionId(/d+)" render={props => {
+         {/* below:  wrap Dashboard, HasList, NeedsList inside a collections component
+            for/loop through all collections to */}
+         <Route path="/collections/:collectionId(/d+)" render={props => {
             return <React.Fragment>
               <Dashboard
               {...props}
@@ -129,7 +140,7 @@ export default class ApplicationViews extends Component {
               />
             </React.Fragment>
             }}
-              /> */}
+              />
 
           <Route exact path="/collections/Toby" render={props => {
             return <React.Fragment>
@@ -137,9 +148,14 @@ export default class ApplicationViews extends Component {
               <HasCard
             {...props}
             collections={this.state.TobysQuarters}
-            addQ={this.addQ}
+            deleteQ={this.deleteQ}
             />
-              <NeedsCard />
+              <NeedsCard
+            {...props}
+            addQ={this.addQ}
+            matchlist={this.state.matchlist}
+
+            />
             </React.Fragment>
           }}
           />
@@ -147,11 +163,16 @@ export default class ApplicationViews extends Component {
             return <React.Fragment>
               <Dashboard />
               <HasCard
-                {...props}
-                collections={this.state.NatesQuarters}
-                addQ={this.addQ}
-              />
-          <NeedsCard />
+            {...props}
+            collections={this.state.NatesQuarters}
+            deleteQ={this.deleteQ}
+            />
+              <NeedsCard
+            {...props}
+            addQ={this.addQ}
+            matchlist={this.state.matchlist}
+
+            />
             </React.Fragment>
           }}
           />
@@ -161,21 +182,31 @@ export default class ApplicationViews extends Component {
               <HasCard
             {...props}
             collections={this.state.AndrewsQuarters}
-            addQ={this.addQ}
+            deleteQ={this.deleteQ}
             />
-            <NeedsCard />
+              <NeedsCard
+            {...props}
+            addQ={this.addQ}
+            matchlist={this.state.matchlist}
+
+            />
             </React.Fragment>
           }}
           />
           <Route exact path="/collections/Laney" render={props => {
             return <React.Fragment>
               <Dashboard />
-                <HasCard
-              {...props}
-              collections={this.state.LaneysQuarters}
-              addQ={this.addQ}
-              />
-          <NeedsCard />
+              <HasCard
+            {...props}
+            collections={this.state.LaneysQuarters}
+            deleteQ={this.deleteQ}
+            />
+              <NeedsCard
+            {...props}
+            addQ={this.addQ}
+            matchlist={this.state.matchlist}
+
+            />
             </React.Fragment>
           }}
           />
@@ -185,9 +216,14 @@ export default class ApplicationViews extends Component {
               <HasCard
             {...props}
             collections={this.state.MaryMacsQuarters}
-            addQ={this.addQ}
+            deleteQ={this.deleteQ}
             />
-            <NeedsCard />
+              <NeedsCard
+            {...props}
+            addQ={this.addQ}
+            matchlist={this.state.matchlist}
+
+            />
             </React.Fragment>
           }}
           />
@@ -195,11 +231,16 @@ export default class ApplicationViews extends Component {
             return <React.Fragment>
               <Dashboard />
               <HasCard
-                {...props}
-                collections={this.state.MollysQuarters}
-                addQ={this.addQ}
+            {...props}
+            collections={this.state.MollysQuarters}
+            deleteQ={this.deleteQ}
+            />
+              <NeedsCard
+              {...props}
+              addQ={this.addQ}
+              matchlist={this.state.matchlist}
+
               />
-            <NeedsCard />
             </React.Fragment>
           }}
           />

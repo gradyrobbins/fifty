@@ -4,7 +4,7 @@ import './HasCard.css'
 
 class HasCard extends Component {
     render() {
-        console.log("this.props.collections =", this.props.collections)
+        console.log("this.props =", this.props)
 
         return (
             <React.Fragment>
@@ -17,10 +17,7 @@ class HasCard extends Component {
 
             <div>
 
-            <button className="AddQuarter" onClick={(id) => {console.log("add button clicked")
-                            // this.props.addQ(this.idx)
-                            //    this.props.history.push("/collections/")
-                        }}>Add a new quarter</button>
+
                         <br/>
                         <br/>
             <h2>Has: </h2>
@@ -37,13 +34,13 @@ class HasCard extends Component {
                         <br/>
                         <button key={quarter.id} id="edit" onClick={() => {console.log(`edit button clicked `)
 
-                            }}> Edit this quarter id {quarter.id}</button>
+                            }}> Edit this quarter# {quarter.id}</button>
                     </div>
 
                 )
             }
             </section>
-            
+
              </div>
              </React.Fragment>
         )

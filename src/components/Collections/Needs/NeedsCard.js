@@ -21,22 +21,25 @@ class NeedsCard extends Component {
             <section className="NEEDScollections">
             <br/>
 
-            no props are coming in yet
+            "Some" props are coming in. are they the right ones?
+
+            Logic needed:  compare what this collection "HAS" against a master list of all 56 to get a list of what this collection "NEEDS"; map over this Needs array onto Needs-Card-Component
+
             {
-                // this.props.collections.map(quarter =>
+                this.props.matchlist.map(quarter =>
 
-                    // <div key={quarter.id} id={quarter.id} className="collection" >
-                    //     <p>StateId #: {quarter.usaId} </p>
-                    //     <br/>
-                    //     <p>Notes: {quarter.notes}</p>
-                    //     <br/>
-                    //     <button key={quarter.id} id="add" onClick={() => {console.log(`add button clicked `)
+                    <div key={quarter.id} id={quarter.id} className="collection" >
+                        <p>Matchlist  #: {quarter} </p>
 
-                    //         }}> Add this quarter id {quarter.id}</button>
-                    // </div>
+                        <button key={quarter.id} id="add" onClick={() => {
+                            // console.log(`add button clicked `)
+                            this.props.addQ(quarter)
+                            }}> Add this quarter id # {quarter}</button>
+                    </div>
 
-                // )
+                )
             }
+            
             </section>
 
              </div>

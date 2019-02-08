@@ -1,7 +1,5 @@
 {
-
   "usas": [
-
     {
       "id": 1,
       "name": "Pennsylvania",
@@ -564,7 +562,6 @@
     }
   ],
   "users": [
-
     {
       "name": "Uncle Grady",
       "email": "grady@22.com",
@@ -625,11 +622,8 @@
       "password": "22",
       "id": 10
     }
-
   ],
-
   "collections": [
-
     {
       "id": 1,
       "collectorsName": "Toby"
@@ -654,7 +648,6 @@
       "id": 6,
       "collectorsName": "Molly Patrick"
     }
-
   ],
   "quarters": [
     {
@@ -743,14 +736,12 @@
     }
 
   ],
-
   "familyCollection": [
     {
       "id": 1,
       "userId": 3,
       "collectionId": 3,
       "name": "Uncle Pat >> Andrew"
-
     }
   ]
 }

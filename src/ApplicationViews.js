@@ -4,10 +4,11 @@ import React, { Component } from 'react';
 import DataManager from './modules/DataManager'
 import Login from './components/login/LoginForm'
 import LandingPage from './components/landing/LandingPage'
-// import CollectionsList from './components/Collections/CollectionsList'
-import Dashboard from './components/Collections/Dashboard'
-import HasCard from './components/Collections/Has/HasCard'
-import NeedsCard from './components/Collections/Needs/NeedsCard'
+// import CollectionsList from './components/Dashboard/CollectionsList'
+import Dashboard from './components/Dashboard/Dashboard'
+import HasCard from './components/Collection/Has/HasCard'
+import NeedsCard from './components/Collection/Needs/NeedsCard'
+
 export default class ApplicationViews extends Component {
 
   // Check if credentials are in local storage

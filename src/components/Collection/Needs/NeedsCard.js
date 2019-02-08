@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import Dashboard from '../Dashboard'
+import Dashboard from '../../Dashboard/Dashboard'
 import './NeedsCard.css'
+// import stock_Qtr_image from './../../img/stock_Qtr_image.png'
+// import bloop from './../../img/stock_Qtr_image.png'
 
 class NeedsCard extends Component {
     render() {
@@ -28,10 +30,11 @@ class NeedsCard extends Component {
             {
                 this.props.matchlist.map(quarter =>
 
-                    <div key={quarter.id} id={quarter.id} className="collection" >
+                    <div key={quarter} id={quarter} className="collection" >
                         <p>Matchlist  #: {quarter} </p>
+                        {/* <img src={bloop} alt="" width="50px" className="icon--stock_Qtr_image" /> */}
 
-                        <button key={quarter.id} id="add" onClick={() => {
+                        <button key={quarter} id="add" onClick={() => {
                             // console.log(`add button clicked `)
                             this.props.addQ(quarter)
                             }}> Add this quarter id # {quarter}</button>
@@ -39,7 +42,7 @@ class NeedsCard extends Component {
 
                 )
             }
-            
+
             </section>
 
              </div>

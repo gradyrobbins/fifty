@@ -7,7 +7,7 @@ class Dashboard extends Component {
     render() {
         return (
             <nav className="navbar navbar-dark bg-dark fixed-top flex-md-nowrap">
-                {/* <p>WELCOME, *getlocalStorage.name*</p> */}
+                <p>WELCOME, {localStorage.credentials}</p>
                 <ul className="nav nav-pills">
                     <li className="nav-item">
                         <Link className="nav-link" to="/collections/Toby">Toby</Link>

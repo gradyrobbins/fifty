@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 
 import DataManager from './modules/DataManager'
 import Login from './components/login/LoginForm'
-import LandingPage from './components/landing/LandingPage'
+// import LandingPage from './components/landing/LandingPage'
 // import CollectionsList from './components/Dashboard/CollectionsList'
 import Dashboard from './components/Dashboard/Dashboard'
+import CollectionDetail from './components/Collection/CollectionDetail'
 import HasCard from './components/Collection/Has/HasCard'
 import NeedsCard from './components/Collection/Needs/NeedsCard'
-import NavBar from './components/Nav/NavBar'
+// import NavBar from './components/Nav/NavBar'
 
 export default class ApplicationViews extends Component {
 
@@ -89,11 +90,9 @@ export default class ApplicationViews extends Component {
     return (
       <React.Fragment>
 
-        <Route exact path="/" render={props => {
-          return <React.Fragment>
-            <LandingPage />
-          </React.Fragment>
-        }}/>
+        {/* <Route exact path="/" render={props => {
+          return <NavBar />
+        }}/> */}
 
 
 
@@ -123,14 +122,6 @@ export default class ApplicationViews extends Component {
                   /> }}
               />
 
-        {/* <Route exact path="/collections2" render={props => {
-          return <React.Fragment>
-                    <Dashboard
-                        {...props}
-                        collections={this.state.collections}
-                        />
-                  <React.Fragment />
-          }} /> */}
 
 
           {/* the below `dynamic routing` was suggested by EmLem 2/8/19 thurs */}
@@ -141,14 +132,21 @@ export default class ApplicationViews extends Component {
                           <Dashboard
                           {...props}
                           collections={this.state.collections}
-
-                          // getASpecificCollection={this.getASpecificCollection}
+                          />
+                          <CollectionDetail
+                          {...props}
+                          collections={this.state.collections}
                           />
 
                           <HasCard
                           {...props}
                           collections={this.state.quarters}
                           addQ={this.addQ}
+                          />
+                          <NeedsCard
+                          {...props}
+                          addQ={this.addQ}
+                          matchlist={this.state.matchlist}
                           />
                   </React.Fragment>
             }}
@@ -239,7 +237,7 @@ export default class ApplicationViews extends Component {
             </React.Fragment>
           }}
           />
-          
+
           <Route exact path="/collections/Molly_Patrick" render={props => {
             return <React.Fragment>
                         <Dashboard />

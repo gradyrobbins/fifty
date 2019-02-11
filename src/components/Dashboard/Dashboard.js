@@ -1,14 +1,19 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
-
+import CollectionsList from './CollectionsList'
 
 class Dashboard extends Component {
     render() {
+        console.log("this.props", this.props)
         return (
+            <React.Fragment>
             <nav className="navbar navbar-dark bg-dark fixed-top flex-md-nowrap">
-                <p>WELCOME, {localStorage.credentials}</p>
+                {/* <p>WELCOME, {localStorage.credentials}</p> */}
                 <ul className="nav nav-pills">
+                    {/* <li className="nav-item">
+                        <Link className="nav-link" to={`/collections/${collection.id}`}>DYNAMIC?</Link>
+                    </li> */}
                     <li className="nav-item">
                         <Link className="nav-link" to="/collections/Toby">Toby</Link>
                     </li>
@@ -38,6 +43,8 @@ class Dashboard extends Component {
                     className="logoutButton">LOG OUT</button>
                 </ul>
             </nav>
+            {/* <CollectionsList /> */}
+            </React.Fragment>
         )
     }
 }

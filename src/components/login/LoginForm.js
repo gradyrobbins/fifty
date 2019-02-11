@@ -46,7 +46,6 @@ export default class Login extends Component {
 
     render() {
         return (
-            // <div className="containerDiv"> container Div
             <div className="forms">
                 <div className="loginForm">
                     <form onSubmit={this.handleLogin}>
@@ -71,7 +70,6 @@ export default class Login extends Component {
                     </form>
                 </div>
             </div>
-            // </div>
 
         )
     }

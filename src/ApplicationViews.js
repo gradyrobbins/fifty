@@ -36,12 +36,6 @@ export default class ApplicationViews extends Component {
       quarters: quarters
     }))
 
-    addQ = quarter => DataManager.add("quarters", quarter)
-    .then(() => DataManager.getAll("quarters"))
-    .then(quarters => this.setState({
-      quarters: quarters
-    }))
-
     deleteQ = id => DataManager.delete("quarters", id)
     .then(() => DataManager.getAll("quarters"))
     .then(quarters => this.setState({
@@ -69,18 +63,7 @@ export default class ApplicationViews extends Component {
       .then(quarter => newState.quarters = quarter)
       .then(()=>DataManager.getAll("collections"))
       .then(collections => newState.collections = collections)
-      // .then(()=>DataManager.getASpecificCollection(1))
-      // .then(collections => newState.TobysQuarters = collections)
-      // .then(()=>DataManager.getASpecificCollection(2))
-      // .then(collections => newState.NatesQuarters = collections)
-      // .then(()=>DataManager.getASpecificCollection(3))
-      // .then(collections => newState.AndrewsQuarters = collections)
-      // .then(()=>DataManager.getASpecificCollection(4))
-      // .then(collections => newState.LaneysQuarters = collections)
-      // .then(()=>DataManager.getASpecificCollection(5))
-      // .then(collections => newState.MaryMacsQuarters = collections)
-      // .then(()=>DataManager.getASpecificCollection(6))
-      // .then(collections => newState.MollysQuarters = collections)
+
 
       .then(() => this.setState(newState))
   };
@@ -108,6 +91,7 @@ export default class ApplicationViews extends Component {
                           collections={this.state.collections}
                           matchlist={this.state.matchlist}
                           getASpecificCollection={this.getASpecificCollection}
+                          addQ={this.addQ}
                           />
 
                           {/* <HasCard

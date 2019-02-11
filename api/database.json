@@ -683,56 +683,56 @@
       "usaId": 28,
       "collectionId": 3,
       "userId": 3,
-      "notes": "Andrew"
+      "notes": "Andrew found this on his own"
     },
     {
       "id": 6,
       "usaId": 24,
       "collectionId": 3,
       "userId": 3,
-      "notes": "Andrew2"
+      "notes": "Andrew2 from Honey and Papa"
     },
     {
       "id": 7,
       "usaId": 38,
       "collectionId": 4,
       "userId": 3,
-      "notes": "Laney"
+      "notes": "Laney from Grandma"
     },
     {
       "id": 8,
       "usaId": 34,
       "collectionId": 4,
       "userId": 3,
-      "notes": "Laney2"
+      "notes": "Laney2 from Uncle S"
     },
     {
       "id": 9,
       "usaId": 48,
       "collectionId": 5,
       "userId": 3,
-      "notes": "MaryMac"
+      "notes": "MaryMac from Aunt J"
     },
     {
       "id": 10,
       "usaId": 44,
       "collectionId": 5,
       "userId": 3,
-      "notes": "MaryMac2"
+      "notes": "MaryMac2 from Aunt Fe"
     },
     {
       "id": 11,
       "usaId": 55,
       "collectionId": 6,
       "userId": 3,
-      "notes": "Molly Patrick"
+      "notes": "Molly Patrick from Uncle G"
     },
     {
       "id": 12,
       "usaId": 40,
       "collectionId": 6,
       "userId": 3,
-      "notes": "Molly Patrick 2"
+      "notes": "Molly Patrick 2 from Uncle P"
     }
 
   ],

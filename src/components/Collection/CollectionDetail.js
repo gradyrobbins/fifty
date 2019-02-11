@@ -27,6 +27,7 @@ export default class CollectionDetail extends Component {
 
         DataManager.getASpecificCollection(this.props.match.params.collectionId)
         .then( (userSpecific1) => console.log(" quarters that below to this collectionId's set: ", userSpecific1))
+        .then()
         //setState here with another .then statement.  below, use this.state.qu to map into <Has Card />
 
 
@@ -40,9 +41,13 @@ export default class CollectionDetail extends Component {
                 <section className="collection">
                     <div key={collection.id} className="card">
                         <h3>{collection.collectorsName}'s Collection: </h3>
-                    </div>
+                        <br/>
 
+                        <button>Add a new Quarter to {collection.collectorsName}'s Collection</button>
+                    </div>
                 </section>
+                <br/>
+                <br/>
                 <section>Has Card goes here</section>
 
 
@@ -51,7 +56,9 @@ export default class CollectionDetail extends Component {
                         // quarters={this.state.quarters}
                     /> */}
                 <br/>
+                <br/>
                 <section>Needs Card goes here</section>
+                <br/>
                 {/* <NeedsCard /> */}
             </React.Fragment>
         )

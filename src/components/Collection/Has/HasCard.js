@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Dashboard from '../../Dashboard/Dashboard'
+// import Dashboard from '../../Dashboard/Dashboard'
 import './HasCard.css'
 import stock_qtr from './../../img/stock_Qtr_Img.png'
 
@@ -10,17 +10,12 @@ class HasCard extends Component {
         return (
             <React.Fragment>
                 <br/>
-                <Dashboard />
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+                {/* <Dashboard /> */}
 
             <div>
 
 
-                        <br/>
-                        <br/>
+                        
             <h2>Has: </h2>
                         <br/>
             <section className="HAScollections">

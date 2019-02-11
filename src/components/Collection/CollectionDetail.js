@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import HasCard from "./Has/HasCard";
 import NeedsCard from "./Needs/NeedsCard"
 import CollectionsList from "../Dashboard/CollectionsList";
-// import "./Animal.css"
-// import dog from "./DogIcon.png"
+
 // import stock_Qtr_Img from "./../img/stock_Qtr_Img.png"
 
 export default class CollectionDetail extends Component {
@@ -15,6 +14,11 @@ export default class CollectionDetail extends Component {
 
         const collection = this.props.collections.find(a => a.id === parseInt(this.props.match.params.collectionId)) || {}
 
+        console.log("collection" , collection)
+
+        const quarters = this.props.quarters
+        console.log("this.props.quarters" , this.props.quarters)
+
         return (
             <React.Fragment>
             <section className="collection">
@@ -22,10 +26,13 @@ export default class CollectionDetail extends Component {
 
                 </div>
             </section>
-            <CollectionsList />
-            <HasCard />
+            {/* <CollectionsList /> */}
+            {/* <HasCard
+                    // {...props}
+                    // quarters={this.state.quarters}
+            /> */}
             <br/>
-            <NeedsCard />
+            {/* <NeedsCard /> */}
             </React.Fragment>
         )
     }

@@ -1,37 +1,46 @@
 import React, { Component } from 'react'
-
+import { Link } from "react-router-dom"
+import "bootstrap/dist/css/bootstrap.min.css"
 class CollectionsList extends Component {
     render() {
-        console.log(this.props.collections)
-
+        console.log("this.props.collections", this.props.collections)
 
         return (
             <div>
-            {/* <button id="AddMessage" onClick={() => {console.log("add button clicked")
-                            // this.props.addMessage()
-                               this.props.history.push("/messages/new")
-                            }}>Add a new message</button> */}
-            <section className="collections">
-            {/* <h2>View Collection for : </h2> */}
-            {
-                this.props.collections.map(collection =>
-                    <div key={collection.id} className="collection" >
-                        <br/>
-                        <button className="btn btn-primary"  id={collection.id} onClick={() =>
+                <section className="collections">
+                {
+                    this.props.collections.map(collection =>
+                        <div key={collection.id} className="collection" >
+                            <br/>
+                            <button className="btn btn-primary"  id={collection.id} onClick={() =>
+                                {
+                                this.props.history.push(`/collection/${collection.id}`)
+                                    console.log(` button # ${collection.id} clicked`)
+                                }}
+                                >
+                                {collection.collectorsName}  </button>
+                            <br/>
+                        </div>
 
-                            {
-                            this.props.history.push(`/collection/${collection.id}`)
-                                // console.log(`edit button # ${collection.id} clicked`)
-                            }}
-                            >
-                            {collection.collectorsName}  </button>
+                    )
+                }
+                </section>
 
-                        <br/>
-                    </div>
+                {/* <nav className="navbar navbar-light fixed-top light-blue flex-md-nowrap p-0 shadow">
+                    <ul className="nav nav-pills">
 
-                )
-            }
-            </section>
+
+                            {/* <Link className="nav-link" to=`/collection/${collection.id}` >Login< /> */}
+
+
+
+                    {/* </ul> */}
+                {/* </nav>  */}
+
+
+
+
+
              </div>
         )
     }

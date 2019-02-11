@@ -98,18 +98,19 @@ export default class ApplicationViews extends Component {
                   }}
                 />
 
-         <Route path="/collections/:collectionId(/d+)" render={props => {
+         <Route path="/collection/:collectionId(\d+)" render={props => {
             return <React.Fragment>
-                          <Dashboard
+                          {/* <Dashboard
                           {...props}
                           collections={this.state.collections}
-                          />
+                          /> */}
                           <CollectionDetail
                           {...props}
+                          quarters={this.state.quarters}
                           collections={this.state.collections}
                           />
 
-                          <HasCard
+                          {/* <HasCard
                           {...props}
                           collections={this.state.quarters}
                           addQ={this.addQ}
@@ -118,7 +119,7 @@ export default class ApplicationViews extends Component {
                           {...props}
                           addQ={this.addQ}
                           matchlist={this.state.matchlist}
-                          />
+                          /> */}
                   </React.Fragment>
             }} />
             </React.Fragment>

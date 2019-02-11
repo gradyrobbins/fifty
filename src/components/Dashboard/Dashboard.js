@@ -8,7 +8,6 @@ class Dashboard extends Component {
         console.log("this.props.collection", this.props.collections)
         return (
             <div>
-
             <section className="collections">
             {
                 this.props.collections.map(collection =>
@@ -21,11 +20,15 @@ class Dashboard extends Component {
                             >
                             {collection.collectorsName}  </button>
                         <br/>
+
+
+
                     </div>
 
                 )
             }
             </section>
+
              </div>
         )
     }

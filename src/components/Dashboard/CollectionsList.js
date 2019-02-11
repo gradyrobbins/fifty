@@ -3,9 +3,7 @@ import React, { Component } from 'react'
 class CollectionsList extends Component {
     render() {
         console.log(this.props.collections)
-        /*
-            Using the route parameter, find whose collection you want to display by looking at the `this.props.collections` that was passed down from ApplicationViews
-        */
+
 
         return (
             <div>
@@ -23,7 +21,8 @@ class CollectionsList extends Component {
 
                             {
                             this.props.history.push(`/collection/${collection.id}`)
-                                console.log(`edit button # ${collection.id} clicked`)}}
+                                // console.log(`edit button # ${collection.id} clicked`)
+                            }}
                             >
                             {collection.collectorsName}  </button>
 

@@ -1,5 +1,8 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom";
+import HasCard from "./Has/HasCard";
+import NeedsCard from "./Needs/NeedsCard"
+import CollectionsList from "../Dashboard/CollectionsList";
 // import "./Animal.css"
 // import dog from "./DogIcon.png"
 // import stock_Qtr_Img from "./../img/stock_Qtr_Img.png"
@@ -13,20 +16,17 @@ export default class CollectionDetail extends Component {
         const collection = this.props.collections.find(a => a.id === parseInt(this.props.match.params.collectionId)) || {}
 
         return (
-
+            <React.Fragment>
             <section className="collection">
                 <div key={collection.id} className="card">
-                    <div className="card-body">
 
-                        <h6 className="card-title">{collection.name}</h6>
-
-                    </div>
-                    {/* <li className="nav-item">
-                        <Link className="nav-link" to={`/collections/${collection.id}`}>${collection.name}</Link>
-                    </li> */}
                 </div>
             </section>
-
+            <CollectionsList />
+            <HasCard />
+            <br/>
+            <NeedsCard />
+            </React.Fragment>
         )
     }
 }

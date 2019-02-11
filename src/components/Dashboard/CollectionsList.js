@@ -3,10 +3,13 @@ import { Link } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
 class CollectionsList extends Component {
     render() {
-        console.log("this.props.collections", this.props.collections)
+        // console.log("this.props.collections", this.props.collections)
 
         return (
             <div>
+                <br/>
+                <br/>
+
                 <section className="collections">
                 {
                     this.props.collections.map(collection =>
@@ -26,17 +29,12 @@ class CollectionsList extends Component {
                 }
                 </section>
 
-                {/* <nav className="navbar navbar-light fixed-top light-blue flex-md-nowrap p-0 shadow">
-                    <ul className="nav nav-pills">
 
-
-                            {/* <Link className="nav-link" to=`/collection/${collection.id}` >Login< /> */}
-
-
-
-                    {/* </ul> */}
-                {/* </nav>  */}
-
+                <button onClick={() => {
+                localStorage.clear("credentials")
+                document.location.href='http://localhost:3000'
+                }}
+                className="logoutButton">LOG OUT</button>
 
 
 

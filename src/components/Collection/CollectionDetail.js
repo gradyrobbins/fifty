@@ -3,10 +3,16 @@ import { Link } from "react-router-dom";
 import HasCard from "./Has/HasCard";
 import NeedsCard from "./Needs/NeedsCard"
 import CollectionsList from "../Dashboard/CollectionsList";
+import DataManager from "../../modules/DataManager";
 
 // import stock_Qtr_Img from "./../img/stock_Qtr_Img.png"
 
 export default class CollectionDetail extends Component {
+    state ={
+        matchlist: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55],
+        userSpecific: []
+  }
+
     render() {
         /*
             Using the route parameter, find whose collection you want to display by looking at the `this.props.collections` that was passed down from ApplicationViews
@@ -14,25 +20,39 @@ export default class CollectionDetail extends Component {
 
         const collection = this.props.collections.find(a => a.id === parseInt(this.props.match.params.collectionId)) || {}
 
-        console.log("collection" , collection)
+        console.log("collection name:" , collection)
 
         const quarters = this.props.quarters
-        console.log("this.props.quarters" , this.props.quarters)
+        console.log("this.props.quarters = " , quarters)
+
+        DataManager.getASpecificCollection(this.props.match.params.collectionId)
+        .then( (userSpecific1) => console.log(" quarters that below to this collectionId's set: ", userSpecific1))
+        //setState here with another .then statement.  below, use this.state.qu to map into <Has Card />
+
+
+
+
 
         return (
             <React.Fragment>
-            <section className="collection">
-                <div key={collection.id} className="card">
+                <br/>
+                <br/>
+                <section className="collection">
+                    <div key={collection.id} className="card">
+                        <h3>{collection.collectorsName}'s Collection: </h3>
+                    </div>
 
-                </div>
-            </section>
-            {/* <CollectionsList /> */}
-            {/* <HasCard
-                    // {...props}
-                    // quarters={this.state.quarters}
-            /> */}
-            <br/>
-            {/* <NeedsCard /> */}
+                </section>
+                <section>Has Card goes here</section>
+
+
+                {/* <HasCard
+                        // {...props}
+                        // quarters={this.state.quarters}
+                    /> */}
+                <br/>
+                <section>Needs Card goes here</section>
+                {/* <NeedsCard /> */}
             </React.Fragment>
         )
     }

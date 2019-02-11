@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import Dashboard from '../../Dashboard/Dashboard'
 import './HasCard.css'
 import stock_qtr from './../../img/stock_Qtr_Img.png'
 
@@ -10,18 +9,16 @@ class HasCard extends Component {
         return (
             <React.Fragment>
                 <br/>
-                {/* <Dashboard /> */}
-
             <div>
 
 
-                        
+
             <h2>Has: </h2>
                         <br/>
             <section className="HAScollections">
                         <br/>
             {
-                this.props.collections.map(quarter =>
+                this.props.quarters.map(quarter =>
 
                     <div key={quarter.id} id={quarter.id} className="collection" >
                         <p>StateId #: {quarter.usaId} </p>

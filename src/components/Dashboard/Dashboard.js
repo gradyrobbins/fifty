@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
-import CollectionsList from './CollectionsList'
+// import CollectionsList from './CollectionsList'
 
 class Dashboard extends Component {
     render() {

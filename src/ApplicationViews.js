@@ -9,6 +9,7 @@ import Dashboard from './components/Dashboard/Dashboard'
 import CollectionDetail from './components/Collection/CollectionDetail'
 import HasCard from './components/Collection/Has/HasCard'
 import NeedsCard from './components/Collection/Needs/NeedsCard'
+import CollectionsList from './components/Dashboard/CollectionsList';
 // import NavBar from './components/Nav/NavBar'
 
 export default class ApplicationViews extends Component {
@@ -87,46 +88,16 @@ export default class ApplicationViews extends Component {
   };
 
   render() {
-    return (
-      <React.Fragment>
+    return ( <React.Fragment>
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/collections" render={props => {
+                  return <CollectionsList
+                        {...props}
+                        collections={this.state.collections}
+                        />
+                  }}
+                />
 
-        {/* <Route exact path="/" render={props => {
-          return <NavBar />
-        }}/> */}
-
-
-
-        <Route exact path="/login" component={Login} />
-        {/* <Route exact path="/register" component={ComingSoon} /> */}
-        {/* <Route exact path="/learn" component={ComingSoon} /> */}
-        {/* <Route exact path="/home" component={CollectionsList2} /> */}
-        {/* <Route exact path="/collections" render={props => {
-            return <CollectionsList
-              {...props}
-              collections={this.state.collections}
-              // messages={this.state.messages}
-              // users={this.state.users}
-              // deleteMessage={this.deleteMessage}
-              // addMessage={this.addMessage}
-
-              // stickMessagesOnDom={this.stickMessagesOnDom}
-
-              /> }}
-        /> */}
-
-        <Route exact path="/collections" render={props => {
-            return <Dashboard
-                  {...props}
-                  collections={this.state.collections}
-                  // getASpecificCollection={this.getASpecificCollection}
-                  /> }}
-              />
-
-
-
-          {/* the below `dynamic routing` was suggested by EmLem 2/8/19 thurs */}
-         {/* below:  wrap Dashboard, HasList, NeedsList inside a collections component
-            for/loop through all collections to */}
          <Route path="/collections/:collectionId(/d+)" render={props => {
             return <React.Fragment>
                           <Dashboard
@@ -149,115 +120,9 @@ export default class ApplicationViews extends Component {
                           matchlist={this.state.matchlist}
                           />
                   </React.Fragment>
-            }}
-              />
-
-          <Route exact path="/collections/Toby" render={props => {
-            return <React.Fragment>
-              <Dashboard />
-              <HasCard
-            {...props}
-            collections={this.state.TobysQuarters}
-            deleteQ={this.deleteQ}
-            />
-              <NeedsCard
-            {...props}
-            addQ={this.addQ}
-            matchlist={this.state.matchlist}
-
-            />
+            }} />
             </React.Fragment>
-          }}
-          />
-          <Route exact path="/collections/Nate" render={props => {
-            return <React.Fragment>
-              <Dashboard />
-              <HasCard
-            {...props}
-            collections={this.state.NatesQuarters}
-            deleteQ={this.deleteQ}
-            />
-              <NeedsCard
-            {...props}
-            addQ={this.addQ}
-            matchlist={this.state.matchlist}
 
-            />
-            </React.Fragment>
-          }}
-          />
-          <Route exact path="/collections/Andrew" render={props => {
-            return <React.Fragment>
-              <Dashboard />
-              <HasCard
-            {...props}
-            collections={this.state.AndrewsQuarters}
-            deleteQ={this.deleteQ}
-            />
-              <NeedsCard
-            {...props}
-            addQ={this.addQ}
-            matchlist={this.state.matchlist}
-
-            />
-            </React.Fragment>
-          }}
-          />
-          <Route exact path="/collections/Laney" render={props => {
-            return <React.Fragment>
-              <Dashboard />
-              <HasCard
-            {...props}
-            collections={this.state.LaneysQuarters}
-            deleteQ={this.deleteQ}
-            />
-              <NeedsCard
-            {...props}
-            addQ={this.addQ}
-            matchlist={this.state.matchlist}
-
-            />
-            </React.Fragment>
-          }}
-          />
-          <Route exact path="/collections/Mary_Mac" render={props => {
-            return <React.Fragment>
-              <Dashboard />
-              <HasCard
-            {...props}
-            collections={this.state.MaryMacsQuarters}
-            deleteQ={this.deleteQ}
-            />
-              <NeedsCard
-            {...props}
-            addQ={this.addQ}
-            matchlist={this.state.matchlist}
-
-            />
-            </React.Fragment>
-          }}
-          />
-
-          <Route exact path="/collections/Molly_Patrick" render={props => {
-            return <React.Fragment>
-                        <Dashboard />
-                        <HasCard
-                      {...props}
-                      collections={this.state.MollysQuarters}
-                      deleteQ={this.deleteQ}
-                      />
-                        <NeedsCard
-                        {...props}
-                        addQ={this.addQ}
-                        matchlist={this.state.matchlist}
-
-                        />
-            </React.Fragment>
-          }}
-          />
-
-      </React.Fragment >
     )
-
 }
 }

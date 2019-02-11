@@ -29,8 +29,7 @@ export default class CollectionDetail extends Component {
                                             .then(() => this.props.history.push("/collections"))}
                             className="card-link">Delete</a> */}
                     </div>
-                    <div>Has card component</div>
-                    <div>Needs card component</div>
+                    
                 </div>
             </section>
 

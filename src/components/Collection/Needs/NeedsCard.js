@@ -44,9 +44,10 @@ class NeedsCard extends Component {
                         <button type="button"
                             className="btn btn-success"
                             onClick={() => {
-                                this.props.history.push(`/collection/${quarter.id}/add`)}
+                                // this.props.addQ(quarter)
+                                this.props.history.push(`/collection/1/add`)}
                             }>
-                                Add this Quarter 
+                                Add this Quarter
                         </button>
 
                     </div>

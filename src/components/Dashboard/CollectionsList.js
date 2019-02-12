@@ -24,17 +24,16 @@ class CollectionsList extends Component {
                                 {collection.collectorsName}  </button>
                             <br/>
                         </div>
-
                     )
                 }
                 </section>
 
 
-                <button onClick={() => {
+                <button className="btn btn-primary" onClick={() => {
                 localStorage.clear("credentials")
                 document.location.href='http://localhost:3000'
                 }}
-                className="logoutButton">LOG OUT</button>
+                >LOG OUT</button>
 
 
 

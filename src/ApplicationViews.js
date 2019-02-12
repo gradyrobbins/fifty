@@ -23,6 +23,7 @@ export default class ApplicationViews extends Component {
     usas: [],
     quarters: [],
     collections: [],
+    matchlist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56],
     // specificCollection: [],
   }
 
@@ -90,7 +91,7 @@ export default class ApplicationViews extends Component {
                               {...props}
                               quarters={this.state.quarters}
                               collections={this.state.collections}
-                              // matchlist={this.state.matchlist}
+                              matchlist={this.state.matchlist}
                               // getASpecificCollection={this.getASpecificCollection}
                               addQ={this.addQ}
                               />
@@ -104,23 +105,23 @@ export default class ApplicationViews extends Component {
                               {...props}
                               addQ={this.addQ}
                               matchlist={this.state.matchlist}
-                              /> */}
+                            /> */}
                       </React.Fragment>
                 }} />
 
             <Route path="/collection/:collectionId(\d+)/add" render={props => {
-                return <React.Fragment>
+              return <React.Fragment>
 
                               {/* <CollectionDetail
                               {...props}
                               quarters={this.state.quarters}
                               collections={this.state.collections}
                               addQ={this.addQ}
-                              /> */}
+                            /> */}
                             <AddAQuarterForm
                               collections={this.state.collections}
                               addQ={this.addQ}
-                            />
+                              />
 
                       </React.Fragment>
                 }} />
@@ -130,6 +131,6 @@ export default class ApplicationViews extends Component {
 
             </React.Fragment>
 
-    )
+)
 }
 }

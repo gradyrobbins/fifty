@@ -9,35 +9,21 @@ class HasCard extends Component {
     }
 
     componentDidUpdate(prevProps) {
-
        if(prevProps.quarters !== this.props.quarters) {
-
            this.setState({quarters : this.props.quarters})
        }
     }
 
     componentDidMount() {
-
-
-
            this.setState({quarters : this.props.quarters})
-
-
-
-
     }
     render() {
-
-
         console.log("<HasCard /> props =", this.props)
-
         return (
             <React.Fragment>
                 <br/>
+                <br/>
             <div>
-
-
-
             <h2>Has: </h2>
                         <br/>
             <section className="HAScollections">
@@ -55,6 +41,10 @@ class HasCard extends Component {
                         <button key={quarter.id} id="edit" onClick={() => {console.log(`edit button clicked `)
 
                             }}> Edit this quarter# {quarter.id}</button>
+
+                        <button id={quarter.id} onClick={() => {console.log(`delete button clicked `)
+
+                            }}> Delete this quarter# {quarter.id}</button>
                     </div>
 
                 )

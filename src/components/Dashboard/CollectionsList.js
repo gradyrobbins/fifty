@@ -29,11 +29,11 @@ class CollectionsList extends Component {
                 </section>
 
 
-                <button className="btn btn-primary" onClick={() => {
+                {/* <button className="btn btn-primary" onClick={() => {
                 localStorage.clear("credentials")
                 document.location.href='http://localhost:3000'
                 }}
-                >LOG OUT</button>
+                >LOG OUT</button> */}
 
 
 

@@ -13,3 +13,8 @@
     padding: 20px;
     margin: 20px;
 }
+.icon-qtr {
+    border-radius: 50%;
+    width: 300px;
+    height: auto;
+}

@@ -2,7 +2,6 @@ import React, { Component } from "react"
 // import { Link } from "react-router-dom";
 import HasCard from "./Has/HasCard";
 import NeedsCard from "./Needs/NeedsCard"
-// import CollectionsList from "../Dashboard/CollectionsList";
 import DataManager from "../../modules/DataManager";
 
 
@@ -74,7 +73,7 @@ export default class CollectionDetail extends Component {
                         <button>Add a new Quarter to {collection.collectorsName}'s Collection</button>
                     </div>
                 </section>
-                        <button>View all Collections</button>
+                        {/* <button>View all Collections</button> */}
                 <br/>
                 <br/>
 

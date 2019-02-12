@@ -81,10 +81,10 @@ export default class ApplicationViews extends Component {
 
          <Route path="/collection/:collectionId(\d+)" render={props => {
             return <React.Fragment>
-                          {/* <Dashboard
-                          {...props}
-                          collections={this.state.collections}
-                          /> */}
+                          <CollectionsList
+                        {...props}
+                        collections={this.state.collections}
+                        />
                           <CollectionDetail
                           {...props}
                           quarters={this.state.quarters}

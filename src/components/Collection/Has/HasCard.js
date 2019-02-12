@@ -4,7 +4,7 @@ import stock_qtr from './../../img/stock_Qtr_Img.png'
 
 class HasCard extends Component {
     render() {
-        console.log("this.props =", this.props)
+        console.log("<HasCard /> props =", this.props)
 
         return (
             <React.Fragment>

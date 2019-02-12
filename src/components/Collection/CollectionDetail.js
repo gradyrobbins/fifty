@@ -1,8 +1,8 @@
 import React, { Component } from "react"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import HasCard from "./Has/HasCard";
-import NeedsCard from "./Needs/NeedsCard"
-import CollectionsList from "../Dashboard/CollectionsList";
+// import NeedsCard from "./Needs/NeedsCard"
+// import CollectionsList from "../Dashboard/CollectionsList";
 import DataManager from "../../modules/DataManager";
 
 // import stock_Qtr_Img from "./../img/stock_Qtr_Img.png"
@@ -13,6 +13,18 @@ export default class CollectionDetail extends Component {
         userSpecific: []
   }
 
+  componentDidMount() {
+    const newState = {}
+    DataManager.getASpecificCollection(this.props.match.params.collectionId)
+    .then(userSpecific => newState.userSpecific = userSpecific)
+    .then( (userSpecific) => console.log(" quarters that below to this collectionId's set: ", userSpecific))
+    .then(() => this.setState(newState))
+};
+
+// .then()
+//setState here with another .then statement.  below, use this.state.qu to map into <Has Card />
+
+
     render() {
         /*
             Using the route parameter, find whose collection you want to display by looking at the `this.props.collections` that was passed down from ApplicationViews
@@ -20,15 +32,10 @@ export default class CollectionDetail extends Component {
 
         const collection = this.props.collections.find(a => a.id === parseInt(this.props.match.params.collectionId)) || {}
 
-        console.log("collection name:" , collection)
+        // console.log("collection name:" , collection)
 
-        const quarters = this.props.quarters
-        console.log("this.props.quarters = " , quarters)
-
-        DataManager.getASpecificCollection(this.props.match.params.collectionId)
-        .then( (userSpecific1) => console.log(" quarters that below to this collectionId's set: ", userSpecific1))
-        .then()
-        //setState here with another .then statement.  below, use this.state.qu to map into <Has Card />
+        // const quarters = this.props.quarters
+        // console.log("this.props.quarters = " , quarters)
 
 
 
@@ -51,10 +58,10 @@ export default class CollectionDetail extends Component {
                 <section>Has Card goes here</section>
 
 
-                {/* <HasCard
+                <HasCard
                         // {...props}
-                        // quarters={this.state.quarters}
-                    /> */}
+                        quarters={this.state.userSpecific}
+                    />
                 <br/>
                 <br/>
                 <section>Needs Card goes here</section>

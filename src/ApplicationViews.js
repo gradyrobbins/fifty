@@ -5,10 +5,10 @@ import DataManager from './modules/DataManager'
 import Login from './components/login/LoginForm'
 // import LandingPage from './components/landing/LandingPage'
 // import CollectionsList from './components/Dashboard/CollectionsList'
-import Dashboard from './components/Dashboard/Dashboard'
+// import Dashboard from './components/Dashboard/Dashboard'
 import CollectionDetail from './components/Collection/CollectionDetail'
-import HasCard from './components/Collection/Has/HasCard'
-import NeedsCard from './components/Collection/Needs/NeedsCard'
+// import HasCard from './components/Collection/Has/HasCard'
+// import NeedsCard from './components/Collection/Needs/NeedsCard'
 import CollectionsList from './components/Dashboard/CollectionsList';
 // import NavBar from './components/Nav/NavBar'
 
@@ -22,7 +22,7 @@ export default class ApplicationViews extends Component {
     usas: [],
     quarters: [],
     collections: [],
-    specificCollection: [],
+    // specificCollection: [],
   }
 
   getAllUsers = user => DataManager.getAll("users", user)
@@ -89,8 +89,8 @@ export default class ApplicationViews extends Component {
                           {...props}
                           quarters={this.state.quarters}
                           collections={this.state.collections}
-                          matchlist={this.state.matchlist}
-                          getASpecificCollection={this.getASpecificCollection}
+                          // matchlist={this.state.matchlist}
+                          // getASpecificCollection={this.getASpecificCollection}
                           addQ={this.addQ}
                           />
 

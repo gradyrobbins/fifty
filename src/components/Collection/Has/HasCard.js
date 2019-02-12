@@ -5,7 +5,7 @@ import stock_qtr from './../../img/stock_Qtr_Img.png'
 class HasCard extends Component {
     render() {
         console.log("this.props =", this.props)
-
+// passing in "userSpecific" from <CollectionDetail />
         return (
             <React.Fragment>
                 <br/>

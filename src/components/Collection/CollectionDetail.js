@@ -21,22 +21,19 @@ export default class CollectionDetail extends Component {
     .then(userSpecific => newState.userSpecific = userSpecific)
     .then( (userSpecific) => console.log(" quarters that belong to this collectionId's set: ", userSpecific))
 
-    // .then( (userSpecific) => userSpecific.map()
-
     .then(() => this.setState(newState))
     }
 
   componentDidMount() {
     this.fetchSpecificCollection(this.props.match.params.collectionId)
 };
+
   componentDidUpdate(prevProps) {
 
     if(prevProps.match.params.collectionId !== this.props.match.params.collectionId) {
 
         this.fetchSpecificCollection(this.props.match.params.collectionId)
     }
-
-
 
 };
 
@@ -83,7 +80,7 @@ render() {
                         <button type="button"
                             className="btn btn-success"
                             onClick={() => {
-                                this.props.history.push(`/collection/${collection.id}/new`)}
+                                this.props.history.push(`/collection/${collection.id}/add`)}
                             }>
                                 Add a new Quarter to {collection.collectorsName}'s Collection
                         </button>

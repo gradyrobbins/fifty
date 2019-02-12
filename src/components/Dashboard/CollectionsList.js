@@ -18,7 +18,7 @@ class CollectionsList extends Component {
                             <button className="btn btn-primary"  id={collection.id} onClick={() =>
                                 {
                                 this.props.history.push(`/collection/${collection.id}`)
-                                    console.log(` button # ${collection.id} clicked`)
+                                    // console.log(` button # ${collection.id} clicked`)
                                 }}
                                 >
                                 {collection.collectorsName}  </button>

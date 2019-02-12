@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import Dashboard from '../../Dashboard/Dashboard'
 import './NeedsCard.css'
 import stock_qtr from './../../img/stock_Qtr_Img.png'
-import CollectionsList from '../../Dashboard/CollectionsList';
+// import CollectionsList from '../../Dashboard/CollectionsList';
 
 
 class NeedsCard extends Component {
@@ -40,6 +40,15 @@ class NeedsCard extends Component {
                             // console.log(`add button clicked `)
                             this.props.addQ(quarter)
                             }}> Add this quarter id # {quarter}</button>
+
+                        <button type="button"
+                            className="btn btn-success"
+                            onClick={() => {
+                                this.props.history.push(`/collection/${quarter.id}/add`)}
+                            }>
+                                Add this Quarter 
+                        </button>
+
                     </div>
 
                 )

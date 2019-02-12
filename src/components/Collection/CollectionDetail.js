@@ -103,6 +103,7 @@ render() {
                 <NeedsCard
                         quarters={this.state.needsList}
                         matchlist={this.state.matchlist}
+                        addAQuarter={this.props.addAQuarter}
 
                 />
 

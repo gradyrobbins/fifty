@@ -3,7 +3,32 @@ import './HasCard.css'
 import stock_qtr from './../../img/stock_Qtr_Img.png'
 
 class HasCard extends Component {
+
+    state={
+        quarters: []
+    }
+
+    componentDidUpdate(prevProps) {
+
+       if(prevProps.quarters !== this.props.quarters) {
+
+           this.setState({quarters : this.props.quarters})
+       }
+    }
+
+    componentDidMount() {
+
+
+
+           this.setState({quarters : this.props.quarters})
+
+
+
+
+    }
     render() {
+
+
         console.log("<HasCard /> props =", this.props)
 
         return (
@@ -18,7 +43,7 @@ class HasCard extends Component {
             <section className="HAScollections">
                         <br/>
             {
-                this.props.quarters.map(quarter =>
+                this.state.quarters.map(quarter =>
 
                     <div key={quarter.id} id={quarter.id} className="collection" >
                         <p>StateId #: {quarter.usaId} </p>

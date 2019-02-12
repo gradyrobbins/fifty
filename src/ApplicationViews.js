@@ -11,6 +11,7 @@ import CollectionDetail from './components/Collection/CollectionDetail'
 // import NeedsCard from './components/Collection/Needs/NeedsCard'
 import CollectionsList from './components/Dashboard/CollectionsList';
 // import NavBar from './components/Nav/NavBar'
+import AddAQuarterForm from './components/Collection/AddAQuarterForm'
 
 export default class ApplicationViews extends Component {
 
@@ -79,33 +80,54 @@ export default class ApplicationViews extends Component {
                   }}
                 />
 
-         <Route path="/collection/:collectionId(\d+)" render={props => {
-            return <React.Fragment>
-                          <CollectionsList
-                        {...props}
-                        collections={this.state.collections}
-                        />
-                          <CollectionDetail
-                          {...props}
-                          quarters={this.state.quarters}
-                          collections={this.state.collections}
-                          // matchlist={this.state.matchlist}
-                          // getASpecificCollection={this.getASpecificCollection}
-                          addQ={this.addQ}
-                          />
+            <Route path="/collection/:collectionId(\d+)" render={props => {
+                return <React.Fragment>
+                              <CollectionsList
+                            {...props}
+                            collections={this.state.collections}
+                            />
+                              <CollectionDetail
+                              {...props}
+                              quarters={this.state.quarters}
+                              collections={this.state.collections}
+                              // matchlist={this.state.matchlist}
+                              // getASpecificCollection={this.getASpecificCollection}
+                              addQ={this.addQ}
+                              />
 
-                          {/* <HasCard
-                          {...props}
-                          collections={this.state.quarters}
-                          addQ={this.addQ}
-                          />
-                          <NeedsCard
-                          {...props}
-                          addQ={this.addQ}
-                          matchlist={this.state.matchlist}
-                          /> */}
-                  </React.Fragment>
-            }} />
+                              {/* <HasCard
+                              {...props}
+                              collections={this.state.quarters}
+                              addQ={this.addQ}
+                              />
+                              <NeedsCard
+                              {...props}
+                              addQ={this.addQ}
+                              matchlist={this.state.matchlist}
+                              /> */}
+                      </React.Fragment>
+                }} />
+
+            <Route path="/collection/:collectionId(\d+)/add" render={props => {
+                return <React.Fragment>
+
+                              <CollectionDetail
+                              {...props}
+                              quarters={this.state.quarters}
+                              collections={this.state.collections}
+                              addQ={this.addQ}
+                              />
+                            <AddAQuarterForm
+                              collections={this.state.collections}
+                              addQ={this.addQ}
+                            />
+
+                      </React.Fragment>
+                }} />
+
+
+
+
             </React.Fragment>
 
     )

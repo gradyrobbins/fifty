@@ -1,4 +1,5 @@
 .HAScollections {
+    display: flex;
     border: 2px solid black;
     padding: 20px;
     margin: 20px;
@@ -8,11 +9,7 @@
     padding: 20px;
     margin: 20px;
 }
-.NEEDScollections {
-    border: 2px solid black;
-    padding: 20px;
-    margin: 20px;
-}
+
 .icon-qtr {
     border-radius: 50%;
     width: 300px;

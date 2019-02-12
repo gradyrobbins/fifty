@@ -7,18 +7,16 @@ class HasCard extends Component {
     state={
         quarters: []
     }
-
     componentDidUpdate(prevProps) {
        if(prevProps.quarters !== this.props.quarters) {
            this.setState({quarters : this.props.quarters})
        }
     }
-
     componentDidMount() {
            this.setState({quarters : this.props.quarters})
     }
     render() {
-        console.log("<HasCard /> props =", this.props)
+        // console.log("<HasCard /> props =", this.props)
         return (
             <React.Fragment>
                 <br/>

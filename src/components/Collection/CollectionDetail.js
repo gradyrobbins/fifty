@@ -11,9 +11,9 @@ export default class CollectionDetail extends Component {
         needsList: []
     }
 
-    fetchSpecificCollection = (arg) => {
+    fetchSpecificCollection = (collectionId) => {
         const newState = {}
-            DataManager.getASpecificCollection(arg)
+            DataManager.getASpecificCollection(collectionId)
             .then(userSpecific => newState.userSpecific = userSpecific)
             .then( (userSpecific) => console.log(" quarters that belong to this collectionId's set: ", userSpecific))
             .then(() => this.setState(newState))
@@ -28,6 +28,12 @@ export default class CollectionDetail extends Component {
             this.fetchSpecificCollection(this.props.match.params.collectionId)
         }
     };
+
+    deleteQ = id => DataManager.delete("quarters", id)
+    .then(() => this.fetchSpecificCollection(this.props.match.params.collectionId))
+    // .then(quarters => this.setState({
+    //   userSpecific: quarters
+    // }))
 
 //  below, use this.state.userSpecific to map onto <Has Card />
 
@@ -87,7 +93,7 @@ render() {
                         // {...props}
                         quarters={this.state.userSpecific}
                         getASpecificCollection={this.fetchSpecificCollection}
-                        deleteQ={this.props.deleteQ}
+                        deleteQ={this.deleteQ}
                         />
                 <br/>
                 <br/>

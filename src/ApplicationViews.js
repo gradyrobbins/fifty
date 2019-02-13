@@ -107,6 +107,7 @@ export default class ApplicationViews extends Component {
 
                               collections={this.state.collections}
                               addQ={this.addQ}
+                              usas={this.state.usas}
                               />
 
                       </React.Fragment>

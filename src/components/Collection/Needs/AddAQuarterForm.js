@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-// import "./Animal.css"
+import "./AddAQuarterForm.css"
 
 export default class AddAQuarterForm extends Component {
     // Set initial state
@@ -38,11 +38,9 @@ export default class AddAQuarterForm extends Component {
 
     addnewQ = evt => {
         evt.preventDefault()
-        if (this.state.state_id === "" || this.state.user_id === "") {
-            window.alert("You need to have both a state AND a user!")
-        } else {
+
             const item = {
-                stateId: this.state.stateId,
+                // stateId: this.state.stateId,
                 // user_id: this.state.user_id,
 
 
@@ -51,7 +49,7 @@ export default class AddAQuarterForm extends Component {
 
             // Create the quarter and redirect user to their collection
             this.props.addnewQ(item).then(() => this.props.history.push("/collections"))
-        }
+
     }
 
 
@@ -68,34 +66,39 @@ export default class AddAQuarterForm extends Component {
                         <label htmlFor="collection">Whose collection?</label>
                         <select defaultValue="niece/nephew" name="collection" id="collection"
                                 onChange={this.handleFieldChange}>
-                            <option value="">Select whose collection</option>
+                            <option value="">Select whose collection you want to add a quarter to</option>
                         {
-                            this.props.collections.map(e => <option key={e.id} id={e.id}>{e.name}</option>)
+                            this.props.collections.map(e => <option key={e.id} id={e.id}>{e.collectorsName}</option>)
                         }
                         </select>
                     </div>
                 <br/>
                 <br/>
-                <br/>
                     <div className="form-group">
                         <label htmlFor="state_id">Add a new State to your collection</label>
-                        <input type="text" required={true}
-                            onChange={this.handleFieldChange}
-                            id="state_id"
-                            placeholder="select the new Stateid" />
+                        <select defaultValue="USAs" name="quarter" id="quarter"
+                                onChange={this.handleFieldChange}>
+                            <option value="">Select which State quarter to add</option>
+                        {
+                            this.props.usas.map(e => <option key={e.id} id={e.id}>{e.name}</option>)
+                        }
+                        </select>
+
                     </div>
                     <div className="form-group">
                         <label htmlFor="user_id">notes?</label>
                         <input type="text" required={true}
                             onChange={this.handleFieldChange}
                             id="user_id"
-                            placeholder="add userid here" />
+                            placeholder="add notes here" />
                     </div>
-                    <button type="submit" onClick={this.addnewQ}
+                    <button type="submit" onClick={
+                        console.log("console log the object that captures the values that user sets from the dropdowns")
+                        // this.addnewQ
+                    }
                     className="btn btn-primary">Submit</button>
 
 
-                    <button type="submit" onClick={this.addnewQ} className="btn btn-primary">Submit</button>
                 </form>
             </React.Fragment>
         )

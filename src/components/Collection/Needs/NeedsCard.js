@@ -55,7 +55,7 @@ class NeedsCard extends Component {
                         <p>Matchlist  #: {quarter} </p>
                         <img src={stock_qtr} alt="" width="50px" className="icon--stock_Qtr_image" />
 
-                        <button key={quarter} id="add" onClick={() => {
+                        {/* <button key={quarter} id="add" onClick={() => {
                             // console.log(`add button clicked `)
                             this.props.addAQuarter(quarter)
                             }}> Add this quarter id # {quarter}</button>
@@ -70,7 +70,7 @@ class NeedsCard extends Component {
                             }
                             }>
                                 Add this Quarter
-                        </button>
+                        </button> */}
 
                     </div>
 

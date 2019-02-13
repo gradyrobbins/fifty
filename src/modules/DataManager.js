@@ -16,13 +16,23 @@ export default Object.create(null, {
             .then(result => result.json())
         }
     },
+    //commented out; not in use 2/8/19
+    // getAllUserData: {
+    //     value: (resource, id) => {
+    //         return fetch(`${remoteURL}/${resource}?user_id=${id}`)
+    //         .then(result => result.json())
+    //     }
+    // },
 
-    getAllUserData: {
-        value: (resource, id) => {
-            return fetch(`${remoteURL}/${resource}?user_id=${id}`)
+    getASpecificCollection: {
+        value: (id) => {
+            return fetch(`${remoteURL}/quarters?collectionId=${id}`)
             .then(result => result.json())
         }
     },
+
+
+
 
     delete: {
         value: (resource, id) => {

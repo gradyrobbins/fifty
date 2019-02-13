@@ -1,23 +1,25 @@
+.containerDiv {
+    display: flex;
+}
+
 .loginForm {
     display: table-caption;
 }
 
+
 .forms {
     text-align: -webkit-center;
-    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    background-color: lightgray;
+    border-radius: 5%;
 }
 
 body {
-    /* background-image: url("./../../img/coverImage.jpg"); */
+    /* background-image: url("./../img/coverImage.jpg"); */
     background-repeat: no-repeat;
     background-position: center ;
     background-size:1200px 1200px;
-    /* resize: both */
-
-  }
-
-
-.loginForm {
-    justify-content: center;
+    resize: both
 
   }

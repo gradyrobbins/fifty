@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import './HomePage.css'
+import './LandingPage.css'
 
-export default class HomePage extends Component {
+export default class LandingPage extends Component {
 
     render() {
-        
+
         return (
-            <React.Fragment>
-                <div className="HomePage" >
-                <div className="homeButtons" >
+        <React.Fragment>
+            <div className="LandingPage" >
+                <div className="landingButtons" >
                     <div className="loginButton">
                         <button type="button"
                             className="btn btn-success"
@@ -28,7 +28,7 @@ export default class HomePage extends Component {
                             }
                         }>Create Account</button>
                     </div>
-                    <div className="registerButton">
+                    <div className="learnButton">
                         <button type="button"
                             className="btn btn-success"
                             onClick={() => {
@@ -41,8 +41,8 @@ export default class HomePage extends Component {
                             }>Learn More! </button>
                     </div>
                 </div>
-                </div>
-            </React.Fragment>
+            </div>
+        </React.Fragment>
         )
 
     }

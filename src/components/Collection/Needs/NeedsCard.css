@@ -1,0 +1,25 @@
+
+.collection {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+.NEEDScollections {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+.AddQuarter {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+.icon--stock_Qtr_image {
+    border-radius: 50%;
+    width: 300px;
+    height: auto;
+}

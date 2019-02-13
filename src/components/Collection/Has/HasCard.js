@@ -43,7 +43,6 @@ class HasCard extends Component {
                         <button id={quarter.id} onClick={() => {
                             // console.log(`delete button clicked `)
                             this.props.deleteQ(quarter.id)
-                            // .then(this.componentDidUpdate("bloop"))
                             }}> Delete this quarter# {quarter.id}</button>
                     </div>
 

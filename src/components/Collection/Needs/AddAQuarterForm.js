@@ -36,9 +36,32 @@ export default class AddAQuarterForm extends Component {
     //     }
     // }
 
+    addnewQ = evt => {
+        evt.preventDefault()
+        if (this.state.state_id === "" || this.state.user_id === "") {
+            window.alert("You need to have both a state AND a user!")
+        } else {
+            const item = {
+                stateId: this.state.stateId,
+                // user_id: this.state.user_id,
+
+
+
+            }
+
+            // Create the quarter and redirect user to their collection
+            this.props.addnewQ(item).then(() => this.props.history.push("/collections"))
+        }
+    }
+
+
     render() {
         return (
             <React.Fragment>
+
+                        <br/>
+                        <br/>
+                        <br/>
                 <form className="AddAQuarterForm">
 
                     <div className="form-group">
@@ -51,7 +74,28 @@ export default class AddAQuarterForm extends Component {
                         }
                         </select>
                     </div>
-                    <button type="submit" onClick={this.props.addQ} className="btn btn-primary">Submit</button>
+                <br/>
+                <br/>
+                <br/>
+                    <div className="form-group">
+                        <label htmlFor="state_id">Add a new State to your collection</label>
+                        <input type="text" required={true}
+                            onChange={this.handleFieldChange}
+                            id="state_id"
+                            placeholder="select the new Stateid" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="user_id">notes?</label>
+                        <input type="text" required={true}
+                            onChange={this.handleFieldChange}
+                            id="user_id"
+                            placeholder="add userid here" />
+                    </div>
+                    <button type="submit" onClick={this.addnewQ}
+                    className="btn btn-primary">Submit</button>
+
+
+                    <button type="submit" onClick={this.addnewQ} className="btn btn-primary">Submit</button>
                 </form>
             </React.Fragment>
         )

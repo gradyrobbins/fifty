@@ -6,7 +6,7 @@ import Login from './components/login/LoginForm'
 import Learn from './components/Learn/Learn'
 import CollectionDetail from './components/Collection/CollectionDetail'
 import CollectionsList from './components/Dashboard/CollectionsList';
-import AddAQuarterForm from './components/Collection/AddAQuarterForm'
+import AddAQuarterForm from './components/Collection/Needs/AddAQuarterForm'
 
 export default class ApplicationViews extends Component {
 
@@ -26,13 +26,7 @@ export default class ApplicationViews extends Component {
       users: users
     }))
 
-    addQ = quarter => DataManager.add("quarters", quarter)
-    .then(() => DataManager.getAll("quarters"))
-    .then(quarters => this.setState({
-      quarters: quarters
-    }))
 
-    
 
     getASpecificCollection = id => DataManager.getASpecificCollection(id)
     .then(specificCollection => this.setState({
@@ -100,7 +94,7 @@ export default class ApplicationViews extends Component {
                       </React.Fragment>
                 }} />
 
-            <Route path="/collection/:collectionId(\d+)/add" render={props => {
+            <Route path="/collection/add" render={props => {
               return <React.Fragment>
 
                               {/* <CollectionDetail
@@ -110,6 +104,7 @@ export default class ApplicationViews extends Component {
                               addQ={this.addQ}
                             /> */}
                             <AddAQuarterForm
+
                               collections={this.state.collections}
                               addQ={this.addQ}
                               />

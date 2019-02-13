@@ -3,11 +3,30 @@ import React, { Component } from 'react'
 import './NeedsCard.css'
 import stock_qtr from './../../img/stock_Qtr_Img.png'
 // import CollectionsList from '../../Dashboard/CollectionsList';
-
+// import CollectionDetail from './../CollectionDetail'
 
 class NeedsCard extends Component {
+
+    state={
+        quarters: [],
+        matchlist: []
+    }
+    componentDidUpdate(prevProps) {
+       if(prevProps.quarters !== this.props.quarters) {
+           this.setState({quarters : this.props.quarters})
+       }
+    }
+    componentDidMount() {
+           this.setState({quarters : this.props.quarters,
+                        //  matchlist : this.props.matchlist
+        })
+    }
+
+
     render() {
         console.log("<NEEDSCARD /> props =", this.props)
+        // console.log("<NEEDSCARD /> props.history=", this.props.history)
+
 
         return (
         <React.Fragment>
@@ -38,14 +57,17 @@ class NeedsCard extends Component {
 
                         <button key={quarter} id="add" onClick={() => {
                             // console.log(`add button clicked `)
-                            this.props.addQ(quarter)
+                            this.props.addAQuarter(quarter)
                             }}> Add this quarter id # {quarter}</button>
 
                         <button type="button"
                             className="btn btn-success"
                             onClick={() => {
-                                // this.props.addQ(quarter)
-                                this.props.history.push(`/collection/1/add`)}
+                                console.log("bloopy bloop bloop")
+                                document.location.href='http://localhost:3000/collection/add'
+                                // this.props.addAQuarter(quarter)
+                                // this.props.history.push(`/collection/{this.props.collections/}/add`)
+                            }
                             }>
                                 Add this Quarter
                         </button>

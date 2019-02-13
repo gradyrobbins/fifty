@@ -16,7 +16,7 @@ class HasCard extends Component {
            this.setState({quarters : this.props.quarters})
     }
     render() {
-        // console.log("<HasCard /> props =", this.props)
+        console.log("<HasCard /> props =", this.props)
         return (
             <React.Fragment>
                 <br/>
@@ -40,8 +40,9 @@ class HasCard extends Component {
 
                             }}> Edit this quarter# {quarter.id}</button>
 
-                        <button id={quarter.id} onClick={() => {console.log(`delete button clicked `)
-
+                        <button id={quarter.id} onClick={() => {
+                            console.log(`delete button clicked `)
+                            this.props.deleteQ(quarter.id)
                             }}> Delete this quarter# {quarter.id}</button>
                     </div>
 

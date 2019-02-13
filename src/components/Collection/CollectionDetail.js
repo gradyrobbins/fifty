@@ -87,6 +87,7 @@ render() {
                         // {...props}
                         quarters={this.state.userSpecific}
                         getASpecificCollection={this.fetchSpecificCollection}
+                        deleteQ={this.props.deleteQ}
                         />
                 <br/>
                 <br/>

@@ -87,6 +87,7 @@ export default class ApplicationViews extends Component {
                               collections={this.state.collections}
                               matchlist={this.state.matchlist}
                               addQ={this.addQ}
+                              deleteQ={this.deleteQ}
                               />
                       </React.Fragment>
                 }} />

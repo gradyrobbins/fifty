@@ -23,7 +23,7 @@ class CollectionsList extends Component {
                                 {collection.collectorsName}  </button>
 
                             <br/>
-                            <h4> &lt; Progress Bar /&gt; goes here </h4>
+                            <h4> &lt; Progress Bar /&gt; coming soon  </h4>
                         </div>
                     )
                 }

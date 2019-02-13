@@ -38,13 +38,7 @@ export default class AddAQuarterForm extends Component {
 
     addnewQ = evt => {
         evt.preventDefault()
-
             const item = {
-                // stateId: this.state.stateId,
-                // user_id: this.state.user_id,
-
-
-
             }
 
             // Create the quarter and redirect user to their collection
@@ -72,8 +66,7 @@ export default class AddAQuarterForm extends Component {
                         }
                         </select>
                     </div>
-                <br/>
-                <br/>
+
                     <div className="form-group">
                         <label htmlFor="state_id">Add a new State to your collection</label>
                         <select defaultValue="USAs" name="quarter" id="quarter"

@@ -1,14 +1,17 @@
 import React, { Component } from "react"
 import "./AddAQuarterForm.css"
 
+let bloop = localStorage.getItem("id")
+
+console.log (bloop)
 export default class AddAQuarterForm extends Component {
     // Set initial state
     state = {
-        id: [],
-      usaId: [],
-      collectionId: [],
-      userId:[],
-      notes: ""
+
+      usaId: "",
+      collectionId: "",
+      notes: "",
+      userId: ""
     }
 
     // Update state whenever an input field is edited
@@ -39,10 +42,15 @@ export default class AddAQuarterForm extends Component {
     addnewQ = evt => {
         evt.preventDefault()
             const item = {
+                collectionId: this.state.collectionId,
+                usaId: this.state.usaId,
+                notes: this.state.notes,
+                userId: localStorage.getItem("id")
             }
 
             // Create the quarter and redirect user to their collection
-            this.props.addnewQ(item).then(() => this.props.history.push("/collections"))
+            this.props.addQ(item)
+            // .then(() => this.props.history.push("/collections"))
 
     }
 
@@ -54,40 +62,41 @@ export default class AddAQuarterForm extends Component {
                         <br/>
                         <br/>
                         <br/>
-                <form className="AddAQuarterForm">
+                <form className="AddAQuarterForm" >
 
                     <div className="form-group">
                         <label htmlFor="collection">Whose collection?</label>
-                        <select defaultValue="niece/nephew" name="collection" id="collection"
+                        <select defaultValue="niece/nephew" name="collection" id="collectionId"
                                 onChange={this.handleFieldChange}>
                             <option value="">Select whose collection you want to add a quarter to</option>
                         {
-                            this.props.collections.map(e => <option key={e.id} id={e.id}>{e.collectorsName}</option>)
+                            this.props.collections.map(e => <option value={e.id} key={e.id} id={e.id}>{e.collectorsName}</option>)
                         }
                         </select>
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="state_id">Add a new State to your collection</label>
-                        <select defaultValue="USAs" name="quarter" id="quarter"
+                        <label htmlFor="usaId">Add a new State to your collection</label>
+                        <select defaultValue="USAs" name="quarter" id="usaId"
                                 onChange={this.handleFieldChange}>
                             <option value="">Select which State quarter to add</option>
                         {
-                            this.props.usas.map(e => <option key={e.id} id={e.id}>{e.name}</option>)
+                            this.props.usas.map(e => <option value={e.id} key={e.id} id={e.id}>{e.name}</option>)
                         }
                         </select>
 
                     </div>
                     <div className="form-group">
-                        <label htmlFor="user_id">notes?</label>
+                        <label htmlFor="notes">notes?</label>
                         <input type="text" required={true}
                             onChange={this.handleFieldChange}
-                            id="user_id"
+                            id="notes"
                             placeholder="add notes here" />
                     </div>
-                    <button type="submit" onClick={
-                        console.log("console log the object that captures the values that user sets from the dropdowns")
-                        // this.addnewQ
+                    <button type="button" onClick={
+                        this.addnewQ
+                        // console.log("How do i console log the object that is being captured  the values that user sets from the dropdowns", )
+
                     }
                     className="btn btn-primary">Submit</button>
 

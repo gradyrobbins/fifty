@@ -33,6 +33,15 @@ export default class ApplicationViews extends Component {
       specificCollection: specificCollection
     }))
 
+    addQ = quarter =>{
+    return DataManager.add("quarters", quarter)
+    // .then(() => this.fetchSpecificCollection(this.props.match.params.collectionId))
+
+    .then(() => DataManager.getAll("quarters"))
+    // .then(quarters => this.setState({
+    //   quarters: quarters
+    // }))
+  }
 
 
   componentDidMount() {

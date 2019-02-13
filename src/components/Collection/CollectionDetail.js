@@ -39,10 +39,10 @@ export default class CollectionDetail extends Component {
     addQ = quarter => DataManager.add("quarters", quarter)
     .then(() => this.fetchSpecificCollection(this.props.match.params.collectionId))
 
-    // .then(() => DataManager.getAll("quarters"))
-    // .then(quarters => this.setState({
-    //   quarters: quarters
-    // }))
+    .then(() => DataManager.getAll("quarters"))
+    .then(quarters => this.setState({
+      quarters: quarters
+    }))
 
 
 
@@ -117,7 +117,7 @@ render() {
                         addAQuarter={this.props.addAQuarter}
                         collections={this.props.collections}
                         usas={this.props.usas}
-                        // addQ={this.props.addQ}
+                        addQ={this.addQ}
 
                 />
 

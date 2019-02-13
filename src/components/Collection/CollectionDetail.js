@@ -1,11 +1,8 @@
 import React, { Component } from "react"
-// import { Link } from "react-router-dom";
 import HasCard from "./Has/HasCard";
 import NeedsCard from "./Needs/NeedsCard"
 import DataManager from "../../modules/DataManager";
-
-
-
+import './CollectionDetail.css'
 
 export default class CollectionDetail extends Component {
     state ={
@@ -14,29 +11,23 @@ export default class CollectionDetail extends Component {
         needsList: []
     }
 
-
-     fetchSpecificCollection = (arg) => {
+    fetchSpecificCollection = (arg) => {
         const newState = {}
-    DataManager.getASpecificCollection(arg)
-    .then(userSpecific => newState.userSpecific = userSpecific)
-    .then( (userSpecific) => console.log(" quarters that belong to this collectionId's set: ", userSpecific))
-
-    .then(() => this.setState(newState))
+            DataManager.getASpecificCollection(arg)
+            .then(userSpecific => newState.userSpecific = userSpecific)
+            .then( (userSpecific) => console.log(" quarters that belong to this collectionId's set: ", userSpecific))
+            .then(() => this.setState(newState))
     }
 
-  componentDidMount() {
-    this.fetchSpecificCollection(this.props.match.params.collectionId)
-};
-
-  componentDidUpdate(prevProps) {
-
-    if(prevProps.match.params.collectionId !== this.props.match.params.collectionId) {
-
+    componentDidMount() {
         this.fetchSpecificCollection(this.props.match.params.collectionId)
-    }
+    };
 
-};
-
+    componentDidUpdate(prevProps) {
+        if(prevProps.match.params.collectionId !== this.props.match.params.collectionId) {
+            this.fetchSpecificCollection(this.props.match.params.collectionId)
+        }
+    };
 
 //  below, use this.state.userSpecific to map onto <Has Card />
 
@@ -72,7 +63,8 @@ render() {
             <React.Fragment>
                 <br/>
                 <br/>
-                <section className="collection">
+                <div className="collection">
+                <section >
                     <div key={collection.id} className="card">
                         <h3>{collection.collectorsName}'s Collection: </h3>
                         <br/>
@@ -108,6 +100,7 @@ render() {
 
                 />
 
+            </div>
             </React.Fragment>
         )
     }

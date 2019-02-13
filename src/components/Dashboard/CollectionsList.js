@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
 class CollectionsList extends Component {
     render() {
@@ -9,7 +9,6 @@ class CollectionsList extends Component {
             <div>
                 <br/>
                 <br/>
-
                 <section className="collections">
                 {
                     this.props.collections.map(collection =>
@@ -22,21 +21,13 @@ class CollectionsList extends Component {
                                 }}
                                 >
                                 {collection.collectorsName}  </button>
+
                             <br/>
+                            <h4> &lt; Progress Bar /&gt; goes here </h4>
                         </div>
                     )
                 }
                 </section>
-
-
-                {/* <button className="btn btn-primary" onClick={() => {
-                localStorage.clear("credentials")
-                document.location.href='http://localhost:3000'
-                }}
-                >LOG OUT</button> */}
-
-
-
 
              </div>
         )

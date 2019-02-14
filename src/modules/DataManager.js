@@ -16,6 +16,18 @@ export default Object.create(null, {
             .then(result => result.json())
         }
     },
+
+    getAllExpand: {
+        value: (resource, id) => {
+            return fetch(`${remoteURL}/${resource}/${id}?_expand=usa`)
+            .then(result => result.json())
+        }
+    },
+
+
+    // http://localhost:3000/collection/1?_expand=usa
+
+
     //commented out; not in use 2/8/19
     // getAllUserData: {
     //     value: (resource, id) => {

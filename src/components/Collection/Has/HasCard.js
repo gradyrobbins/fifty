@@ -1,18 +1,24 @@
 import React, { Component } from 'react'
 import './HasCard.css'
 import stock_qtr from './../../img/stock_Qtr_Img.png'
+import QDetail from '../QDetail';
 
 class HasCard extends Component {
 
     state={
-        quarters: []
+        quarters: [],
+        singleQ: []
+
     }
     componentDidUpdate(prevProps) {
        if(prevProps.quarters !== this.props.quarters) {
            this.setState({quarters : this.props.quarters})
+       } else if(prevProps.singleQ !== this.props.singleQ) {
+           this.setState({singleQ: this.props.singleQ})
        }
     }
     componentDidMount() {
+        console.log("this.props", this.props)
            this.setState({quarters : this.props.quarters})
     }
     render() {
@@ -37,21 +43,26 @@ class HasCard extends Component {
                         <p>Notes: {quarter.notes}</p>
                         <br/>
                         <button key={quarter.id} id="edit" onClick={() => {
-                            console.log(`edit button clicked `)
+
+                            this.props.fetchSpecificQ(quarter.id)
                             // this.props.history.push(`/collection/{collectionId}/{quarter.id}`)
 
-                            }}> View/Edit this quarter# {quarter.id}</button>
+                            }}> View and update notes on this quarter</button>
 
                         <button id={quarter.id} onClick={() => {
                             // console.log(`delete button clicked `)
                             this.props.deleteQ(quarter.id)
-                            }}> Delete this quarter# {quarter.id}</button>
+                            }}> Delete this quarter</button>
                     </div>
 
                 )
             }
             </section>
-
+            <QDetail
+                    editQ={this.editQ}
+                    singleQ={this.state.singleQ}
+                    // getASpecificQ={ this.props.fetchSpecificQ(quarter.id)}
+            />
              </div>
              </React.Fragment>
         )

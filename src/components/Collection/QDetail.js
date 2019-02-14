@@ -8,7 +8,7 @@ import './CollectionDetail.css'
 export default class QDetail extends Component {
     state ={
 
-        specificQ: []
+        // specificQ: []
     }
 
 
@@ -35,7 +35,7 @@ render() {
         // const specificQ = this.props.quarters.find(a => a.id === parseInt(this.props.quarters.id)) || {}
 
 
-
+console.log("this.props.singleQ", this.props.singleQ)
 
         return (
             <React.Fragment>
@@ -44,22 +44,45 @@ render() {
                 <div className="collection">
                 <section >
                     <div  className="card">
-                        {/* <h3>{specificQ}</h3> */}
                         <br/>
                     <h3>One Specific Qtr Card renders here</h3>
                     <img alt="stock-qtr" src={stock_qtr} className="icon-qtr" />
+                    {/* <h6>{this.fetchSpecificQ}</h6> */}
                     <h5>Notes:  (this is the field that will be editable)</h5>
+                {/* <h5>this.props.singleQ</h5> */}
                         <button type="button"
                             className="btn btn-success"
                             onClick={() => {
-                                this.props.history.push(`/collection/edit`)}
-                            }>
+                                // this.fetchSpecificQ(4)
+                                // this.props.history.push(`/collection/edit`)}
+                            }}>
                                 edit this Quarter
                         </button>
                     </div>
                 </section>
 
                 <br/>
+                <section className="collections">
+                {
+                    this.props.singleQ.map(q =>
+                        <div key={q.id} className="q" >
+                            <br/>
+                            <p>{q.notes}</p>
+                            <button className="btn btn-primary"  id={q.id} onClick={() =>
+                                {
+                                // this.props.history.push(`/collection/${collection.id}`)
+                                    console.log(` button # ${q.id} clicked`)
+                                }}
+                                >
+                                edit </button>
+
+                            <br/>
+                            <h4> &lt; Progress Bar /&gt; coming soon  </h4>
+                            <h5> (80% complete) </h5>
+                        </div>
+                    )
+                }
+                </section>
                 <br/>
 
 

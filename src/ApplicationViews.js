@@ -37,7 +37,6 @@ export default class ApplicationViews extends Component {
   addQ = quarter =>{
   return DataManager.add("quarters", quarter)
   // .then(() => this.fetchSpecificCollection(this.props.match.params.collectionId))
-
   .then(() => DataManager.getAll("quarters"))
     // .then(quarters => this.setState({
     //   quarters: quarters
@@ -95,10 +94,6 @@ export default class ApplicationViews extends Component {
 
             <Route path="/collection/:collectionId(\d+)" render={props => {
                 return <React.Fragment>
-                              {/* <CollectionsList
-                            {...props}
-                            collections={this.state.collections}
-                            /> */}
 
                               <CollectionDetail
                               {...props}
@@ -107,26 +102,20 @@ export default class ApplicationViews extends Component {
                               matchlist={this.state.matchlist}
                               addQ={this.addQ}
                               deleteQ={this.deleteQ}
-                              getASpecificQ={this.getASpecificQ}
+                              editQ={this.editQ}
+                              // singleQ={this.state.singleQ}
+                              // getASpecificQ={this.getASpecificQ}
                               />
+                              {/* <QDetail
+                              {...props}
+                    // singleQ={this.state.singleQ}
+
+                /> */}
                       </React.Fragment>
                 }} />
             <Route path="/collection/:collectionId(\d+)/:quarterId(\d+)" render={props => {
                 return <React.Fragment>
-                              {/* <CollectionsList
-                            {...props}
-                            collections={this.state.collections}
-                          /> */}
 
-                              {/* <CollectionDetail
-                              {...props}
-                              quarters={this.state.quarters}
-                              collections={this.state.collections}
-                              matchlist={this.state.matchlist}
-                              addQ={this.addQ}
-                              deleteQ={this.deleteQ}
-                              getASpecificQ={this.getASpecificQ}
-                              /> */}
                           <QDetail
                           editQ={this.editQ}
                           getASpecificQ={this.getASpecificQ}
@@ -141,12 +130,14 @@ export default class ApplicationViews extends Component {
 
                               {/* <CollectionDetail
                               {...props}
+                              {...props}
                               quarters={this.state.quarters}
                               collections={this.state.collections}
                               addQ={this.addQ}
                             /> */}
                             <AddAQuarterForm
 
+                              {...props}
                               collections={this.state.collections}
                               addQ={this.addQ}
                               usas={this.state.usas}

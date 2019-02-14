@@ -36,7 +36,7 @@
       "Statehood": "January 9, 1788",
       "Capital": "Hartford",
       "Nicknames": "Nutmeg State, Constitution State",
-      "Motto": "Qui Transtulit Sustinet (He who transplanted still sustains",
+      "Motto": "Qui Transtulit Sustinet (He who transplanted still sustains)",
       "Flower": "Mountain Laurel",
       "Bird": "American Robin"
     },
@@ -728,13 +728,33 @@
       "notes": "Molly Patrick from Uncle G"
     },
     {
-      "collectionId": 3,
-      "usaId": 21,
-      "notes": "Hi Andrew",
+      "collectionId": 2,
+      "usaId": 4,
+      "notes": "wow",
       "userId": 1,
-      "id": 12
+      "id": 13
+    },
+    {
+      "collectionId": 2,
+      "usaId": 2,
+      "notes": "bloop",
+      "userId": 1,
+      "id": 14
+    },
+    {
+      "collectionId": 6,
+      "usaId": 49,
+      "notes": "wow",
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "collectionId": 2,
+      "usaId": 26,
+      "notes": "Uncle Grady found this",
+      "userId": 1,
+      "id": 16
     }
-
   ],
   "familyCollection": [
     {

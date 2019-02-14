@@ -42,24 +42,7 @@ console.log("this.props.singleQ", this.props.singleQ)
                 <br/>
                 <br/>
                 <div className="collection">
-                <section >
-                    <div  className="card">
-                        <br/>
-                    <h3>One Specific Qtr Card renders here</h3>
-                    <img alt="stock-qtr" src={stock_qtr} className="icon-qtr" />
-                    {/* <h6>{this.fetchSpecificQ}</h6> */}
-                    <h5>Notes:  (this is the field that will be editable)</h5>
-                {/* <h5>this.props.singleQ</h5> */}
-                        <button type="button"
-                            className="btn btn-success"
-                            onClick={() => {
-                                // this.fetchSpecificQ(4)
-                                // this.props.history.push(`/collection/edit`)}
-                            }}>
-                                edit this Quarter
-                        </button>
-                    </div>
-                </section>
+
 
                 <br/>
                 <section className="collections">
@@ -67,18 +50,18 @@ console.log("this.props.singleQ", this.props.singleQ)
                     this.props.singleQ.map(q =>
                         <div key={q.id} className="q" >
                             <br/>
-                            <p>{q.notes}</p>
+                            <img alt="stock-qtr" src={stock_qtr} className="icon-qtr" />
+                            <p>Notes: {q.notes}</p>
                             <button className="btn btn-primary"  id={q.id} onClick={() =>
                                 {
-                                // this.props.history.push(`/collection/${collection.id}`)
+                                    // this.props.history.push(`/collection/${collection.id}`)
                                     console.log(` button # ${q.id} clicked`)
                                 }}
                                 >
-                                edit </button>
+                                Edit </button>
 
                             <br/>
-                            <h4> &lt; Progress Bar /&gt; coming soon  </h4>
-                            <h5> (80% complete) </h5>
+
                         </div>
                     )
                 }
@@ -86,13 +69,7 @@ console.log("this.props.singleQ", this.props.singleQ)
                 <br/>
 
 
-                {/* <HasCard
-                        // {...props}
-                        quarters={this.state.userSpecific}
-                        getASpecificCollection={this.fetchSpecificCollection}
-                        deleteQ={this.deleteQ}
-                        /> */}
-                <br/>
+
                 <br/>
 
 

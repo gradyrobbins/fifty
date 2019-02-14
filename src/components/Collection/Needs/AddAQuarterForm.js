@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import "./AddAQuarterForm.css"
 
-// let bloop = localStorage.getItem("credentials")
+let credentials = JSON.parse(localStorage.getItem('credentials'))
+console.log ("bloop", Object.values(credentials)[3])
 
-// console.log (bloop.id)
 export default class AddAQuarterForm extends Component {
     // Set initial state
     state = {
@@ -11,7 +11,7 @@ export default class AddAQuarterForm extends Component {
       usaId: "",
       collectionId: "",
       notes: "",
-      userId: "",
+      userId: Object.values(JSON.parse(localStorage.getItem('credentials')))[3]
     }
 
     // Update state whenever an input field is edited
@@ -38,14 +38,15 @@ export default class AddAQuarterForm extends Component {
     //         this.props.addQ(quarter).then(() => this.props.history.push("/collections"))
     //     }
     // }
+    // parseInt(text, 10)
 
     addnewQ = evt => {
         evt.preventDefault()
             const item = {
-                collectionId: this.state.collectionId,
-                usaId: this.state.usaId,
+                collectionId: parseInt((this.state.collectionId), 10),
+                usaId: parseInt((this.state.usaId), 10),
                 notes: this.state.notes,
-                userId: localStorage.getItem("credentials").id
+                userId: Object.values(JSON.parse(localStorage.getItem('credentials')))[3]
             }
 
             // Create the quarter and redirect user to their collection

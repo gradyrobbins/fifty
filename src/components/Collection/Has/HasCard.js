@@ -59,7 +59,7 @@ class HasCard extends Component {
             }
             </section>
             <QDetail
-                    editQ={this.editQ}
+                    editQ={this.props.editQ}
                     singleQ={this.state.singleQ}
                     // getASpecificQ={ this.props.fetchSpecificQ(quarter.id)}
             />

@@ -655,28 +655,28 @@
       "usaId": 8,
       "collectionId": 1,
       "userId": 3,
-      "notes": "Toby"
+      "notes": "From Uncle Grady"
     },
     {
       "id": 2,
       "usaId": 4,
       "collectionId": 1,
       "userId": 3,
-      "notes": "Toby2"
+      "notes": "From Uncle Seth"
     },
     {
       "id": 3,
       "usaId": 18,
       "collectionId": 2,
       "userId": 3,
-      "notes": "Nate"
+      "notes": "From Aunt Julie"
     },
     {
       "id": 4,
       "usaId": 14,
       "collectionId": 2,
       "userId": 3,
-      "notes": "Nate2"
+      "notes": "From Aunt Laura"
     },
     {
       "id": 5,
@@ -690,14 +690,14 @@
       "usaId": 24,
       "collectionId": 3,
       "userId": 3,
-      "notes": "Andrew2 from Honey and Papa"
+      "notes": "From Honey and Papa"
     },
     {
       "id": 7,
       "usaId": 38,
       "collectionId": 4,
       "userId": 3,
-      "notes": "Laney from Grandma"
+      "notes": "From Grandma"
     },
     {
       "id": 8,
@@ -726,35 +726,8 @@
       "collectionId": 6,
       "userId": 3,
       "notes": "Molly Patrick from Uncle G"
-    },
-    {
-      "collectionId": 2,
-      "usaId": 4,
-      "notes": "wow",
-      "userId": 1,
-      "id": 13
-    },
-    {
-      "collectionId": 2,
-      "usaId": 2,
-      "notes": "bloop",
-      "userId": 1,
-      "id": 14
-    },
-    {
-      "collectionId": 6,
-      "usaId": 49,
-      "notes": "wow",
-      "userId": 1,
-      "id": 15
-    },
-    {
-      "collectionId": 2,
-      "usaId": 26,
-      "notes": "Uncle Grady found this",
-      "userId": 1,
-      "id": 16
     }
+
   ],
   "familyCollection": [
     {

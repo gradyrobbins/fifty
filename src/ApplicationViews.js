@@ -44,7 +44,7 @@ export default class ApplicationViews extends Component {
     // .then(() => this.props.history.push("/collections"))
   }
 
-  editQ = (id, item) => DataManager.edit("collection", id, item)
+  editQ = (id, item) => DataManager.edit("quarters", id, item)
     .then(() => DataManager.getAll("quarters"))
     .then(quarters => this.setState({
       quarters: quarters

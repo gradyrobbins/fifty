@@ -6,19 +6,26 @@ import DataManager from "../../modules/DataManager";
 import './CollectionDetail.css'
 
 export default class QDetail extends Component {
-    state ={
 
-        // specificQ: []
+
+    state = {
+
     }
+// update state upon edits to fields
+handleFieldChange = evt => {
+    const stateToChange = {}
+    stateToChange[evt.target.id] = evt.target.value
+    this.setState(stateToChange)
+}
 
 
-    fetchSpecificQ = (quarterId) => {
-        const newState = {}
-            DataManager.getASpecificQ(quarterId)
-            .then(specificQ => newState.specificQ = specificQ)
-            .then( (specificQ) => console.log("  this specificQ's id: ", specificQ.id))
-            .then(() => this.setState(newState))
-    }
+    // fetchSpecificQ = (quarterId) => {
+    //     const newState = {}
+    //         DataManager.getASpecificQ(quarterId)
+    //         .then(specificQ => newState.specificQ = specificQ)
+    //         .then( (specificQ) => console.log("  this specificQ's id: ", specificQ.id))
+    //         .then(() => this.setState(newState))
+    // }
 
 
 
@@ -35,7 +42,7 @@ render() {
         // const specificQ = this.props.quarters.find(a => a.id === parseInt(this.props.quarters.id)) || {}
 
 
-console.log("this.props.singleQ", this.props.singleQ)
+// console.log("this.props.singleQ", this.props.singleQ)
 
         return (
             <React.Fragment>
@@ -43,6 +50,7 @@ console.log("this.props.singleQ", this.props.singleQ)
                 <br/>
                 <div className="collection">
 
+                <img alt="stock-qtr" src={stock_qtr} className="icon-qtr" />
 
                 <br/>
                 <section className="collections">
@@ -50,13 +58,18 @@ console.log("this.props.singleQ", this.props.singleQ)
                     this.props.singleQ.map(q =>
                         <div key={q.id} className="q" >
                             <br/>
-                            <img alt="stock-qtr" src={stock_qtr} className="icon-qtr" />
-                            <p>Notes: {q.notes}</p>
+                        <div className="form-group">
+                            <label htmlFor="setup">Edit notes</label>
+                            <input type="text" required={true}
+                                onChange={this.handleFieldChange}
+                                id="notes"
+                                placeholder={q.notes} />
+                        </div>
                             <button className="btn btn-primary"  id={q.id} onClick={() =>
                                 {
-                                    // this.props.history.push(`/collection/${collection.id}`)
-                                    console.log(` button # ${q.id} clicked`)
-                                }}
+                                    this.props.editQ(1 , this.state.notes)
+                                }
+                            }
                                 >
                                 Edit </button>
 
@@ -66,7 +79,6 @@ console.log("this.props.singleQ", this.props.singleQ)
                     )
                 }
                 </section>
-                <br/>
 
 
 

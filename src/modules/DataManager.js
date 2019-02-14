@@ -73,10 +73,10 @@ export default Object.create(null, {
         }
     },
     edit: {
-        value: (id, item) => {
+        value: (resource, id, item) => {
             // console.log(item, "item")
             // console.log(`${remoteURL}/${resource}/${id}`)
-            return fetch(`${remoteURL}/collection/${id}`, {
+            return fetch(`${remoteURL}/${resource}/${id.notes}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"

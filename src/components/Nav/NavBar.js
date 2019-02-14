@@ -9,7 +9,10 @@ class NavBar extends Component {
                 <ul className="nav nav-pills">
 
                     <li className="nav-item">
-                        <Link className="nav-link" to="/login">Login to View All Collections</Link>
+                        <Link className="nav-link" to="/login">Login </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/collections">View All Collections</Link>
                     </li>
                     <span></span>
                     <li className="nav-item">

@@ -31,6 +31,13 @@ export default Object.create(null, {
         }
     },
 
+    getASpecificQ: {
+        value: (id) => {
+            return fetch(`${remoteURL}/quarters?id=${id}`)
+            .then(result => result.json())
+        }
+    },
+
 
 
 
@@ -54,10 +61,10 @@ export default Object.create(null, {
         }
     },
     edit: {
-        value: (resource, id, item) => {
+        value: (id, item) => {
             // console.log(item, "item")
             // console.log(`${remoteURL}/${resource}/${id}`)
-            return fetch(`${remoteURL}/${resource}/${id}`, {
+            return fetch(`${remoteURL}/collection/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"

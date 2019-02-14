@@ -24,6 +24,7 @@ class CollectionsList extends Component {
 
                             <br/>
                             <h4> &lt; Progress Bar /&gt; coming soon  </h4>
+                            <h5> (80% complete) </h5>
                         </div>
                     )
                 }

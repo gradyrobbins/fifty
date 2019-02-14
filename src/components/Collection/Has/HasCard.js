@@ -36,9 +36,11 @@ class HasCard extends Component {
                         <br/>
                         <p>Notes: {quarter.notes}</p>
                         <br/>
-                        <button key={quarter.id} id="edit" onClick={() => {console.log(`edit button clicked `)
+                        <button key={quarter.id} id="edit" onClick={() => {
+                            console.log(`edit button clicked `)
+                            // this.props.history.push(`/collection/{collectionId}/{quarter.id}`)
 
-                            }}> Edit this quarter# {quarter.id}</button>
+                            }}> View/Edit this quarter# {quarter.id}</button>
 
                         <button id={quarter.id} onClick={() => {
                             // console.log(`delete button clicked `)

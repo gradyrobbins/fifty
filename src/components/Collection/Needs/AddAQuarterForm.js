@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import "./AddAQuarterForm.css"
 
 let credentials = JSON.parse(localStorage.getItem('credentials'))
-console.log ("bloop", Object.values(credentials)[3])
+// console.log ("bloop", Object.values(credentials)[3])
 
 export default class AddAQuarterForm extends Component {
     // Set initial state
@@ -11,7 +11,7 @@ export default class AddAQuarterForm extends Component {
       usaId: "",
       collectionId: "",
       notes: "",
-      userId: Object.values(JSON.parse(localStorage.getItem('credentials')))[3]
+      userId: Object.values(credentials)[3]
     }
 
     // Update state whenever an input field is edited
@@ -38,7 +38,7 @@ export default class AddAQuarterForm extends Component {
     //         this.props.addQ(quarter).then(() => this.props.history.push("/collections"))
     //     }
     // }
-    // parseInt(text, 10)
+
 
     addnewQ = evt => {
         evt.preventDefault()
@@ -51,7 +51,7 @@ export default class AddAQuarterForm extends Component {
 
             // Create the quarter and redirect user to their collection
             this.props.addQ(item)
-            // .then(() => this.props.history.push("/collections"))
+
 
     }
 
@@ -96,7 +96,8 @@ export default class AddAQuarterForm extends Component {
                     </div>
                     <button type="button" onClick={
                         this.addnewQ
-                        // console.log("How do i console log the object that is being captured  the values that user sets from the dropdowns", )
+                        // location.href='http://localhost:3000/collections'
+                        
 
                     }
                     className="btn btn-primary">Submit</button>

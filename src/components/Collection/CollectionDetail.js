@@ -18,6 +18,15 @@ export default class CollectionDetail extends Component {
             .then( (userSpecific) => console.log(" quarters that belong to this collectionId's set: ", userSpecific))
             .then(() => this.setState(newState))
     }
+    fetchSpecificQ = (quarterId) => {
+        const newState = {}
+            DataManager.getASpecificQuarter(quarterId)
+        .then(singleQ => newState.singleQ = singleQ)
+        .then( (singleQ) => console.log(" quarters that belong to this collectionId's set: ", singleQ))
+            .then(() => this.setState(newState))
+    }
+
+
 
     componentDidMount() {
         this.fetchSpecificCollection(this.props.match.params.collectionId)
@@ -105,12 +114,13 @@ render() {
                         quarters={this.state.userSpecific}
                         getASpecificCollection={this.fetchSpecificCollection}
                         deleteQ={this.deleteQ}
+                        getASpecificQuarter={this.getASpecificQuarter}
                         />
                 <br/>
                 <br/>
 
                 <br/>
-                <NeedsCard
+                {/* <NeedsCard
                         // {...props}
                         quarters={this.state.needsList}
                         matchlist={this.state.matchlist}
@@ -119,7 +129,7 @@ render() {
                         usas={this.props.usas}
                         addQ={this.addQ}
 
-                />
+                /> */}
 
             </div>
             </React.Fragment>

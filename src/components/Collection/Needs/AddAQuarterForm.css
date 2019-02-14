@@ -1,0 +1,16 @@
+.AddAQuarterForm {
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid burlywood;
+}
+
+.form-group {
+
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid burlywood;
+}

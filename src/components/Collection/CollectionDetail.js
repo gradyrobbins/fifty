@@ -32,8 +32,19 @@ export default class CollectionDetail extends Component {
     deleteQ = id => DataManager.delete("quarters", id)
     .then(() => this.fetchSpecificCollection(this.props.match.params.collectionId))
     // .then(quarters => this.setState({
-    //   userSpecific: quarters
-    // }))
+        //   userSpecific: quarters
+        // }))
+
+
+    addQ = quarter => DataManager.add("quarters", quarter)
+    .then(() => this.fetchSpecificCollection(this.props.match.params.collectionId))
+
+    .then(() => DataManager.getAll("quarters"))
+    .then(quarters => this.setState({
+      quarters: quarters
+    }))
+
+
 
 //  below, use this.state.userSpecific to map onto <Has Card />
 
@@ -78,7 +89,7 @@ render() {
                         <button type="button"
                             className="btn btn-success"
                             onClick={() => {
-                                this.props.history.push(`/collection/${collection.id}/add`)}
+                                this.props.history.push(`/collection/add`)}
                             }>
                                 Add a new Quarter to {collection.collectorsName}'s Collection
                         </button>
@@ -100,10 +111,13 @@ render() {
 
                 <br/>
                 <NeedsCard
+                        // {...props}
                         quarters={this.state.needsList}
                         matchlist={this.state.matchlist}
-                        // addAQuarter={this.props.addAQuarter}
-                        addQ={this.props.addQ}
+                        addAQuarter={this.props.addAQuarter}
+                        collections={this.props.collections}
+                        usas={this.props.usas}
+                        addQ={this.addQ}
 
                 />
 

@@ -5,6 +5,7 @@ import stock_qtr from './../img/stock_Qtr_Img.png'
 import DataManager from "../../modules/DataManager";
 import './CollectionDetail.css'
 
+// console.log("this.props", this.props)
 export default class QDetail extends Component {
 
 
@@ -32,17 +33,28 @@ handleFieldChange = evt => {
     componentDidMount() {
         // this.fetchSpecificQ(this.props.quarters.id)
     };
+    //STAGE 1 - Get the id of the item.
+    seeksInterestsId(id) {
+      return fetch(`http://localhost:5002/quarters/${id}`)
+      .then(response => response.json())
+      // .then(response => form.renderEditForm(response))
+    };
+    // //STAGE 2 - Do some stuff to the item.
+    thingsChange(id, editedObject) {
+      return fetch(`http://localhost:5002/quarters/${id.notes}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(editedObject)
+      })
+    };
+
 
 render() {
-    /*
-    Using the route parameter, find whose collection you want to display by looking at the `this.props.collections` that was passed down from ApplicationViews
-    */
-   //​​​​​​​​​​​​​​react-router-dom stores the route params in the component’s props and it enables us to access this parameter via this.props.match.params.collectionId. Once we have the collectionId, we then find the collection with a matching ID in the quarter array, and set it in the component state as userSpecific. This is handled in DataManager.getASpecificCollection.
+    //***** TEST *****/
+      // EDIT USER - 2 STAGES
 
-        // const specificQ = this.props.quarters.find(a => a.id === parseInt(this.props.quarters.id)) || {}
-
-
-// console.log("this.props.singleQ", this.props.singleQ)
 
         return (
             <React.Fragment>
@@ -67,7 +79,8 @@ render() {
                         </div>
                             <button className="btn btn-primary"  id={q.id} onClick={() =>
                                 {
-                                    this.props.editQ(1 , this.state.notes)
+                                    console.log("this.state.notes", this.state.notes)
+
                                 }
                             }
                                 >

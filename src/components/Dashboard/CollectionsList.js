@@ -10,11 +10,19 @@ class CollectionsList extends Component {
 
                 <br/>
                 <br/>
+
                 <br/>
 
                 <section className="collections">
+                <br/>
+{/* <nav>
+<ul className="nav nav-pills"> */}
                 {
                     this.props.collections.map(collection =>
+
+
+                            // <Link className="nav-link" to=/collection/${collection.id}>Login
+                            // </Link>
 
                             <button key={collection.id} className="btn btn-primary"  id={collection.id} onClick={() =>
                                 {
@@ -27,6 +35,8 @@ class CollectionsList extends Component {
 
                     )
                 }
+                {/* </ul>
+</nav> */}
                 </section>
 
              </React.Fragment>

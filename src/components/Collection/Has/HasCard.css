@@ -1,9 +1,9 @@
 .HAScollections {
-    display: flex;
+    /* display: flex; */
     border: 2px solid black;
     padding: 20px;
     margin: 20px;
-    align-items: wrap;
+    /* align-items: wrap; */
     /* justify-content: space-evenly; */
 }
 

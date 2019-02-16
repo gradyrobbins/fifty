@@ -1,20 +1,22 @@
 import React, { Component } from 'react'
 // import { Link } from "react-router-dom"
-import "bootstrap/dist/css/bootstrap.min.css"
+import "./CollectionsList.css"
 class CollectionsList extends Component {
     render() {
         // console.log("this.props.collections", this.props.collections)
 
         return (
-            <div>
+            <React.Fragment>
+
                 <br/>
                 <br/>
+                <br/>
+
                 <section className="collections">
                 {
                     this.props.collections.map(collection =>
-                        <div key={collection.id} className="collection" >
-                            <br/>
-                            <button className="btn btn-primary"  id={collection.id} onClick={() =>
+
+                            <button key={collection.id} className="btn btn-primary"  id={collection.id} onClick={() =>
                                 {
                                 this.props.history.push(`/collection/${collection.id}`)
                                     // console.log(` button # ${collection.id} clicked`)
@@ -22,15 +24,12 @@ class CollectionsList extends Component {
                                 >
                                 {collection.collectorsName}  </button>
 
-                            <br/>
-                            <h4> &lt; Progress Bar /&gt; coming soon  </h4>
-                            <h5> (80% complete) </h5>
-                        </div>
+
                     )
                 }
                 </section>
 
-             </div>
+             </React.Fragment>
         )
     }
 }

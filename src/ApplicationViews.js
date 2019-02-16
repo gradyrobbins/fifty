@@ -113,7 +113,7 @@ export default class ApplicationViews extends Component {
                 /> */}
                       </React.Fragment>
                 }} />
-            <Route path="/collection/:collectionId(\d+)/:quarterId(\d+)" render={props => {
+            {/* <Route path="/collection/:collectionId(\d+)/:quarterId(\d+)" render={props => {
                 return <React.Fragment>
 
                           <QDetail
@@ -123,7 +123,7 @@ export default class ApplicationViews extends Component {
                                 />
 
                       </React.Fragment>
-                }} />
+                }} /> */}
 
             <Route path="/collection/add" render={props => {
               return <React.Fragment>

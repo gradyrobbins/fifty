@@ -23,10 +23,9 @@ export default class CollectionDetail extends Component {
     fetchSpecificQ = (quarterId) => {
         const newState = {}
             DataManager.getASpecificQ(quarterId)
+            // DataManager.getASpecificQ_expand(quarterId)
         .then(singleQ => { newState.singleQ = singleQ
-
         console.log(" single Q: ??", singleQ)
-
         this.setState(newState)
     })
 

@@ -2,7 +2,7 @@ import React, { Component } from "react"
 // import HasCard from "./Has/HasCard";
 // import NeedsCard from "./Needs/NeedsCard"
 import stock_qtr from './../img/stock_Qtr_Img.png'
-import DataManager from "../../modules/DataManager";
+// import DataManager from "../../modules/DataManager";
 import './CollectionDetail.css'
 
 // console.log("this.props", this.props)
@@ -35,8 +35,10 @@ handleFieldChange = evt => {
     };
     //STAGE 1 - Get the id of the item.
     seeksInterestsId(id) {
-      return fetch(`http://localhost:5002/quarters/${id}`)
+      return fetch(`http://localhost:5002/quarters/${id}?_expand=usa`)
       .then(response => response.json())
+      .then(response => console.log("response", response))
+
       // .then(response => form.renderEditForm(response))
     };
     // //STAGE 2 - Do some stuff to the item.

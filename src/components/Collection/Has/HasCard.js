@@ -11,15 +11,20 @@ class HasCard extends Component {
 
     }
     componentDidUpdate(prevProps) {
-       if(prevProps.quarters !== this.props.quarters) {
-           this.setState({quarters : this.props.quarters})
-       } else if(prevProps.singleQ !== this.props.singleQ) {
-           this.setState({singleQ: this.props.singleQ})
+       if(prevProps.quarters !== this.props.quarters || prevProps.singleQ !== this.props.singleQ ) {
+           this.setState({quarters : this.props.quarters,
+                            singleQ: this.props.singleQ
+        })
        }
+    //    else if(prevProps.singleQ !== this.props.singleQ) {
+    //        this.setState({singleQ: this.props.singleQ})
+    //    }
     }
     componentDidMount() {
         console.log("this.props", this.props)
-           this.setState({quarters : this.props.quarters})
+           this.setState({quarters : this.props.quarters,
+                            singleQ: this.props.singleQ
+        })
     }
     render() {
         console.log("<HasCard /> props =", this.props)
@@ -37,6 +42,7 @@ class HasCard extends Component {
 
                     <div key={quarter.id} id={quarter.id} className="collection" >
                         <p>StateId #: {quarter.usaId} </p>
+                        <p>State Name via _expand: {quarter.name}</p>
                         <br/>
                         <img alt="stock-qtr" src={stock_qtr} className="icon-qtr" />
                         <br/>

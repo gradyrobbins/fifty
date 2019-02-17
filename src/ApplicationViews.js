@@ -118,27 +118,27 @@ export default class ApplicationViews extends Component {
                 }} />
             <Route exact path="/collection/:collectionId(\d+)/add" render={props => {
                 return <React.Fragment>
-                              {/* <CollectionsList
+                              <CollectionsList
                               {...props}
                               collections={this.state.collections}
-                              /> */}
+                              />
                                <AddAQuarterForm
                                 {...props}
                                 collections={this.state.collections}
                                 addQ={this.addQ}
                                 usas={this.state.usas}
                                       />
-                              {/* <CollectionDetail
+                              <CollectionDetail
                               {...props}
                               quarters={this.state.quarters}
                               collections={this.state.collections}
                               matchlist={this.state.matchlist}
                               addQ={this.addQ}
                               deleteQ={this.deleteQ}
-                              editQ={this.editQ} */}
-                              {/* // singleQ={this.state.singleQ}
+                              editQ={this.editQ}
+                               // singleQ={this.state.singleQ}
                               // getASpecificQ={this.getASpecificQ}
-                              /> */}
+                              /> 
                               {/* <QDetail
                               {...props}
                     // singleQ={this.state.singleQ}

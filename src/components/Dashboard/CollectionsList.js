@@ -21,7 +21,7 @@ class CollectionsList extends Component {
                     this.props.collections.map(collection =>
 
 
-                            // <Link className="nav-link" to=/collection/${collection.id}>Login
+                            // <Link className="nav-link" to=/collection/:collectionId(\d+)>{collection.collectorsName}
                             // </Link>
 
                             <button key={collection.id} className="btn btn-primary"  id={collection.id} onClick={() =>

@@ -104,7 +104,7 @@ render() {
                         <button type="button"
                             className="btn btn-success"
                             onClick={() => {
-                                this.props.history.push(`/collection/add`)}
+                                this.props.history.push(`/collection/${collection.id}/add`)}
                             }>
                                 Add a new Quarter to {collection.collectorsName}'s Collection
                         </button>

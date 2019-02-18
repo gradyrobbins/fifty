@@ -8,17 +8,16 @@ class HasCard extends Component {
     state={
         quarters: [],
         singleQ: []
-
     }
+
     componentDidUpdate(prevProps) {
-       if(prevProps.quarters !== this.props.quarters || prevProps.singleQ !== this.props.singleQ ) {
+       if(prevProps.quarters !== this.props.quarters
+        || prevProps.singleQ !== this.props.singleQ ) {
            this.setState({quarters : this.props.quarters,
                             singleQ: this.props.singleQ
         })
        }
-    //    else if(prevProps.singleQ !== this.props.singleQ) {
-    //        this.setState({singleQ: this.props.singleQ})
-    //    }
+
     }
     componentDidMount() {
         console.log("this.props", this.props)
@@ -52,9 +51,9 @@ class HasCard extends Component {
                         <button key={quarter.id} id="edit" onClick={() => {
 
                             this.props.fetchSpecificQ(quarter.id)
-                            // this.props.history.push(`/collection/{collectionId}/{quarter.id}`)
-
-                            }}> View and update notes on this quarter</button>
+                            // .then(() => {this.props.history.push(`/collection/edit/{quarter.id}`)})
+                            }
+                            }> View and update notes on this quarter</button>
 
                         <button id={quarter.id} onClick={() => {
                             // console.log(`delete button clicked `)

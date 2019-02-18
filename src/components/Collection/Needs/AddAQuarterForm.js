@@ -10,9 +10,8 @@ export default class AddAQuarterForm extends Component {
     state = {
 
         usaId: "",
-        collectionId: this.props.match.params.collectionId,
-        // collectionId2: "",
         notes: "",
+        collectionId: this.props.match.params.collectionId,
         userId: Object.values(credentials)[3]
     }
 
@@ -28,20 +27,20 @@ export default class AddAQuarterForm extends Component {
     invoking the function reference passed from parent component
     */
 
-    addnewQ = evt => {
-            evt.preventDefault()
+    addnewQ = () => {
+            // evt.preventDefault()
 
             const item = {
                 // collectionId: parseInt((this.state.collectionId), 10),
-                // collectionId: this.props.match.params.collectionId,
+                collectionId: this.props.match.params.collectionId,
                 usaId: parseInt((this.state.usaId), 10),
                 notes: this.state.notes,
-                // userId: Object.values(JSON.parse(localStorage.getItem('credentials')))[3]
+                userId: Object.values(JSON.parse(localStorage.getItem('credentials')))[3]
     }
 
         // Create the quarter and redirect user to their collection
         this.props.addQ(item)
-        // .then(() =>this.props.history.push(`/collections`))
+        .then(() =>this.props.history.push(`/collections`))
         }
 
 
@@ -56,47 +55,12 @@ export default class AddAQuarterForm extends Component {
                         <br/>
                 <form className="AddAQuarterForm" >
 
-                    {/* <div className="form-group">
-                        <label htmlFor="collection">Select whose collection you want to add a quarter to</label>
-                        <select defaultValue="niece/nephew" name="collection" id="collectionId"
-                                onChange={this.handleFieldChange}>
-                            <option value="">Whose Collection?</option>
-                        {
-                            this.props.collections.map(e => <option value={e.id} key={e.id} id={e.id}>{e.collectorsName}</option>)
-                        }
-                        </select>
-                    </div> */}
+
 
                     <div className="form-group">
-                        {/* <label htmlFor="collection2">
-                        add a quarter to &nbsp;
-                        {collection.collectorsName}'s Collection
-                        </label> */}
                         <h4>Add a State Quarter to &nbsp;
                         {collection.collectorsName}'s Collection</h4>
-                        {/* <select defaultValue="niece/nephew" name="collection2" id="collectionId2"
-                                onChange={this.handleFieldChange}
-                                >
-                            <option value=""> i want this dropdown populated &lt; dynamically &gt;  </option> */}
-                        {/* {
-                            this.props.collections.find( e => e.id === this.props.match.params.collectionId)
-                                <option value={this.props.match.params.collectionId} key={e.id}
-                                id={e.id}
-                                >
-                                {e.collectorsName}
-                                </option>
-                                )
-                        } */}
-                        {/* <option value={this.props.match.params.collectionId}> {collection.collectorsName}</option>
-                        </select> */}
-                        {/* <p>this value reflects this/props/match/params regardless of the first select box's choice</p>
-                        <p>this.props.match.params.collectionId</p>
-                        <p>.find( e => e.id === this.props.match.params.collectionId );</p> */}
 
-                    </div>
-
-                    <div className="form-group">
-                        {/* <label htmlFor="usaId">Add a new State Quarter to {collection.collectorsName}'s Collection</label> */}
                         <select defaultValue="USAs" name="quarter" id="usaId"
                                 onChange={this.handleFieldChange}>
                             <option value="">Select which State quarter to add</option>

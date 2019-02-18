@@ -749,27 +749,18 @@
       "id": 15
     },
     {
-      "collectionId": 3,
-      "usaId": 13,
-      "notes": "V is for Vermont",
+      "collectionId": "6",
+      "usaId": 7,
+      "notes": "like a helicopter!",
       "userId": 1,
       "id": 16
     },
     {
-      "collectionId": 4,
-      "collectionId2": "4",
-      "usaId": 16,
-      "notes": "like a helicopter",
+      "collectionId": "6",
+      "usaId": 7,
+      "notes": "like a helicopter!",
       "userId": 1,
       "id": 17
-    },
-    {
-      "collectionId": 6,
-      "collectionId2": "6",
-      "usaId": 9,
-      "notes": "monday morning",
-      "userId": 1,
-      "id": 18
     }
   ],
   "familyCollection": [

@@ -38,10 +38,10 @@ export default class ApplicationViews extends Component {
   return DataManager.add("quarters", quarter)
   // .then(() => this.fetchSpecificCollection(this.props.match.params.collectionId))
   .then(() => DataManager.getAll("quarters"))
-    // .then(quarters => this.setState({
-    //   quarters: quarters
-    // }))
-    .then(() => this.props.history.push("/collections"))
+    .then(quarters => this.setState({
+      quarters: quarters
+    }))
+    // .then(() => this.props.history.push("/collections"))
   }
 
   editQ = (id, item) => DataManager.edit("quarters", id, item)

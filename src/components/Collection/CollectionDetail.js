@@ -20,6 +20,13 @@ export default class CollectionDetail extends Component {
             // .then( (userSpecific) => console.log(" quarters that belong to this collectionId's set: ", userSpecific))
             .then(() => this.setState(newState))
     }
+    // fetchSpecificCollectionExpand = (collectionId) => {
+    //     const newState = {}
+    //         DataManager.getAllExpand(collectionId)
+    //         .then(userSpecific => newState.userSpecific = userSpecific)
+    //         .then( (userSpecific) => console.log(" quarters that belong to this collectionId's set: ", userSpecific))
+    //         .then(() => this.setState(newState))
+    // }
     fetchSpecificQ = (quarterId) => {
         const newState = {}
             DataManager.getASpecificQ(quarterId)
@@ -117,7 +124,8 @@ render() {
 
                 <HasCard
                         // {...props}
-                        quarters={this.state.userSpecific}
+                        // quarters={this.state.userSpecific}
+                        quarters={this.props.quarters}
                         getASpecificCollection={this.fetchSpecificCollection}
                         deleteQ={this.deleteQ}
                         fetchSpecificQ={this.fetchSpecificQ}

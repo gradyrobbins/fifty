@@ -8,7 +8,6 @@ let credentials = JSON.parse(localStorage.getItem('credentials'))
 export default class AddAQuarterForm extends Component {
     // Set initial state
     state = {
-
         usaId: "",
         notes: "",
         collectionId: this.props.match.params.collectionId,
@@ -28,10 +27,8 @@ export default class AddAQuarterForm extends Component {
     */
 
     addnewQ = () => {
-            // evt.preventDefault()
 
             const item = {
-                // collectionId: parseInt((this.state.collectionId), 10),
                 collectionId: this.props.match.params.collectionId,
                 usaId: parseInt((this.state.usaId), 10),
                 notes: this.state.notes,
@@ -54,13 +51,9 @@ export default class AddAQuarterForm extends Component {
                         <br/>
                         <br/>
                 <form className="AddAQuarterForm" >
-
-
-
                     <div className="form-group">
                         <h4>Add a State Quarter to &nbsp;
                         {collection.collectorsName}'s Collection</h4>
-
                         <select defaultValue="USAs" name="quarter" id="usaId"
                                 onChange={this.handleFieldChange}>
                             <option value="">Select which State quarter to add</option>
@@ -68,22 +61,19 @@ export default class AddAQuarterForm extends Component {
                             this.props.usas.map(e => <option value={e.id} key={e.id} id={e.id}>{e.name}</option>)
                         }
                         </select>
-
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="notes">notes?</label>
+                        <label htmlFor="notes">Add notes </label>
                         <input type="text" required={true}
                             onChange={this.handleFieldChange}
                             id="notes"
-                            placeholder="add notes here" />
+                            placeholder="Add notes here" />
                     </div>
                     <button type="button"
                         className="btn btn-primary"
                         onClick={ () => {
-                            // console.log("bloop")
                                 this.addnewQ()
-
                             }}>
                         Submit</button>
                 </form>

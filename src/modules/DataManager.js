@@ -16,6 +16,18 @@ export default Object.create(null, {
             .then(result => result.json())
         }
     },
+
+    getAllExpand: {
+        value: (resource, id) => {
+            return fetch(`${remoteURL}/${resource}/${id}?_expand=usa`)
+            .then(result => result.json())
+        }
+    },
+
+
+    // http://localhost:3000/collection/1?_expand=usa
+
+
     //commented out; not in use 2/8/19
     // getAllUserData: {
     //     value: (resource, id) => {
@@ -31,6 +43,19 @@ export default Object.create(null, {
         }
     },
 
+    getASpecificQ: {
+        value: (id) => {
+            return fetch(`${remoteURL}/quarters?id=${id}`)
+            .then(result => result.json())
+        }
+    },
+
+    getASpecificQ_expand: {
+        value: (id) => {
+            return fetch(`${remoteURL}/quarters?id=${id}_expand=usa`)
+            .then(result => result.json())
+        }
+    },
 
 
 
@@ -57,7 +82,7 @@ export default Object.create(null, {
         value: (resource, id, item) => {
             // console.log(item, "item")
             // console.log(`${remoteURL}/${resource}/${id}`)
-            return fetch(`${remoteURL}/${resource}/${id}`, {
+            return fetch(`${remoteURL}/${resource}/${id.notes}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"

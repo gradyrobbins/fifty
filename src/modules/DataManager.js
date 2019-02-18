@@ -38,7 +38,7 @@ export default Object.create(null, {
 
     getASpecificCollection: {
         value: (id) => {
-            return fetch(`${remoteURL}/quarters?collectionId=${id}`)
+            return fetch(`${remoteURL}/quarters?collectionId=${id}&_expand=usa`)
             .then(result => result.json())
         }
     },

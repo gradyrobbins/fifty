@@ -124,8 +124,8 @@ render() {
 
                 <HasCard
                         // {...props}
-                        // quarters={this.state.userSpecific}
-                        quarters={this.props.quarters}
+                        quarters={this.state.userSpecific}
+                        // quarters={this.props.quarters}
                         getASpecificCollection={this.fetchSpecificCollection}
                         deleteQ={this.deleteQ}
                         fetchSpecificQ={this.fetchSpecificQ}

@@ -18,8 +18,8 @@ export default Object.create(null, {
     },
 
     getAllExpand: {
-        value: (resource, id) => {
-            return fetch(`${remoteURL}/${resource}/${id}?_expand=usa`)
+        value: (resource) => {
+            return fetch(`${remoteURL}/${resource}?_expand=usa`)
             .then(result => result.json())
         }
     },
@@ -38,7 +38,7 @@ export default Object.create(null, {
 
     getASpecificCollection: {
         value: (id) => {
-            return fetch(`${remoteURL}/quarters?collectionId=${id}`)
+            return fetch(`${remoteURL}/quarters?collectionId=${id}&_expand=usa`)
             .then(result => result.json())
         }
     },
@@ -52,7 +52,7 @@ export default Object.create(null, {
 
     getASpecificQ_expand: {
         value: (id) => {
-            return fetch(`${remoteURL}/quarters?id=${id}_expand=usa`)
+            return fetch(`${remoteURL}/quarters?id=${id}?_expand=usa`)
             .then(result => result.json())
         }
     },

@@ -41,8 +41,9 @@ class HasCard extends Component {
                 this.state.quarters.map(quarter =>
 
                     <div key={quarter.id} id={quarter.id} className="collection" >
+                        <h4> {quarter.usa.name}</h4>
                         <p>StateId #: {quarter.usaId} </p>
-                        <p>State Name via _expand: {quarter.name}</p>
+                        <br/>
                         <br/>
                         <img alt="stock-qtr" src={stock_qtr} className="icon-qtr" />
                         <br/>

@@ -41,7 +41,7 @@ export default class ApplicationViews extends Component {
     // .then(quarters => this.setState({
     //   quarters: quarters
     // }))
-    // .then(() => this.props.history.push("/collections"))
+    .then(() => this.props.history.push("/collections"))
   }
 
   editQ = (id, item) => DataManager.edit("quarters", id, item)
@@ -118,17 +118,17 @@ export default class ApplicationViews extends Component {
                 }} />
             <Route exact path="/collection/:collectionId(\d+)/add" render={props => {
                 return <React.Fragment>
-                              <CollectionsList
+                              {/* <CollectionsList
                               {...props}
                               collections={this.state.collections}
-                              />
+                              /> */}
                                <AddAQuarterForm
                                 {...props}
                                 collections={this.state.collections}
                                 addQ={this.addQ}
                                 usas={this.state.usas}
                                       />
-                              <CollectionDetail
+                              {/* <CollectionDetail
                               {...props}
                               quarters={this.state.quarters}
                               collections={this.state.collections}
@@ -138,7 +138,8 @@ export default class ApplicationViews extends Component {
                               editQ={this.editQ}
                                // singleQ={this.state.singleQ}
                               // getASpecificQ={this.getASpecificQ}
-                              /> 
+                              /> */}
+
                               {/* <QDetail
                               {...props}
                     // singleQ={this.state.singleQ}

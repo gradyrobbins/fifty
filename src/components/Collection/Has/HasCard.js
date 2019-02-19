@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './HasCard.css'
 import stock_qtr from './../../img/stock_Qtr_Img.png'
-import QDetail from '../QDetail';
 
 class HasCard extends Component {
 
@@ -49,9 +48,12 @@ class HasCard extends Component {
                         <p>Notes: {quarter.notes}</p>
                         <br/>
                         <button key={quarter.id} id="edit" onClick={() => {
-
+                            // console.log("edit button clicked")
                             this.props.fetchSpecificQ(quarter.id)
-                            // .then(() => {this.props.history.push(`/collection/edit/{quarter.id}`)})
+                            .then(() => {
+                                this.props.history.push(`/collection/edit/${quarter.id}`)
+                            }
+                                )
                             }
                             }> View and update notes on this quarter</button>
 
@@ -64,11 +66,11 @@ class HasCard extends Component {
                 )
             }
             </section>
-            <QDetail
+            {/* <QDetail
                     editQ={this.props.editQ}
                     singleQ={this.state.singleQ}
                     // getASpecificQ={ this.props.fetchSpecificQ(quarter.id)}
-            />
+            /> */}
              </div>
              </React.Fragment>
         )

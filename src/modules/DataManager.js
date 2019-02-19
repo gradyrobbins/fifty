@@ -52,7 +52,7 @@ export default Object.create(null, {
 
     getASpecificQ_expand: {
         value: (id) => {
-            return fetch(`${remoteURL}/quarters?id=${id}?_expand=usa`)
+            return fetch(`${remoteURL}/quarters/${id}?_expand=usa`)
             .then(result => result.json())
         }
     },

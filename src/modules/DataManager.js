@@ -52,7 +52,7 @@ export default Object.create(null, {
 
     getASpecificQ_expand: {
         value: (id) => {
-            return fetch(`${remoteURL}/quarters?id=${id}?_expand=usa`)
+            return fetch(`${remoteURL}/quarters/${id}?_expand=usa`)
             .then(result => result.json())
         }
     },
@@ -82,8 +82,8 @@ export default Object.create(null, {
         value: (resource, id, item) => {
             // console.log(item, "item")
             // console.log(`${remoteURL}/${resource}/${id}`)
-            return fetch(`${remoteURL}/${resource}/${id.notes}`, {
-                method: "PATCH",
+            return fetch(`${remoteURL}/${resource}/${id}`, {
+                method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
                 },

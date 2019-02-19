@@ -34,6 +34,16 @@ export default class ApplicationViews extends Component {
     specificCollection: specificCollection
   }))
 
+  fetchSpecificQ = (quarterId) => {
+    const newState = {}
+        // DataManager.getASpecificQ(quarterId)
+        DataManager.getASpecificQ_expand(quarterId)
+    .then(singleQ => { newState.singleQ = singleQ
+    console.log(" single Q: ??", singleQ)
+    this.setState(newState)
+})
+}
+
   addQ = quarter =>{
   return DataManager.add("quarters", quarter)
   // .then(() => this.fetchSpecificCollection(this.props.match.params.collectionId))
@@ -149,17 +159,6 @@ export default class ApplicationViews extends Component {
                 /> */}
                       </React.Fragment>
                 }} />
-            {/* <Route path="/collection/:collectionId(\d+)/:quarterId(\d+)" render={props => {
-                return <React.Fragment>
-
-                          <QDetail
-                          editQ={this.editQ}
-                          getASpecificQ={this.getASpecificQ}
-
-                                />
-
-                      </React.Fragment>
-                }} /> */}
 
             <Route path="/collection/add" render={props => {
               return <React.Fragment>
@@ -185,26 +184,16 @@ export default class ApplicationViews extends Component {
             <Route exact path="/collection/edit/:quarterId(\d+)" render={(props) => {
                       if (this.isAuthenticated()) {
                         return <React.Fragment>
-                          <QDetail
-                        editQ={this.editQ}
-                        getASpecificQ={this.getASpecificQ}
-
-                                />
+                                  <QDetail
+                                  {...props}
+                                      editQ={this.editQ}
+                                      fetchSpecificQ={this.fetchSpecificQ}
+                                    />
                                 </React.Fragment>
                       } else {
                         return <Redirect to="/login" />
                       }
                     }} />
-
-            {/* use the below routing  as a template for edit */}
-            {/* <Route exact path="/jokes/edit/:jokeId(\d+)" render={(props) => {
-                      if (this.isAuthenticated()) {
-                        return <JokeEditForm {...props} editJoke={this.editJoke} deleteJoke={this.deleteJoke} jokes={this.state.jokes} />
-                      } else {
-                        return <Redirect to="/login" />
-                      }
-                    }} /> */}
-
 
             </React.Fragment>
 

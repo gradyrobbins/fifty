@@ -103,11 +103,12 @@ export default class QDetail extends Component {
                             <button className="btn btn-primary"  id={this.state.singleQ.id} onClick={() =>
                                 {
 
-                                    console.log("this.props.singleQ :", this.state.singleQ)
-                                    console.log("this.state.notes :", this.state.notes)
+                                    // console.log("this.props.singleQ :", this.state.singleQ)
+                                    // console.log("this.state.notes :", this.state.notes)
 
-                                    // this.props.editQ(`${q.id}`, editedQuarter )
+                                    // // this.props.editQ(`${q.id}`, editedQuarter )
                                     this.thingsChange(`${this.state.singleQ.id}`, editedQuarter )
+                                    .then(() => {this.props.history.push(`/collection/${this.state.singleQ.collectionId}`)})
                                 }
 
 

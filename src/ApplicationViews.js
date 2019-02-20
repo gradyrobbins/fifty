@@ -7,7 +7,6 @@ import Learn from './components/Learn/Learn'
 import CollectionDetail from './components/Collection/CollectionDetail'
 import CollectionsList from './components/Dashboard/CollectionsList';
 import AddAQuarterForm from './components/Collection/Needs/AddAQuarterForm'
-// import JokeEditForm from './components/Collection/Has/JokeEditForm'
 import QDetail from './components/Collection/QDetail'
 
 export default class ApplicationViews extends Component {
@@ -46,12 +45,10 @@ export default class ApplicationViews extends Component {
 
   addQ = quarter =>{
   return DataManager.add("quarters", quarter)
-  // .then(() => this.fetchSpecificCollection(this.props.match.params.collectionId))
   .then(() => DataManager.getAll("quarters"))
     .then(quarters => this.setState({
       quarters: quarters
     }))
-    // .then(() => this.props.history.push("/collections"))
   }
 
   editQ = (id, item) => DataManager.edit("quarters", id, item)
@@ -103,7 +100,6 @@ export default class ApplicationViews extends Component {
                   }}
                 />
 
-
             <Route exact path="/collection/:collectionId(\d+)" render={props => {
                 return <React.Fragment>
                               <CollectionsList
@@ -118,8 +114,6 @@ export default class ApplicationViews extends Component {
                               addQ={this.addQ}
                               deleteQ={this.deleteQ}
                               editQ={this.editQ}
-                              // singleQ={this.state.singleQ}
-                              // getASpecificQ={this.getASpecificQ}
                               />
 
                       </React.Fragment>

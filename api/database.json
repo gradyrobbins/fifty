@@ -761,6 +761,20 @@
       "notes": "Why, Wyoming?",
       "userId": 1,
       "id": 17
+    },
+    {
+      "collectionId": "1",
+      "usaId": 20,
+      "notes": "Ill i NOISE",
+      "userId": 1,
+      "id": 18
+    },
+    {
+      "collectionId": "1",
+      "usaId": 49,
+      "notes": "Ua mau ke eia o ka aina i ka pono",
+      "userId": 1,
+      "id": 19
     }
   ],
   "familyCollection": [

@@ -42,7 +42,7 @@ export default class AddAQuarterForm extends Component {
 
 
         render() {
-            console.log("<Add a Quarter Form /> : this.props =", this.props)
+            // console.log("<Add a Quarter Form /> : this.props =", this.props)
             const collection = this.props.collections.find(a => a.id === parseInt(this.props.match.params.collectionId)) || {}
             return (
                 <React.Fragment>

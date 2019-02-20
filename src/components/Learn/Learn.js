@@ -14,7 +14,7 @@ export default class List extends Component {
             <br/>
             <br/>
             <h3> &lt; Clickable USA Map component / &gt; goes here </h3>
-            <h4> whichever state is clicked, renders the corresponding card and information </h4>
+            <h4> whichever state is clicked renders the corresponding state's card and fun facts </h4>
 
             <div>
                 {this.props.usas.map(item => {

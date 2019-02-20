@@ -7,7 +7,7 @@ class CollectionsList extends Component {
 
         return (
             <React.Fragment>
-
+                    
                 <br/>
                 <br/>
 

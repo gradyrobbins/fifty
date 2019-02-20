@@ -85,7 +85,6 @@ render() {
                     <div key={collection.id} className="card">
                         <h3>{collection.collectorsName}'s Collection: </h3>
                         <br/>
-
                         <button type="button"
                             className="btn btn-success"
                             onClick={() => {
@@ -95,10 +94,8 @@ render() {
                         </button>
                     </div>
                 </section>
-
                 <br/>
                 <br/>
-
 
                 <HasCard
                         // {...props}
@@ -115,7 +112,6 @@ render() {
                         />
                 <br/>
                 <br/>
-
                 <br/>
 
                 {/* <NeedsCard

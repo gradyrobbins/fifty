@@ -57,7 +57,6 @@ export default class ApplicationViews extends Component {
       quarters: quarters
     }))
 
-
   componentDidMount() {
 
     const newState = {}

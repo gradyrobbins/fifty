@@ -85,7 +85,7 @@ export default class QDetail extends Component {
         Edit </button>
     <button className="btn btn-primary" onClick={() => {this.props.history.push(`/collection/${this.state.singleQ.collectionId}`)
         } }>
-        Return without editing </button>
+        Return without making any changes </button>
         <br/>
         <br/>
     </div>

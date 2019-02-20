@@ -1,9 +1,7 @@
 import React, { Component } from "react"
 import HasCard from "./Has/HasCard";
-// import NeedsCard from "./Needs/NeedsCard"
 import DataManager from "../../modules/DataManager";
 import './CollectionDetail.css'
-// import QDetail from "./QDetail";
 
 export default class CollectionDetail extends Component {
     state ={
@@ -29,10 +27,7 @@ export default class CollectionDetail extends Component {
         console.log(" single Q: ??", singleQ)
         this.setState(newState)
     })
-
     }
-
-
 
     componentDidMount() {
         this.fetchSpecificCollection(this.props.match.params.collectionId)
@@ -46,10 +41,6 @@ export default class CollectionDetail extends Component {
 
     deleteQ = id => DataManager.delete("quarters", id)
     .then(() => this.fetchSpecificCollection(this.props.match.params.collectionId))
-    // .then(quarters => this.setState({
-        //   userSpecific: quarters
-        // }))
-
 
     addQ = quarter => DataManager.add("quarters", quarter)
     .then(() => this.fetchSpecificCollection(this.props.match.params.collectionId))
@@ -62,7 +53,6 @@ export default class CollectionDetail extends Component {
 
 
 
-//  below, use this.state.userSpecific to map onto <Has Card />
 
 // //how to compare 2 arrays for matches
 //  compare(arr1,arr2){
@@ -72,12 +62,6 @@ export default class CollectionDetail extends Component {
 //                                             ));
 //     return matches;
 // }
-
-
-
-
-
-
 
 render() {
     /*
@@ -126,23 +110,19 @@ render() {
                         editQ={this.props.editQ}
                         singleQ={this.state.singleQ}
                         history={this.props.history}
+                        match={this.props.match}
+                        collections={this.props.collections}
                         />
                 <br/>
                 <br/>
 
                 <br/>
 
-                {/* <QDetail
-                            //   {...props}
-                    singleQ={this.state.singleQ}
-
-                /> */}
                 {/* <NeedsCard
                         // {...props}
                         quarters={this.state.needsList}
                         matchlist={this.state.matchlist}
                         addAQuarter={this.props.addAQuarter}
-                        collections={this.props.collections}
                         usas={this.props.usas}
                         addQ={this.addQ}
 

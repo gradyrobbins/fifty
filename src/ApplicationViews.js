@@ -121,11 +121,7 @@ export default class ApplicationViews extends Component {
                               // singleQ={this.state.singleQ}
                               // getASpecificQ={this.getASpecificQ}
                               />
-                              {/* <QDetail
-                              {...props}
-                    // singleQ={this.state.singleQ}
 
-                /> */}
                       </React.Fragment>
                 }} />
             <Route exact path="/collection/:collectionId(\d+)/add" render={props => {
@@ -157,27 +153,6 @@ export default class ApplicationViews extends Component {
                     // singleQ={this.state.singleQ}
 
                 /> */}
-                      </React.Fragment>
-                }} />
-
-            <Route path="/collection/add" render={props => {
-              return <React.Fragment>
-
-                              {/* <CollectionDetail
-                              {...props}
-                              {...props}
-                              quarters={this.state.quarters}
-                              collections={this.state.collections}
-                              addQ={this.addQ}
-                            /> */}
-                            <AddAQuarterForm
-
-                              {...props}
-                              collections={this.state.collections}
-                              addQ={this.addQ}
-                              usas={this.state.usas}
-                              />
-
                       </React.Fragment>
                 }} />
 

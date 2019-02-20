@@ -1,10 +1,10 @@
 import React, { Component } from "react"
 import NavBar from "./../Nav/NavBar";
 import './Learn.css'
-class List extends Component {
+export default class List extends Component {
 
     render() {
-        console.log("<Learn /> this.props " , this.props)
+        // console.log("<Learn /> this.props " , this.props)
         return (
         <React.Fragment>
             <br/>
@@ -35,9 +35,5 @@ class List extends Component {
             </div>
         </React.Fragment>
             )
-
-
     }
 }
-
-export default List

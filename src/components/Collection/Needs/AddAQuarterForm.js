@@ -37,7 +37,7 @@ export default class AddAQuarterForm extends Component {
 
         // Create the quarter and redirect user to their collection
         this.props.addQ(item)
-        .then(() =>this.props.history.push(`/collections`))
+        .then(() =>this.props.history.push(`/collection/${this.props.match.params.collectionId}`))
         }
 
 
@@ -74,6 +74,7 @@ export default class AddAQuarterForm extends Component {
                         className="btn btn-primary"
                         onClick={ () => {
                                 this.addnewQ()
+
                             }}>
                         Submit</button>
                 </form>

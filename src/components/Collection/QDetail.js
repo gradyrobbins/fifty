@@ -62,10 +62,10 @@ export default class QDetail extends Component {
         <img alt="stock-qtr" src={stock_qtr} className="icon-qtr" />
         <br/>
 
-        <div key={this.state.singleQ.id} className="q" >
 
 
 {/* initially i was unable to access the State's Name in {this.state.singleQ.usa.name}, because the componentDidMount returned an unresolved promise and continued with the render part of this component.  Now i have a ternary/conditional, below, that determines if the promise is resolved */}
+        <div key={this.state.singleQ.id} className="QDetail" >
     {this.state.isLoaded ? <h3> {this.state.singleQ.usa.name} </h3> : <h3> awaiting promise's resolution </h3>}
 
     <h6>Specific State Quarter ID# &nbsp; {this.state.singleQ.usaId} </h6>
@@ -78,14 +78,12 @@ export default class QDetail extends Component {
             placeholder={this.state.singleQ.notes}
             value={this.state.notes} />
     </div>
-    <button className="btn btn-primary"  id={this.state.singleQ.id} onClick={() =>
-        { this.thingsChange(`${this.state.singleQ.id}`, editedQuarter )
-            .then(() => {this.props.history.push(`/collection/${this.state.singleQ.collectionId}`)})
-        } }>
-        Edit </button>
-    <button className="btn btn-primary" onClick={() => {this.props.history.push(`/collection/${this.state.singleQ.collectionId}`)
-        } }>
-        Return without making any changes </button>
+        <button className="btn btn-primary"  id={this.state.singleQ.id} onClick={() =>
+            { this.thingsChange(`${this.state.singleQ.id}`, editedQuarter )
+                .then(() => {this.props.history.push(`/collection/${this.state.singleQ.collectionId}`)})
+            } }> Edit </button>
+        <button className="btn btn-primary" onClick={() => {this.props.history.push(`/collection/${this.state.singleQ.collectionId}`)
+            } }> Return without making any changes </button>
         <br/>
         <br/>
     </div>

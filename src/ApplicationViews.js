@@ -100,6 +100,7 @@ export default class ApplicationViews extends Component {
                 />
 
             <Route exact path="/collection/:collectionId(\d+)" render={props => {
+                  if (this.isAuthenticated()) {
                 return <React.Fragment>
                               <CollectionsList
                               {...props}
@@ -116,16 +117,23 @@ export default class ApplicationViews extends Component {
                               />
 
                       </React.Fragment>
-                }} />
+              } else {
+                return <Redirect to="/" />
+              }
+              }} />
             <Route exact path="/collection/:collectionId(\d+)/add" render={props => {
+                if (this.isAuthenticated()) {
                 return  <AddAQuarterForm
                                 {...props}
                                 collections={this.state.collections}
                                 addQ={this.addQ}
                                 usas={this.state.usas}
                                       />
-                }} />
-
+                // }} />
+              } else {
+                return <Redirect to="/" />
+              }
+              }} />
             <Route exact path="/collection/edit/:quarterId(\d+)" render={(props) => {
                       if (this.isAuthenticated()) {
                         return <React.Fragment>

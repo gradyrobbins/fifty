@@ -48,7 +48,7 @@ const collection = this.props.collections.find(a => a.id === parseInt(this.props
 
                     <div key={quarter.id} id={quarter.id} className="collection" >
                         <h4> {quarter.usa.name}</h4>
-                        <p>StateId #: {quarter.usaId} </p>
+                        {/* <p>StateId #: {quarter.usaId} </p> */}
                         <br/>
                         <br/>
                         <img alt="stock-qtr" src={stock_qtr} className="icon-qtr" />

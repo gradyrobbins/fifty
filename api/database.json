@@ -522,7 +522,7 @@
     },
     {
       "id": 53,
-      "name": "American_Samoa",
+      "name": "American Samoa",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Pago Pago",
       "Nicknames": "The last frontier",
@@ -777,11 +777,11 @@
       "id": 19
     },
     {
+      "id": 21,
+      "usaId": 26,
       "collectionId": "6",
-      "usaId": 15,
-      "notes": "Grandma grew up here",
       "userId": 1,
-      "id": 20
+      "notes": "Pensacola"
     }
   ],
   "familyCollection": [

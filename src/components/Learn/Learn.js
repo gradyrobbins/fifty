@@ -13,8 +13,8 @@ export default class List extends Component {
                 <NavBar />
             <br/>
             <br/>
-            <h3> &lt; Clickable USA Map component / &gt; goes here </h3>
-            <h4> whichever state is clicked renders the corresponding state's card and fun facts </h4>
+            {/* <h3> &lt; Clickable USA Map component / &gt; goes here </h3>
+            <h4> whichever state is clicked renders the corresponding state's card and fun facts </h4> */}
 
             <div>
                 {this.props.usas.map(item => {
@@ -27,7 +27,7 @@ export default class List extends Component {
                                 Motto: {item.Motto} <br/>
                                 Flower: {item.Flower} <br/>
                                 Bird: {item.Bird} <br/>
-                                &lt; IMPORT AN IMAGE OF THE STATE'S BORDERS HERE &gt;
+                                {/* &lt; IMPORT AN IMAGE OF THE STATE'S BORDERS HERE &gt; */}
                             </div>
                         })
                 }

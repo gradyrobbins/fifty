@@ -49,7 +49,7 @@ export default class QDetail extends Component {
         const editedQuarter = {
             id: this.state.singleQ.id,
             usaId: this.state.singleQ.usaId,
-            collectionId: this.state.singleQ.collectionId,
+            collectionId: parseInt(this.state.singleQ.collectionId),
             userId: this.state.singleQ.userId,
             notes: this.state.notes
             }

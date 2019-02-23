@@ -749,39 +749,32 @@
       "userId": 9
     },
     {
-      "collectionId": "5",
+      "collectionId": 5,
       "usaId": 19,
       "notes": "You're a Pearl of a girl",
       "userId": 1,
       "id": 16
     },
     {
-      "collectionId": "5",
+      "id": 17,
       "usaId": 43,
-      "notes": "Why, Wyoming?",
+      "collectionId": 5,
       "userId": 1,
-      "id": 17
+      "notes": "Why, Wyoming? Why not"
     },
     {
-      "collectionId": "1",
+      "collectionId": 1,
       "usaId": 20,
       "notes": "Ill i NOISE",
       "userId": 1,
       "id": 18
     },
     {
-      "collectionId": "1",
+      "id": 19,
       "usaId": 49,
-      "notes": "Ua mau ke eia o ka aina i ka pono",
+      "collectionId": 1,
       "userId": 1,
-      "id": 19
-    },
-    {
-      "id": 21,
-      "usaId": 26,
-      "collectionId": "6",
-      "userId": 1,
-      "notes": "Pensacola"
+      "notes": "Aloha"
     }
   ],
   "familyCollection": [

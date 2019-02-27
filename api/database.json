@@ -763,11 +763,11 @@
       "id": 17
     },
     {
-      "collectionId": "1",
+      "id": 18,
       "usaId": 20,
-      "notes": "Ill i NOISE",
+      "collectionId": "1",
       "userId": 1,
-      "id": 18
+      "notes": "got it"
     },
     {
       "collectionId": "1",
@@ -781,7 +781,7 @@
       "usaId": 26,
       "collectionId": "6",
       "userId": 1,
-      "notes": "Pensacola"
+      "notes": "St Augustine Surf Station"
     }
   ],
   "familyCollection": [

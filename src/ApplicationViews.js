@@ -7,7 +7,6 @@ import Learn from './components/Learn/Learn'
 import CollectionDetail from './components/Collection/CollectionDetail'
 import CollectionsList from './components/Dashboard/CollectionsList';
 import AddAQuarterForm from './components/Collection/Needs/AddAQuarterForm'
-// import JokeEditForm from './components/Collection/Has/JokeEditForm'
 import QDetail from './components/Collection/QDetail'
 
 export default class ApplicationViews extends Component {
@@ -46,12 +45,10 @@ export default class ApplicationViews extends Component {
 
   addQ = quarter =>{
   return DataManager.add("quarters", quarter)
-  // .then(() => this.fetchSpecificCollection(this.props.match.params.collectionId))
   .then(() => DataManager.getAll("quarters"))
     .then(quarters => this.setState({
       quarters: quarters
     }))
-    // .then(() => this.props.history.push("/collections"))
   }
 
   editQ = (id, item) => DataManager.edit("quarters", id, item)
@@ -59,7 +56,6 @@ export default class ApplicationViews extends Component {
     .then(quarters => this.setState({
       quarters: quarters
     }))
-
 
   componentDidMount() {
 
@@ -103,8 +99,8 @@ export default class ApplicationViews extends Component {
                   }}
                 />
 
-
             <Route exact path="/collection/:collectionId(\d+)" render={props => {
+                  if (this.isAuthenticated()) {
                 return <React.Fragment>
                               <CollectionsList
                               {...props}
@@ -118,69 +114,26 @@ export default class ApplicationViews extends Component {
                               addQ={this.addQ}
                               deleteQ={this.deleteQ}
                               editQ={this.editQ}
-                              // singleQ={this.state.singleQ}
-                              // getASpecificQ={this.getASpecificQ}
                               />
-                              {/* <QDetail
-                              {...props}
-                    // singleQ={this.state.singleQ}
 
-                /> */}
                       </React.Fragment>
-                }} />
+              } else {
+                return <Redirect to="/" />
+              }
+              }} />
             <Route exact path="/collection/:collectionId(\d+)/add" render={props => {
-                return <React.Fragment>
-                              {/* <CollectionsList
-                              {...props}
-                              collections={this.state.collections}
-                              /> */}
-                               <AddAQuarterForm
+                if (this.isAuthenticated()) {
+                return  <AddAQuarterForm
                                 {...props}
                                 collections={this.state.collections}
                                 addQ={this.addQ}
                                 usas={this.state.usas}
                                       />
-                              {/* <CollectionDetail
-                              {...props}
-                              quarters={this.state.quarters}
-                              collections={this.state.collections}
-                              matchlist={this.state.matchlist}
-                              addQ={this.addQ}
-                              deleteQ={this.deleteQ}
-                              editQ={this.editQ}
-                               // singleQ={this.state.singleQ}
-                              // getASpecificQ={this.getASpecificQ}
-                              /> */}
-
-                              {/* <QDetail
-                              {...props}
-                    // singleQ={this.state.singleQ}
-
-                /> */}
-                      </React.Fragment>
-                }} />
-
-            <Route path="/collection/add" render={props => {
-              return <React.Fragment>
-
-                              {/* <CollectionDetail
-                              {...props}
-                              {...props}
-                              quarters={this.state.quarters}
-                              collections={this.state.collections}
-                              addQ={this.addQ}
-                            /> */}
-                            <AddAQuarterForm
-
-                              {...props}
-                              collections={this.state.collections}
-                              addQ={this.addQ}
-                              usas={this.state.usas}
-                              />
-
-                      </React.Fragment>
-                }} />
-
+                // }} />
+              } else {
+                return <Redirect to="/" />
+              }
+              }} />
             <Route exact path="/collection/edit/:quarterId(\d+)" render={(props) => {
                       if (this.isAuthenticated()) {
                         return <React.Fragment>

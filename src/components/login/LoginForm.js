@@ -26,7 +26,7 @@ export default class Login extends Component {
             For now, just store the email and password that
             the customer enters into local storage.
         */
-
+//TODO fix naming conventions/ singular/plural
         DataManager.getAll("users").then((user) => {
             console.log(user)
             const users = user.find(user => {
@@ -35,10 +35,11 @@ export default class Login extends Component {
 
             if (users) {
                 localStorage.setItem("credentials", JSON.stringify(users))
-                document.location.href = 'http://localhost:3000/collections'
+                // document.location.href = 'http://localhost:3000/collections'
+                this.props.history.push(`/collections`)
             } else {
                 alert("invalid credentials")
-                document.location.href = 'http://localhost:3000/login'
+                // document.location.href = 'http://localhost:3000/login'
             }
         })
 
@@ -47,6 +48,9 @@ export default class Login extends Component {
     render() {
         return (
             <div className="forms">
+                <br/>
+                <br/>
+                <br/>
                 <div className="loginForm">
                     <form onSubmit={this.handleLogin}>
                         <h1 className="h3 mb-3 font-weight-normal">Please log in</h1>

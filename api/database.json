@@ -522,7 +522,7 @@
     },
     {
       "id": 53,
-      "name": "American_Samoa",
+      "name": "American Samoa",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Pago Pago",
       "Nicknames": "The last frontier",
@@ -594,7 +594,7 @@
     },
     {
       "name": "Aunt Laura",
-      "email": "grandma@22.com",
+      "email": "laurabeth@22.com",
       "password": "22",
       "id": 6
     },
@@ -612,7 +612,7 @@
     },
     {
       "name": "Honey and Papa McCarty",
-      "email": "honey@22.com",
+      "email": "honey_and_papa@22.com",
       "password": "22",
       "id": 9
     },
@@ -655,83 +655,83 @@
       "usaId": 8,
       "collectionId": 1,
       "userId": 3,
-      "notes": "From Uncle Grady"
+      "notes": "Toby put this in his folio last week.  Thanks Pat!"
     },
     {
       "id": 3,
       "usaId": 18,
       "collectionId": 2,
-      "userId": 3,
-      "notes": "From Aunt Julie"
+      "userId": 2,
+      "notes": "To Nate, From Aunt Julie.  I'll put this quarter in the mail this weekend"
     },
     {
       "id": 4,
       "usaId": 14,
       "collectionId": 2,
-      "userId": 3,
-      "notes": "From Aunt Laura"
+      "userId": 6,
+      "notes": "To Nate, From Aunt Laura.  I found this one in my purse for you "
     },
     {
       "id": 5,
       "usaId": 28,
       "collectionId": 3,
       "userId": 3,
-      "notes": "Andrew found this on his own"
+      "notes": "Andrew found this on his own at the playground"
     },
     {
       "id": 6,
       "usaId": 24,
       "collectionId": 3,
-      "userId": 3,
-      "notes": "From Honey and Papa"
+      "userId": 9,
+      "notes": "To Andrew, From Honey and Papa.  We can't wait to see you next weekend :)"
     },
     {
       "id": 7,
       "usaId": 38,
       "collectionId": 4,
-      "userId": 3,
-      "notes": "From Grandma"
+      "userId": 8,
+      "notes": "To Laney, From Mamaw and Papaw Hatch.  We Love you!"
     },
     {
       "id": 8,
       "usaId": 34,
       "collectionId": 4,
-      "userId": 3,
-      "notes": "Laney2 from Uncle S"
+      "userId": 5,
+      "notes": "To Laney, from Uncle Seth.  Laney just put this in her folio for safe keeping"
     },
     {
       "id": 9,
       "usaId": 48,
       "collectionId": 5,
-      "userId": 3,
-      "notes": "MaryMac from Aunt J"
+      "userId": 2,
+      "notes": "To Mary Mac from Aunt Julie.  "
     },
     {
       "collectionId": 5,
       "id": 10,
-      "notes": "test",
+      "notes": "To Mary Mac from Aunt Fe",
       "usaId": 44,
-      "userId": 3
+      "userId": 4
     },
     {
       "id": 11,
       "usaId": 55,
       "collectionId": 6,
-      "userId": 3,
-      "notes": "Molly Patrick from Uncle G"
+      "userId": 10,
+      "notes": "To Molly Patrick From Grandma"
     },
     {
       "collectionId": 6,
+      "id": 12,
+      "notes": "To Molly Patrick, Love Uncle Grady",
       "usaId": 5,
-      "notes": "Love Uncle Grady",
-      "userId": 1,
-      "id": 12
+      "userId": 1
     },
     {
       "collectionId": 1,
       "usaId": 34,
-      "notes": "west virginia! ",
-      "userId": 1,
+      "notes": "To Toby from Odell",
+      "userId": 7,
       "id": 13
     },
     {
@@ -743,10 +743,45 @@
     },
     {
       "collectionId": 6,
+      "id": 15,
+      "notes": "Honey and Papa say hello! :)",
       "usaId": 9,
-      "notes": "Uncle Pat",
+      "userId": 9
+    },
+    {
+      "collectionId": "5",
+      "usaId": 19,
+      "notes": "You're a Pearl of a girl",
       "userId": 1,
-      "id": 15
+      "id": 16
+    },
+    {
+      "collectionId": "5",
+      "usaId": 43,
+      "notes": "Why, Wyoming?",
+      "userId": 1,
+      "id": 17
+    },
+    {
+      "id": 18,
+      "usaId": 20,
+      "collectionId": "1",
+      "userId": 1,
+      "notes": "got it"
+    },
+    {
+      "collectionId": "1",
+      "usaId": 49,
+      "notes": "Ua mau ke eia o ka aina i ka pono",
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "id": 21,
+      "usaId": 26,
+      "collectionId": "6",
+      "userId": 1,
+      "notes": "St Augustine Surf Station"
     }
   ],
   "familyCollection": [

@@ -21,7 +21,7 @@ Verify that you are back in the project's root directory. Then in your terminal:
 ### `npm install`
 ### `npm start`
 
-#Please note that until further notice, any changes made to database.json file while using this application are .gitignored and will not be pushed up to GitHub.  
+# Until further notice, any changes made to database.json file while using this application are .gitignored and will not be pushed up to GitHub.
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

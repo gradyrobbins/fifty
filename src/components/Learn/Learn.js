@@ -1,10 +1,30 @@
 import React, { Component } from "react"
 import NavBar from "./../Nav/NavBar";
+import USAMap from "react-usa-map";
 import './Learn.css'
 export default class List extends Component {
 
+
+  mapHandler = (event) => {
+    console.log(event.target.dataset.name)
+
+    };
+
+    /* optional customization of filling per state and calling custom callbacks per state */
+  statesCustomConfig = () => {
+    return {
+      "NJ": {
+        fill: "navy",
+        clickHandler: (event) => console.log('Custom handler for NJ', event.target.dataset)
+      },
+      "NY": {
+        fill: "#CC0000"
+      }
+    };
+  };
+
     render() {
-        // console.log("<Learn /> this.props " , this.props)
+        console.log("<Learn /> this.props " , this.props)
         return (
         <React.Fragment>
             <br/>
@@ -13,6 +33,16 @@ export default class List extends Component {
                 <NavBar />
             <br/>
             <br/>
+            <div>
+              <h1> using NPM package install: npm i react-usa-map v1.3.0 to install clickable map.</h1>
+
+              <h3>state's abbreviation console.log's onClickEvent</h3>
+
+              <div className="App">
+        {/* <USAMap customize={this.statesCustomConfig()} onClick={this.mapHandler} /> */}
+        <USAMap onClick={this.mapHandler} />
+      </div>
+            </div>
             {/* <h3> &lt; Clickable USA Map component / &gt; goes here </h3>
             <h4> whichever state is clicked renders the corresponding state's card and fun facts </h4> */}
 

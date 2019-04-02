@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import DataManager from './modules/DataManager'
 import Login from './components/login/LoginForm'
 import Learn from './components/Learn/Learn'
+
 import CollectionDetail from './components/Collection/CollectionDetail'
 import CollectionsList from './components/Dashboard/CollectionsList';
 import AddAQuarterForm from './components/Collection/Needs/AddAQuarterForm'
@@ -87,6 +88,7 @@ export default class ApplicationViews extends Component {
                   />
                 }}
                 />
+
                 <Route exact path="/collections" render={props => {
                    if (this.isAuthenticated()) {
                   return <CollectionsList

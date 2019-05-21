@@ -1,5 +1,7 @@
 # Fifty State Quarters Collector
 
+![](50ReadmeImg.gif)
+
 This project is a single page application that was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to view this project:

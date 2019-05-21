@@ -16,7 +16,7 @@ export default class HasCard extends Component {
         })
     }
 
-    // anytime the user clicks a different collection to view, new props are passed down
+    // anytime the user clicks a different state on the map to view, new props are passed down
     // from <Collection Detail />     into     <HasCard /> so componentDidUpdate handles the new props.
     // use console.log(this.props) to verify componentDidUpdate is firing
     componentDidUpdate(prevProps) {
@@ -74,11 +74,7 @@ const collection = this.props.collections.find(a => a.id === parseInt(this.props
                 )
             }
             </section>
-            {/* <QDetail
-                    editQ={this.props.editQ}
-                    singleQ={this.state.singleQ}
-                    // getASpecificQ={ this.props.fetchSpecificQ(quarter.id)}
-            /> */}
+
              </div>
              </React.Fragment>
         )

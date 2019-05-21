@@ -1,4 +1,4 @@
-import { Route, Redirect} from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from 'react';
 
 import DataManager from './modules/DataManager'
@@ -9,6 +9,7 @@ import CollectionDetail from './components/Collection/CollectionDetail'
 import CollectionsList from './components/Dashboard/CollectionsList';
 import AddAQuarterForm from './components/Collection/Needs/AddAQuarterForm'
 import QDetail from './components/Collection/QDetail'
+import FunFacts from './components/Learn/FunFacts';
 
 export default class ApplicationViews extends Component {
 
@@ -30,26 +31,27 @@ export default class ApplicationViews extends Component {
     }))
 
   getASpecificCollection = id => DataManager.getASpecificCollection(id)
-  .then(specificCollection => this.setState({
-    specificCollection: specificCollection
-  }))
+    .then(specificCollection => this.setState({
+      specificCollection: specificCollection
+    }))
 
   fetchSpecificQ = (quarterId) => {
     const newState = {}
-        // DataManager.getASpecificQ(quarterId)
-        DataManager.getASpecificQ_expand(quarterId)
-    .then(singleQ => { newState.singleQ = singleQ
-    console.log(" single Q: ??", singleQ)
-    this.setState(newState)
-})
-}
+    // DataManager.getASpecificQ(quarterId)
+    DataManager.getASpecificQ_expand(quarterId)
+      .then(singleQ => {
+      newState.singleQ = singleQ
+        console.log(" single Q: ??", singleQ)
+        this.setState(newState)
+      })
+  }
 
-  addQ = quarter =>{
-  return DataManager.add("quarters", quarter)
-  .then(() => DataManager.getAll("quarters"))
-    .then(quarters => this.setState({
-      quarters: quarters
-    }))
+  addQ = quarter => {
+    return DataManager.add("quarters", quarter)
+      .then(() => DataManager.getAll("quarters"))
+      .then(quarters => this.setState({
+        quarters: quarters
+      }))
   }
 
   editQ = (id, item) => DataManager.edit("quarters", id, item)
@@ -66,13 +68,13 @@ export default class ApplicationViews extends Component {
       .then(allUsers => {
         newState.users = allUsers
       })
-      .then(()=>DataManager.getAll("usas"))
+      .then(() => DataManager.getAll("usas"))
       .then(usas => newState.usas = usas)
       // .then(()=>DataManager.getAll("quarters"))
       // .then(quarter => newState.quarters = quarter)
-      .then(()=>DataManager.getAllExpand("quarters"))
+      .then(() => DataManager.getAllExpand("quarters"))
       .then(quarter => newState.quarters = quarter)
-      .then(()=>DataManager.getAll("collections"))
+      .then(() => DataManager.getAll("collections"))
       .then(collections => newState.collections = collections)
 
 
@@ -80,78 +82,82 @@ export default class ApplicationViews extends Component {
   };
 
   render() {
-    return ( <React.Fragment>
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/learn" render={props => {
-                  return <Learn
-                    usas={this.state.usas}
-                  />
-                }}
-                />
+    return (<React.Fragment>
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/learn" render={props => {
+        return <React.Fragment>
 
-                <Route exact path="/collections" render={props => {
-                   if (this.isAuthenticated()) {
-                  return <CollectionsList
-                        {...props}
-                        collections={this.state.collections}
-                        />
-                    } else {
-                          return <Redirect to="/" />
-                        }
-                  }}
-                />
+          <Learn
+          usas={this.state.usas}
+          />
+         
+          </React.Fragment>
+      }}
+      />
 
-            <Route exact path="/collection/:collectionId(\d+)" render={props => {
-                  if (this.isAuthenticated()) {
-                return <React.Fragment>
-                              <CollectionsList
-                              {...props}
-                              collections={this.state.collections}
-                              />
-                              <CollectionDetail
-                              {...props}
-                              quarters={this.state.quarters}
-                              collections={this.state.collections}
-                              matchlist={this.state.matchlist}
-                              addQ={this.addQ}
-                              deleteQ={this.deleteQ}
-                              editQ={this.editQ}
-                              />
+      <Route exact path="/collections" render={props => {
+        if (this.isAuthenticated()) {
+          return <CollectionsList
+            {...props}
+            collections={this.state.collections}
+          />
+        } else {
+          return <Redirect to="/" />
+        }
+      }}
+      />
 
-                      </React.Fragment>
-              } else {
-                return <Redirect to="/" />
-              }
-              }} />
-            <Route exact path="/collection/:collectionId(\d+)/add" render={props => {
-                if (this.isAuthenticated()) {
-                return  <AddAQuarterForm
-                                {...props}
-                                collections={this.state.collections}
-                                addQ={this.addQ}
-                                usas={this.state.usas}
-                                      />
-                // }} />
-              } else {
-                return <Redirect to="/" />
-              }
-              }} />
-            <Route exact path="/collection/edit/:quarterId(\d+)" render={(props) => {
-                      if (this.isAuthenticated()) {
-                        return <React.Fragment>
-                                  <QDetail
-                                  {...props}
-                                      editQ={this.editQ}
-                                      fetchSpecificQ={this.fetchSpecificQ}
-                                    />
-                                </React.Fragment>
-                      } else {
-                        return <Redirect to="/login" />
-                      }
-                    }} />
+      <Route exact path="/collection/:collectionId(\d+)" render={props => {
+        if (this.isAuthenticated()) {
+          return <React.Fragment>
+            <CollectionsList
+              {...props}
+              collections={this.state.collections}
+            />
+            <CollectionDetail
+              {...props}
+              quarters={this.state.quarters}
+              collections={this.state.collections}
+              matchlist={this.state.matchlist}
+              addQ={this.addQ}
+              deleteQ={this.deleteQ}
+              editQ={this.editQ}
+            />
 
-            </React.Fragment>
+          </React.Fragment>
+        } else {
+          return <Redirect to="/" />
+        }
+      }} />
+      <Route exact path="/collection/:collectionId(\d+)/add" render={props => {
+        if (this.isAuthenticated()) {
+          return <AddAQuarterForm
+            {...props}
+            collections={this.state.collections}
+            addQ={this.addQ}
+            usas={this.state.usas}
+          />
+          // }} />
+        } else {
+          return <Redirect to="/" />
+        }
+      }} />
+      <Route exact path="/collection/edit/:quarterId(\d+)" render={(props) => {
+        if (this.isAuthenticated()) {
+          return <React.Fragment>
+            <QDetail
+              {...props}
+              editQ={this.editQ}
+              fetchSpecificQ={this.fetchSpecificQ}
+            />
+          </React.Fragment>
+        } else {
+          return <Redirect to="/login" />
+        }
+      }} />
 
-)
-}
+    </React.Fragment>
+
+    )
+  }
 }

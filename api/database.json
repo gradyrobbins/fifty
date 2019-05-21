@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "Pennsylvania",
+      "abbr": "PA",
       "Statehood": "December 12, 1787",
       "Capital": "Harrisburg",
       "Nicknames": "Keystone State",
@@ -13,6 +14,7 @@
     {
       "id": 2,
       "name": "New Jersey",
+      "abbr": "NJ",
       "Statehood": "December 18, 1787",
       "Capital": "Trenton",
       "Nicknames": "Garden State",
@@ -23,6 +25,7 @@
     {
       "id": 3,
       "name": "Georgia",
+      "abbr": "GA",
       "Statehood": "January 2, 1788",
       "Capital": "Atlanta",
       "Nicknames": "The Peach State, Empire State of the South",
@@ -33,6 +36,7 @@
     {
       "id": 4,
       "name": "Connecticut",
+      "abbr": "CT",
       "Statehood": "January 9, 1788",
       "Capital": "Hartford",
       "Nicknames": "Nutmeg State, Constitution State",
@@ -43,6 +47,7 @@
     {
       "id": 5,
       "name": "Massachusetts",
+      "abbr": "MA",
       "Statehood": "February 6, 1788",
       "Capital": "Boston",
       "Nicknames": "Bay State",
@@ -53,6 +58,7 @@
     {
       "id": 6,
       "name": "Maryland",
+      "abbr": "MD",
       "Statehood": "April 28, 1788",
       "Capital": "Annapolis",
       "Nicknames": "Old Line State, Free State",
@@ -63,6 +69,7 @@
     {
       "id": 7,
       "name": "South Carolina",
+      "abbr": "SC",
       "Statehood": "May 23, 1788",
       "Capital": "Columbia",
       "Nicknames": "Palmetto State",
@@ -73,6 +80,7 @@
     {
       "id": 8,
       "name": "New Hampshire",
+      "abbr": "NH",
       "Statehood": "June 21, 1788",
       "Capital": "Concord",
       "Nicknames": "Granite State",
@@ -83,6 +91,7 @@
     {
       "id": 9,
       "name": "Virginia",
+      "abbr": "VA",
       "Statehood": "June 25, 1788",
       "Capital": "Richmond",
       "Nicknames": "Sic Semper Tyrannis (Thus always to tyrants)",
@@ -93,6 +102,7 @@
     {
       "id": 10,
       "name": "New York",
+      "abbr": "NY",
       "Statehood": "July 26,1788",
       "Capital": "Albany",
       "Nicknames": "Empire State",
@@ -103,6 +113,7 @@
     {
       "id": 11,
       "name": "North Carolina",
+      "abbr": "NC",
       "Statehood": "November 21, 1789",
       "Capital": "Raleigh",
       "Nicknames": "Tarheel State, Old North State",
@@ -113,6 +124,7 @@
     {
       "id": 12,
       "name": "Rhode Island",
+      "abbr": "RI",
       "Statehood": "May 29, 1790",
       "Capital": "Providence",
       "Nicknames": "Little Rhody, Ocean State",
@@ -123,6 +135,7 @@
     {
       "id": 13,
       "name": "Vermont",
+      "abbr": "VT",
       "Statehood": "March 4, 1791",
       "Capital": "Montpelier",
       "Nicknames": "Green Mountain State",
@@ -133,6 +146,7 @@
     {
       "id": 14,
       "name": "Kentucky",
+      "abbr": "KY",
       "Statehood": "June 1, 1792",
       "Capital": "Frankfort",
       "Nicknames": "Bluegrass State",
@@ -143,6 +157,7 @@
     {
       "id": 15,
       "name": "Tennessee",
+      "abbr": "TN",
       "Statehood": "June 1, 1796",
       "Capital": "Nashville",
       "Nicknames": "Volunteer State",
@@ -153,6 +168,7 @@
     {
       "id": 16,
       "name": "Ohio",
+      "abbr": "OH",
       "Statehood": "March 1, 1803",
       "Capital": "Columbus",
       "Nicknames": "Buckeye State",
@@ -163,6 +179,7 @@
     {
       "id": 17,
       "name": "Louisiana",
+      "abbr": "LA",
       "Statehood": "April 30, 1812",
       "Capital": "Baton Rouge",
       "Nicknames": "Pelican State",
@@ -173,6 +190,7 @@
     {
       "id": 18,
       "name": "Indiana",
+      "abbr": "IN",
       "Statehood": "December 11, 1816",
       "Capital": "Indianapolis",
       "Nicknames": "Hoosier State",
@@ -183,6 +201,7 @@
     {
       "id": 19,
       "name": "Mississippi",
+      "abbr": "MS",
       "Statehood": "December 10, 1817",
       "Capital": "Jackson",
       "Nicknames": "Magnolia State",
@@ -193,6 +212,7 @@
     {
       "id": 20,
       "name": "Illinois",
+      "abbr": "IL",
       "Statehood": "December 3, 1818",
       "Capital": "Springfield ",
       "Nicknames": "Prarie State, Land of Lincoln",
@@ -203,6 +223,7 @@
     {
       "id": 21,
       "name": "Alabama",
+      "abbr": "AL",
       "Statehood": "December 14, 1819",
       "Capital": "Montgomery",
       "Nicknames": "Heart of Dixie, Camellia State",
@@ -213,6 +234,7 @@
     {
       "id": 22,
       "name": "Maine",
+      "abbr": "ME",
       "Statehood": "March 15, 1820",
       "Capital": "Augusta",
       "Nicknames": "Pine Tree State",
@@ -223,6 +245,7 @@
     {
       "id": 23,
       "name": "Missouri",
+      "abbr": "MO",
       "Statehood": "August 10, 1821",
       "Capital": "Jefferson City",
       "Nicknames": "Show Me State",
@@ -233,6 +256,7 @@
     {
       "id": 24,
       "name": "Arkansas",
+      "abbr": "AR",
       "Statehood": "June 15, 1836",
       "Capital": "Little Rock",
       "Nicknames": "Land of Opportunity, Natural State",
@@ -243,6 +267,7 @@
     {
       "id": 25,
       "name": "Michigan",
+      "abbr": "MI",
       "Statehood": "January 26, 1837",
       "Capital": "Lansing",
       "Nicknames": "Great Lakes State, Wolverine State",
@@ -253,6 +278,7 @@
     {
       "id": 26,
       "name": "Florida",
+      "abbr": "FL",
       "Statehood": "March 3, 1845",
       "Capital": "Tallahassee",
       "Nicknames": "Sunshine State",
@@ -263,6 +289,7 @@
     {
       "id": 27,
       "name": "Texas",
+      "abbr": "TX",
       "Statehood": "December 29, 1845",
       "Capital": "Austin",
       "Nicknames": "Lone Star State",
@@ -273,6 +300,7 @@
     {
       "id": 28,
       "name": "Iowa",
+      "abbr": "IA",
       "Statehood": "December 28, 1846",
       "Capital": "Des Moines",
       "Nicknames": "Hawkeye State",
@@ -283,6 +311,7 @@
     {
       "id": 29,
       "name": "Wisconsin",
+      "abbr": "WI",
       "Statehood": "May 29, 1848",
       "Capital": "Madison",
       "Nicknames": "Badger State, America's Dairyland",
@@ -293,6 +322,7 @@
     {
       "id": 30,
       "name": "California",
+      "abbr": "CA",
       "Statehood": "September 9, 1850",
       "Capital": "Sacramento",
       "Nicknames": "Golden State",
@@ -303,6 +333,7 @@
     {
       "id": 31,
       "name": "Minnesota",
+      "abbr": "MN",
       "Statehood": "May 11, 1858",
       "Capital": "St. Paul",
       "Nicknames": "Land of 10,000 Lakes, North Star State, Gopher State",
@@ -313,6 +344,7 @@
     {
       "id": 32,
       "name": "Oregon",
+      "abbr": "OR",
       "Statehood": "February 14, 1859",
       "Capital": "Salem",
       "Nicknames": "Beaver State",
@@ -323,6 +355,7 @@
     {
       "id": 33,
       "name": "Kansas",
+      "abbr": "KS",
       "Statehood": "January 29, 1861",
       "Capital": "Topeka",
       "Nicknames": "Sunflower State",
@@ -333,6 +366,7 @@
     {
       "id": 34,
       "name": "West Virginia",
+      "abbr": "WV",
       "Statehood": "June 20, 1863",
       "Capital": "Charleston",
       "Nicknames": "Mountain State",
@@ -343,6 +377,7 @@
     {
       "id": 35,
       "name": "Nevada",
+      "abbr": "NV",
       "Statehood": "October 31, 1864",
       "Capital": "Carson City",
       "Nicknames": "Silver State",
@@ -353,6 +388,7 @@
     {
       "id": 36,
       "name": "Nebraska",
+      "abbr": "NE",
       "Statehood": "March 1, 1867",
       "Capital": "Lincoln",
       "Nicknames": "Cornhusker State",
@@ -363,6 +399,7 @@
     {
       "id": 37,
       "name": "Colorado",
+      "abbr": "CO",
       "Statehood": "August 1, 1876",
       "Capital": "Denver",
       "Nicknames": "Centennial State",
@@ -373,6 +410,7 @@
     {
       "id": 38,
       "name": "North Dakota",
+      "abbr": "ND",
       "Statehood": "November 2, 1889",
       "Capital": "Bismarck",
       "Nicknames": "Peace Garden State, Rough Rider State, Cereal State",
@@ -383,6 +421,7 @@
     {
       "id": 39,
       "name": "South Dakota",
+      "abbr": "SD",
       "Statehood": "November 2, 1889",
       "Capital": "Pierre",
       "Nicknames": "Coyote State, Mount Rushmore State",
@@ -393,6 +432,7 @@
     {
       "id": 40,
       "name": "Montana",
+      "abbr": "MT",
       "Statehood": "November 8, 1889",
       "Capital": "Helena",
       "Nicknames": "Treasure State",
@@ -403,6 +443,7 @@
     {
       "id": 41,
       "name": "Washington",
+      "abbr": "WA",
       "Statehood": "November 11, 1889",
       "Capital": "Olympia",
       "Nicknames": "Evergreen State",
@@ -413,6 +454,7 @@
     {
       "id": 42,
       "name": "Idaho",
+      "abbr": "ID",
       "Statehood": "July 3, 1890",
       "Capital": "Boise",
       "Nicknames": "Gem State",
@@ -423,6 +465,7 @@
     {
       "id": 43,
       "name": "Wyoming",
+      "abbr": "WY",
       "Statehood": "July 10, 1890",
       "Capital": "Cheyenne",
       "Nicknames": "Equality State",
@@ -433,6 +476,7 @@
     {
       "id": 44,
       "name": "Utah",
+      "abbr": "UT",
       "Statehood": "January 4, 1896",
       "Capital": "Salt Lake City",
       "Nicknames": "Beehive State",
@@ -443,6 +487,7 @@
     {
       "id": 45,
       "name": "Oklahoma",
+      "abbr": "OK",
       "Statehood": "November 16, 1907",
       "Capital": "Oklahoma City",
       "Nicknames": "Sooner State",
@@ -453,6 +498,7 @@
     {
       "id": 46,
       "name": "New Mexico",
+      "abbr": "NM",
       "Statehood": "January 6, 1912",
       "Capital": "Santa Fe",
       "Nicknames": "Land of Enchantment",
@@ -463,6 +509,7 @@
     {
       "id": 47,
       "name": "Arizona",
+      "abbr": "AZ",
       "Statehood": "February 14, 1912",
       "Capital": "Phoenix",
       "Nicknames": "Grand Canyon State",
@@ -473,6 +520,7 @@
     {
       "id": 48,
       "name": "Alaska",
+      "abbr": "AK",
       "Statehood": "January 3, 1959",
       "Capital": "Juneau",
       "Nicknames": "The Last Frontier (unofficial)",
@@ -483,6 +531,7 @@
     {
       "id": 49,
       "name": "Hawaii",
+      "abbr": "HI",
       "Statehood": "August 21, 1959",
       "Capital": "Honolulu",
       "Nicknames": "Aloha State",
@@ -493,6 +542,7 @@
     {
       "id": 50,
       "name": "District of Columbia",
+      "abbr": "DC",
       "Statehood": "1 of 6 U.S. territories ",
       "Capital": "Capital of the United States of America",
       "Nicknames": "DC",
@@ -503,6 +553,7 @@
     {
       "id": 51,
       "name": "Puerto Rico",
+      "abbr": "PR",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "San Juan",
       "Nicknames": "",
@@ -513,6 +564,7 @@
     {
       "id": 52,
       "name": "Guam",
+      "abbr": "",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Hagatna (Agana)",
       "Nicknames": "",
@@ -523,6 +575,7 @@
     {
       "id": 53,
       "name": "American Samoa",
+      "abbr": "",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Pago Pago",
       "Nicknames": "The last frontier",
@@ -533,6 +586,7 @@
     {
       "id": 54,
       "name": "US Virgin Islands",
+      "abbr": "",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Charlotte Amalie, St. Thomas",
       "Nicknames": "",
@@ -543,6 +597,7 @@
     {
       "id": 55,
       "name": "Northern Mariana Islands",
+      "abbr": "",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Saipan",
       "Nicknames": "",
@@ -553,6 +608,7 @@
     {
       "id": 56,
       "name": "Delaware",
+      "abbr": "DE",
       "Statehood": "December 7, 1787",
       "Capital": "Dover",
       "Nicknames": "First State, Diamond State",

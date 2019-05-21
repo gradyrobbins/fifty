@@ -19,9 +19,9 @@ class NavBar extends Component {
                     </li>
 
                 </ul>
-                    <button className="btn btn-primary" onClick={() => {
-                localStorage.clear("credentials")
-                document.location.href='http://localhost:3000'
+                <button className="btn btn-primary" onClick={() => {
+                    localStorage.clear("credentials")
+                    document.location.href = 'http://localhost:3000'
                 }}
                 >LOG OUT</button>
             </nav>

@@ -7,39 +7,38 @@ class CollectionsList extends Component {
 
         return (
             <React.Fragment>
-                    
-                <br/>
-                <br/>
 
-                <br/>
+                <br />
+                <br />
+
+                <br />
 
                 <section className="collections">
-                <br/>
-{/* <nav>
-<ul className="nav nav-pills"> */}
-                {
-                    this.props.collections.map(collection =>
+                    <br />
+                    {/* <nav>
+                        <ul className="nav nav-pills"> */}
+                    {
+                        this.props.collections.map(collection =>
 
 
                             // <Link className="nav-link" to=/collection/:collectionId(\d+)>{collection.collectorsName}
                             // </Link>
 
-                            <button key={collection.id} className="btn btn-primary"  id={collection.id} onClick={() =>
-                                {
+                            <button key={collection.id} className="btn btn-primary" id={collection.id} onClick={() => {
                                 this.props.history.push(`/collection/${collection.id}`)
-                                    // console.log(` button # ${collection.id} clicked`)
-                                }}
-                                >
+                                // console.log(` button # ${collection.id} clicked`)
+                            }}
+                            >
                                 {collection.collectorsName}  </button>
 
 
-                    )
-                }
-                {/* </ul>
+                        )
+                    }
+                    {/* </ul>
 </nav> */}
                 </section>
 
-             </React.Fragment>
+            </React.Fragment>
         )
     }
 }

@@ -1,6 +1,10 @@
 # Fifty State Quarters Collector
 
-This project is a single page application bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+![](50ReadmeImg.gif)
+
+This project is a single page application, bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## How to view this project:
 From your terminal
@@ -16,12 +20,12 @@ Rename starterdata.json, specifying the old file name and the new name you'd lik
 
 ### `json-server -p 5002 -w database.json`
 ### `cd .. `
-Verify that you are back in the project's root directory, fifty.
+Verify that you are back in the project's root directory.
 Then in your terminal:
 ### `npm install`
 ### `npm start`
 
-the npm start command should open [http://localhost:3000](http://localhost:3000) in your browser.
+the `npm start` command should open [http://localhost:3000](http://localhost:3000) in your browser.
 
 starter login credentials:
 `username: grady@22.com`

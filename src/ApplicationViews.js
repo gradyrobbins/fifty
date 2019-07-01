@@ -114,6 +114,7 @@ export default class ApplicationViews extends Component {
               {...props}
               collections={this.state.collections}
             />
+            <hr/>
             <CollectionDetail
               {...props}
               quarters={this.state.quarters}

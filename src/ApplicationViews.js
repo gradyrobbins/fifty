@@ -9,7 +9,7 @@ import CollectionDetail from './components/Collection/CollectionDetail'
 import CollectionsList from './components/Dashboard/CollectionsList';
 import AddAQuarterForm from './components/Collection/Needs/AddAQuarterForm'
 import QDetail from './components/Collection/QDetail'
-import FunFacts from './components/Learn/FunFacts';
+// import FunFacts from './components/Learn/FunFacts';
 
 export default class ApplicationViews extends Component {
 
@@ -90,7 +90,7 @@ export default class ApplicationViews extends Component {
           <Learn
           usas={this.state.usas}
           />
-         
+
           </React.Fragment>
       }}
       />

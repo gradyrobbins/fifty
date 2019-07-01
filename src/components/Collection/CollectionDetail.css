@@ -2,13 +2,21 @@
     /* display: flex; */
 
     border: 2px solid black;
-    padding: 20px;
-    margin: 20px;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px;
+}
 
+.card {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    justify-items: center;
+    text-align: center;
 }
 
 .QDetail {
-    /* display: flex; */
+    display: flex;
     border: 2px solid black;
     padding: 20px;
     margin: 20px;

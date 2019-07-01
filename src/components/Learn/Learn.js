@@ -52,35 +52,19 @@ export default class List extends Component {
 
         <div className="App">
           <h3> &lt; USA Map  / &gt; div  </h3>
-          <h4> maphandler() function: whichever state is clicked renders fun facts to console</h4>
+          <h4> maphandler() function: whichever state is clicked renders fun facts to DOM</h4>
           {/* <USAMap customize={this.statesCustomConfig()} onClick={this.mapHandler} /> */}
           <USAMap onClick={this.mapHandler} />
         </div>
 
-
+        <br/>
         <div>
           <FunFacts justClicked={this.state.justClicked}/>
         </div>
 
-        {/* </div> */}
 
-        <div>
-          {/* {this.props.usas.map(item => {
-            // console.log(item)
-            return <div className="Card" key={item.id}>
-              <h4><strong> {item.name} </strong></h4> <br /><br />
-              Date of Statehood: {item.Statehood} <br />
-              Capital: {item.Capital} <br />
-              Nicknames: {item.Nicknames} <br />
-              Motto: {item.Motto} <br />
-              Flower: {item.Flower} <br />
-              Bird: {item.Bird} <br />
 
-            </div>
-          })
-          } */}
 
-        </div>
       </React.Fragment>
     )
   }

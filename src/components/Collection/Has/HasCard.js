@@ -38,25 +38,24 @@ export default class HasCard extends Component {
 
         return (
             <React.Fragment>
-                <br />
-                <br />
-                <div>
+
+
                     <h2> {collection.collectorsName} Has: </h2>
-                    <br />
-                    <section className="HAScollections">
-                        <br />
+                    <hr />
+
+                <section className="HAScollections">
+
                         {
                             this.state.quarters.map(quarter =>
 
                                 <div key={quarter.id} id={quarter.id} className="collection" >
                                     <h4> {quarter.usa.name}</h4>
                                     {/* <p>StateId #: {quarter.usaId} </p> */}
-                                    <br />
-                                    <br />
+
                                     <img alt="stock-qtr" src={stock_qtr} className="icon-qtr" />
-                                    <br />
+
                                     <p>Notes: {quarter.notes}</p>
-                                    <br />
+
                                     <button key={quarter.id} id="edit" onClick={() => {
                                         // console.log("edit button clicked")
                                         this.props.fetchSpecificQ(quarter.id)
@@ -66,7 +65,7 @@ export default class HasCard extends Component {
                                             )
                                     }
                                     }> View and update notes on this quarter</button>
-
+                                    <br/>
                                     <button id={quarter.id} onClick={() => {
                                         // console.log(`delete button clicked `)
                                         this.props.deleteQ(quarter.id)
@@ -77,7 +76,7 @@ export default class HasCard extends Component {
                         }
                     </section>
 
-                </div>
+
             </React.Fragment>
         )
     }

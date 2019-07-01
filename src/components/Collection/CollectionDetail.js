@@ -24,7 +24,7 @@ export default class CollectionDetail extends Component {
         return DataManager.getASpecificQ(quarterId)
             // DataManager.getASpecificQ_expand(quarterId)
             .then(singleQ => {
-            newState.singleQ = singleQ
+                newState.singleQ = singleQ
                 console.log(" single Q: ??", singleQ)
                 this.setState(newState)
             })
@@ -79,13 +79,11 @@ export default class CollectionDetail extends Component {
 
         return (
             <React.Fragment>
-                <br />
-                <br />
+                <hr />
                 <div className="collection">
                     <section >
                         <div key={collection.id} className="card">
                             <h3>{collection.collectorsName}'s Collection: </h3>
-                            <br />
                             <button type="button"
                                 className="btn btn-success"
                                 onClick={() => {
@@ -96,8 +94,7 @@ export default class CollectionDetail extends Component {
                         </button>
                         </div>
                     </section>
-                    <br />
-                    <br />
+                    <hr />
 
                     <HasCard
                         // {...props}
@@ -112,9 +109,7 @@ export default class CollectionDetail extends Component {
                         match={this.props.match}
                         collections={this.props.collections}
                     />
-                    <br />
-                    <br />
-                    <br />
+                    <hr/>
 
                     {/* <NeedsCard
                         // {...props}
@@ -124,7 +119,7 @@ export default class CollectionDetail extends Component {
                         usas={this.props.usas}
                         addQ={this.addQ}
 
-                /> */}
+                        /> */}
 
                 </div>
             </React.Fragment>

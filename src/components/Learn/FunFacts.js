@@ -28,7 +28,7 @@ class FunFacts extends Component {
 
     render() {
 
-        console.log(this.props.justClicked)
+        console.log("<FunFacts /> props (ComponentDidUpdate):" + this.props.justClicked)
         return (
             <section className="funFacts">
 

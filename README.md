@@ -7,16 +7,16 @@ This project is a single page application, bootstrapped with [Create React App](
 
 
 ## How to view this project:
-From your terminal
+
 ### `git clone https://github.com/gradyrobbins/fifty.git`
-Change the current working directory to your local repository.
+Change into the directory.
 ### `cd fifty`
 Move into the api sub-directory
 ### `cd api/`
 
-Rename starterdata.json, specifying the old file name and the new name you'd like to give the file, using the below command. This will populate the application with starter data.  Until further notice, any changes made to database.json file while using this application are .gitignored and will not be pushed up to GitHub.  Meaning:  quarters collected during your session are not kept in the API's persistent storage.  yet.
+Rename starterdata.json, specifying the old file name and the new name you'd like to give the file, using the below command. This will populate the application with starter data.  Until further notice, any changes made to database.json file while using this application are .gitignored and will not be pushed up to GitHub.  Meaning:  quarters collected during your session are not kept in the API's persistent storage...  yet.
 
-### `git mv starterdata.json database.json`
+### `mv starterdata.json database.json`
 
 ### `json-server -p 5002 -w database.json`
 ### `cd .. `

@@ -23,18 +23,14 @@ class FunFacts extends Component {
         }
     }
 
-
-
-
     render() {
 
         console.log("<FunFacts /> props (ComponentDidUpdate):" + this.props.justClicked)
         return (
             <section className="funFacts">
-
-                <div className="Card" key={this.state.justClicked.id}>
+                {/* <div className="Card" key={this.state.justClicked.id}></div>
                     <br/>
-
+                    <br/> */}
                     <strong> {this.state.justClicked.name} </strong><br/>
                     <ul>
                         <br/>
@@ -44,15 +40,7 @@ class FunFacts extends Component {
                         <li><strong>Motto: </strong>{this.state.justClicked.Motto}</li>
                         <li><strong>Flower:</strong>{this.state.justClicked.Flower}</li>
                         <li><strong>Bird: </strong>{this.state.justClicked.Bird}</li>
-
                     </ul>
-
-
-                </div>
-
-
-
-
             </section>
                 )
             }

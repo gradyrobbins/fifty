@@ -564,7 +564,7 @@
     {
       "id": 52,
       "name": "Guam",
-      "abbr": "",
+      "abbr": "Guam",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Hagatna (Agana)",
       "Nicknames": "",
@@ -575,7 +575,7 @@
     {
       "id": 53,
       "name": "American Samoa",
-      "abbr": "",
+      "abbr": "American Samoa",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Pago Pago",
       "Nicknames": "The last frontier",
@@ -586,7 +586,7 @@
     {
       "id": 54,
       "name": "US Virgin Islands",
-      "abbr": "",
+      "abbr": "US Virgin Islands",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Charlotte Amalie, St. Thomas",
       "Nicknames": "",
@@ -597,7 +597,7 @@
     {
       "id": 55,
       "name": "Northern Mariana Islands",
-      "abbr": "",
+      "abbr": "Northern Mariana Islands",
       "Statehood": "1 of 6 U.S. territories",
       "Capital": "Saipan",
       "Nicknames": "",

@@ -8,7 +8,7 @@ import VirginIslands from './../img/USVirginIslands.jpeg'
 import N_Marianas from './../img/N_Mariana_Islands.jpeg'
 import Puerto_Rico from './../img/PuertoRico.jpeg'
 import American_Samoa from './../img/American_Samoa.jpeg'
-export default class List extends Component {
+export default class Learn extends Component {
 
 
   constructor(props) {
@@ -72,11 +72,84 @@ export default class List extends Component {
         <br />
         <br/>
         <div className="Territories">
-          <img alt="guam" src={Guam} className="img" />
-          <img alt="virgin Islands" src={VirginIslands} className="img" />
-          <img alt="N_Marianas" src={N_Marianas} className="img" />
-          <img alt="Puerto_Rico" src={Puerto_Rico} className="img" />
-          <img alt="American_Samoa" src={American_Samoa} className="img" />
+          <img alt="Guam" src={Guam} className="img"
+          // onClick={() => console.log("clicked Guam")}
+
+          onClick={() => this.setState({ justClicked:
+            {
+                "id": 52,
+                "name": "Guam",
+                "abbr": "",
+                "Statehood": "1 of 6 U.S. territories",
+                "Capital": "Hagatna (Agana)",
+                "Nicknames": "",
+                "Motto": "Where America's day begins",
+                "Flower": "Bougainvillea spectabilis",
+                "Bird": "Marianas rose crown fruit dove"
+              }
+            })}
+
+              />
+          <img alt="virgin Islands" src={VirginIslands} className="img"
+            onClick={() => this.setState({ justClicked:
+              {
+                "id": 54,
+                "name": "US Virgin Islands",
+                "abbr": "US Virgin Islands",
+                "Statehood": "1 of 6 U.S. territories",
+                "Capital": "Charlotte Amalie, St. Thomas",
+                "Nicknames": "",
+                "Motto": "United in pride",
+                "Flower": "Yellow elder or yellow cedar",
+                "Bird": "Yellow breast or banana quit"
+              }
+              })}
+          />
+          <img alt="N_Marianas" src={N_Marianas} className="img"
+              onClick={() => this.setState({ justClicked:
+                {
+                  "id": 55,
+                  "name": "Northern Mariana Islands",
+                  "abbr": "Northern Mariana Islands",
+                  "Statehood": "1 of 6 U.S. territories",
+                  "Capital": "Saipan",
+                  "Nicknames": "",
+                  "Motto": "",
+                  "Flower": "Flores Mayo",
+                  "Bird": "Mariana fruit-dove"
+                }
+                })}
+          />
+          <img alt="Puerto_Rico" src={Puerto_Rico} className="img"
+            onClick={() => this.setState({ justClicked:
+              {
+                "id": 51,
+                "name": "Puerto Rico",
+                "abbr": "PR",
+                "Statehood": "1 of 6 U.S. territories",
+                "Capital": "San Juan",
+                "Nicknames": "",
+                "Motto": "Joannes Est Nomen Eius (John is his name)",
+                "Flower": "Maga",
+                "Bird": "Reinita"
+              }
+              })}
+          />
+          <img alt="American_Samoa" src={American_Samoa} className="img"
+            onClick={() => this.setState({ justClicked:
+              {
+                "id": 53,
+                "name": "American Samoa",
+                "abbr": "American Samoa",
+                "Statehood": "1 of 6 U.S. territories",
+                "Capital": "Pago Pago",
+                "Nicknames": "The last frontier",
+                "Motto": "Samoa Muamua le Atua (God is first in Samoa)",
+                "Flower": "Paogo",
+                "Bird": "Willow ptarmigan"
+              }
+              })}
+          />
         </div>
 
 

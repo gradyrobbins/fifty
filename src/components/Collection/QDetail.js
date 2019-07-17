@@ -21,7 +21,7 @@ export default class QDetail extends Component {
             newState.singleQ = singleQ
                 newState.notes = singleQ.notes
                 newState.isLoaded = true
-                console.log(" single Q name: ??", singleQ.usa.name)
+                console.log(" single Q name:  ", singleQ.usa.name)
                 this.setState(newState)
             })
     }

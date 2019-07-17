@@ -5,17 +5,17 @@ import "bootstrap/dist/css/bootstrap.min.css"
 class NavBar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-light fixed-top light-blue flex-md-nowrap p-0 shadow">
+            <nav className="navbar navbar-light fixed-top bg-dark text-white flex-md-nowrap p-0 shadow">
                 <ul className="nav nav-pills">
 
                     <li className="nav-item">
-                        <Link className="nav-link" to="/login">Login </Link>
+                        <Link className="nav-link" to="/login" style={{color: 'white'}}>Login </Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/collections">View All Collections</Link>
+                        <Link className="nav-link" to="/collections" style={{color: 'white'}}>View All Collections</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/learn">Learn more </Link>
+                        <Link className="nav-link" to="/learn" style={{color: 'white'}}>Learn more </Link>
                     </li>
 
                 </ul>

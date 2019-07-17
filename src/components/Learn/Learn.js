@@ -85,7 +85,9 @@ export default class Learn extends Component {
                 "Nicknames": "",
                 "Motto": "Where America's day begins",
                 "Flower": "Bougainvillea spectabilis",
-                "Bird": "Marianas rose crown fruit dove"
+                "Bird": "Marianas rose crown fruit dove",
+                "image": "https://loremflickr.com/75/75",
+                "year": ""
               }
             })}
 
@@ -101,7 +103,9 @@ export default class Learn extends Component {
                 "Nicknames": "",
                 "Motto": "United in pride",
                 "Flower": "Yellow elder or yellow cedar",
-                "Bird": "Yellow breast or banana quit"
+                "Bird": "Yellow breast or banana quit",
+                "image": "https://loremflickr.com/75/75",
+                "year": ""
               }
               })}
           />
@@ -116,7 +120,9 @@ export default class Learn extends Component {
                   "Nicknames": "",
                   "Motto": "",
                   "Flower": "Flores Mayo",
-                  "Bird": "Mariana fruit-dove"
+                  "Bird": "Mariana fruit-dove",
+                  "image": "https://loremflickr.com/75/75",
+                  "year": ""
                 }
                 })}
           />
@@ -131,7 +137,9 @@ export default class Learn extends Component {
                 "Nicknames": "",
                 "Motto": "Joannes Est Nomen Eius (John is his name)",
                 "Flower": "Maga",
-                "Bird": "Reinita"
+                "Bird": "Reinita",
+                "image": "https://loremflickr.com/75/75",
+                "year": ""
               }
               })}
           />
@@ -146,7 +154,9 @@ export default class Learn extends Component {
                 "Nicknames": "The last frontier",
                 "Motto": "Samoa Muamua le Atua (God is first in Samoa)",
                 "Flower": "Paogo",
-                "Bird": "Willow ptarmigan"
+                "Bird": "Willow ptarmigan",
+                "image": "https://loremflickr.com/75/75",
+                "year": ""
               }
               })}
           />

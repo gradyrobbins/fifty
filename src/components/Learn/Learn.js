@@ -79,15 +79,15 @@ export default class Learn extends Component {
             {
                 "id": 52,
                 "name": "Guam",
-                "abbr": "",
+                "abbr": "Guam",
                 "Statehood": "1 of 6 U.S. territories",
                 "Capital": "Hagatna (Agana)",
                 "Nicknames": "",
                 "Motto": "Where America's day begins",
                 "Flower": "Bougainvillea spectabilis",
                 "Bird": "Marianas rose crown fruit dove",
-                "image": "https://loremflickr.com/75/75",
-                "year": ""
+                "image": "https://upload.wikimedia.org/wikipedia/commons/5/59/2009_GU_Proof.png",
+                "year": "2009"
               }
             })}
 
@@ -104,8 +104,8 @@ export default class Learn extends Component {
                 "Motto": "United in pride",
                 "Flower": "Yellow elder or yellow cedar",
                 "Bird": "Yellow breast or banana quit",
-                "image": "https://loremflickr.com/75/75",
-                "year": ""
+                "image": "https://upload.wikimedia.org/wikipedia/commons/d/dc/2009_USVI_Proof.png",
+                "year": "2009"
               }
               })}
           />
@@ -121,8 +121,8 @@ export default class Learn extends Component {
                   "Motto": "",
                   "Flower": "Flores Mayo",
                   "Bird": "Mariana fruit-dove",
-                  "image": "https://loremflickr.com/75/75",
-                  "year": ""
+                  "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/2009_NMI_Proof.png",
+                  "year": "2009"
                 }
                 })}
           />
@@ -138,8 +138,8 @@ export default class Learn extends Component {
                 "Motto": "Joannes Est Nomen Eius (John is his name)",
                 "Flower": "Maga",
                 "Bird": "Reinita",
-                "image": "https://loremflickr.com/75/75",
-                "year": ""
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/2009_PR_Proof.png/766px-2009_PR_Proof.png",
+                "year": "2009"
               }
               })}
           />
@@ -155,8 +155,8 @@ export default class Learn extends Component {
                 "Motto": "Samoa Muamua le Atua (God is first in Samoa)",
                 "Flower": "Paogo",
                 "Bird": "Willow ptarmigan",
-                "image": "https://loremflickr.com/75/75",
-                "year": ""
+                "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/2009_AS_Proof.png",
+                "year": "2009"
               }
               })}
           />

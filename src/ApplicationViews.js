@@ -41,7 +41,7 @@ export default class ApplicationViews extends Component {
     DataManager.getASpecificQ_expand(quarterId)
       .then(singleQ => {
       newState.singleQ = singleQ
-        console.log(" single Q: ??", singleQ)
+        console.log(" single Q:  ", singleQ)
         this.setState(newState)
       })
   }
@@ -86,11 +86,9 @@ export default class ApplicationViews extends Component {
       <Route exact path="/login" component={Login} />
       <Route exact path="/learn" render={props => {
         return <React.Fragment>
-
           <Learn
           usas={this.state.usas}
           />
-
           </React.Fragment>
       }}
       />

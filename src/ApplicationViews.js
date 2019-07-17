@@ -100,7 +100,7 @@ export default class ApplicationViews extends Component {
             collections={this.state.collections}
           />
         } else {
-          return <Redirect to="/" />
+          return <Redirect to="/login" />
         }
       }}
       />

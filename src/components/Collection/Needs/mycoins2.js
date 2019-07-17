@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NavBar from '../nav/NavBar';
+// import NavBar from '../nav/NavBar';
 import "bootstrap/dist/css/bootstrap.min.css"
 import DataManager from "./../../modules/DataManager"
 
@@ -83,7 +83,7 @@ let needem = missingStateIDs.map(e =>  this.props.states.find(state => state.sta
 
         return (
             <div>
-                <NavBar />
+                {/* <NavBar /> */}
                     <div className="container">
 
                     This collector is looking for the following states:

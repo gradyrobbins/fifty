@@ -1,14 +1,15 @@
 import React, { Component } from "react"
 import HasCard from "./Has/HasCard";
+import NeedsCard from "./Needs/NeedsCard"
 import DataManager from "../../modules/DataManager";
 import './CollectionDetail.css'
 
 export default class CollectionDetail extends Component {
     state = {
-        // matchlist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56],
+        matchlist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56],
         userSpecific: [],
-        singleQ: ""
-        // needsList: [],
+        singleQ: "",
+        needsList: [],
     }
 
     fetchSpecificCollection = (collectionId) => {
@@ -111,7 +112,7 @@ export default class CollectionDetail extends Component {
                     />
                     <hr/>
 
-                    {/* <NeedsCard
+                    <NeedsCard
                         // {...props}
                         quarters={this.state.needsList}
                         matchlist={this.state.matchlist}
@@ -119,7 +120,7 @@ export default class CollectionDetail extends Component {
                         usas={this.props.usas}
                         addQ={this.addQ}
 
-                        /> */}
+                        />
 
                 </div>
             </React.Fragment>

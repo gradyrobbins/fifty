@@ -114,12 +114,15 @@ export default class CollectionDetail extends Component {
 
                     <NeedsCard
                         // {...props}
-                        quarters={this.state.needsList}
+                        quarters={this.state.userSpecific}
                         matchlist={this.state.matchlist}
                         addAQuarter={this.props.addAQuarter}
                         usas={this.props.usas}
                         addQ={this.addQ}
-
+                        getASpecificCollection={this.fetchSpecificCollection}
+                        history={this.props.history}
+                        match={this.props.match}
+                        collections={this.props.collections}
                         />
 
                 </div>

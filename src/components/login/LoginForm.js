@@ -28,19 +28,17 @@ export default class Login extends Component {
         */
         //TODO fix naming conventions/ singular/plural
         DataManager.getAll("users").then((user) => {
-            console.log(user)
+            // console.log(user)
             const users = user.find(user => {
                 return user.email === this.state.email && user.password === this.state.password //verifies account is in DB
             })
 
             if (users) {
                 localStorage.setItem("credentials", JSON.stringify(users))
-                // document.location.href = 'http://localhost:3000/collections'
                 this.props.history.push(`/collections`)
             } else {
                 alert("invalid credentials")
                 this.props.history.push(`/`)
-                // document.location.href = 'http://localhost:3000/login'
             }
         })
 
@@ -50,9 +48,11 @@ export default class Login extends Component {
         return (
             <div className="forms" >
                 <br />
-                <img src={backgroundImage} alt="Screaming Eagle and George Washington" style={ { backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat' } }/>
+                <img src={backgroundImage} alt="Screaming Eagle and George Washington" style={{
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat'
+                }} />
                 <br />
                 <br />
                 <div className="loginForm">

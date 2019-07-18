@@ -69,7 +69,7 @@ export default class QDetail extends Component {
             <div key={this.state.singleQ.id} className="QDetail" >
                 {this.state.isLoaded ? <h3> {this.state.singleQ.usa.name} </h3> : <h3> awaiting promise's resolution </h3>}
 
-                <h6>Specific State Quarter ID# &nbsp; {this.state.singleQ.usaId} </h6>
+                {/* <h6>Specific State Quarter ID# &nbsp; {this.state.singleQ.usaId} </h6> */}
                 <br />
                 <div className="form-group">
                     <label htmlFor="setup">Edit notes</label>

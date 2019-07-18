@@ -8,14 +8,14 @@ class NeedsCard extends Component {
     state = {
         quarters: [],
         matchlist: [],
-        needslist: []
+
     }
     componentDidMount() {
         console.log("this.props", this.props)
         this.setState({
             quarters: this.props.quarters,
             matchlist: this.props.matchlist,
-            needslist: []
+
 
         })
     }
@@ -47,6 +47,27 @@ class NeedsCard extends Component {
         var missingStateIDs = arr2.filter(function (n) { return !this.has(n) }, new Set(arr1));
         console.log("these are the usaId's  NEEDED :", missingStateIDs);
 
+        //this performs array methods on the "missingStateIds" array to gather an array of objects representing
+        let needem = missingStateIDs.map(e => this.props.usas.find(state => state.id === e)) || {}
+        // console.log("needem", needem)
+
+        let bloop = [];
+        //nested loops:  Outer loop iterates over [{}, {}, {}]
+        for (let i = 0; i < needem.length; i++){
+
+            // console.log(needem[i])
+            // innerloop logs key/values of each {}
+            for (let prop in needem[i]){
+                    //conditional on the key we need, just the state's name.  push it into the bloop array for later use.
+                    if(prop==="name"){
+                        bloop.push(needem[i][prop])
+                    }
+            }
+
+        }
+        // console.log("bloop", bloop.sort())
+        let ABC = bloop.sort();
+        console.log(ABC)
 
         return (
             <React.Fragment>
@@ -59,7 +80,8 @@ class NeedsCard extends Component {
                     <br />
                     <h2> {collection.collectorsName} Needs: </h2>
                     <br />
-                    {/* <img src={stock_qtr} alt="bloop" height="175" width="175" /> */}
+                    <img src={stock_qtr} alt="bloop" height="175" width="175" />
+                    
                 </div>
                 <section className="NEEDScollection">
                     {

@@ -17,6 +17,9 @@
 
 .QDetail {
     display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: left;
     border: 2px solid black;
     padding: 20px;
     margin: 20px;

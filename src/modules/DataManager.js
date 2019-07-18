@@ -24,18 +24,6 @@ export default Object.create(null, {
         }
     },
 
-
-    // http://localhost:3000/collection/1?_expand=usa
-
-
-    //commented out; not in use 2/8/19
-    // getAllUserData: {
-    //     value: (resource, id) => {
-    //         return fetch(`${remoteURL}/${resource}?user_id=${id}`)
-    //         .then(result => result.json())
-    //     }
-    // },
-
     getASpecificCollection: {
         value: (id) => {
             return fetch(`${remoteURL}/quarters?collectionId=${id}&_expand=usa`)
@@ -49,8 +37,6 @@ export default Object.create(null, {
                 .then(result => result.json())
         }
     },
-
-    
 
     getASpecificQ_expand: {
         value: (id) => {

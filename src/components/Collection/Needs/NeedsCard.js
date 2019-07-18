@@ -48,13 +48,6 @@ class NeedsCard extends Component {
         console.log("these are the usaId's  NEEDED :", missingStateIDs);
 
 
-
-
-
-
-
-
-
         return (
             <React.Fragment>
                 <br />
@@ -69,7 +62,6 @@ class NeedsCard extends Component {
                     {/* <img src={stock_qtr} alt="bloop" height="175" width="175" /> */}
                 </div>
                 <section className="NEEDScollection">
-
                     {
                         missingStateIDs.map(quarter =>
                             <ul key={quarter} id={quarter}  >
@@ -79,9 +71,6 @@ class NeedsCard extends Component {
                     }
                 </section>
 
-                <section>
-
-                </section>
             </React.Fragment>
         )
     }

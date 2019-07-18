@@ -53,15 +53,15 @@ class NeedsCard extends Component {
 
         let bloop = [];
         //nested loops:  Outer loop iterates over [{}, {}, {}]
-        for (let i = 0; i < needem.length; i++){
+        for (let i = 0; i < needem.length; i++) {
 
             // console.log(needem[i])
             // innerloop logs key/values of each {}
-            for (let prop in needem[i]){
-                    //conditional on the key we need, just the state's name.  push it into the bloop array for later use.
-                    if(prop==="name"){
-                        bloop.push(needem[i][prop])
-                    }
+            for (let prop in needem[i]) {
+                //conditional on the key we need, just the state's name.  push it into the bloop array for later use.
+                if (prop === "name") {
+                    bloop.push(needem[i][prop])
+                }
             }
 
         }
@@ -78,16 +78,16 @@ class NeedsCard extends Component {
                 <br />
                 <div>
                     <br />
-                    <h2> {collection.collectorsName} Needs: </h2>
+                    <h2> {collection.collectorsName} Needs these Quarters: </h2>
                     <br />
-                    <img src={stock_qtr} alt="bloop" height="175" width="175" />
-                    
+                    {/* <img src={stock_qtr} alt="bloop" height="175" width="175" /> */}
                 </div>
-                <section className="NEEDScollection">
+
+                <section className="HAScollections">
                     {
-                        missingStateIDs.map(quarter =>
+                        ABC.map(quarter =>
                             <ul key={quarter} id={quarter}  >
-                                <li>StateId #: {quarter} </li>
+                                <li> {quarter}</li>
                             </ul>
                         )
                     }

@@ -19,50 +19,33 @@ class NeedsCard extends Component {
 
         })
     }
-    componentDidUpdate(prevProps) {
-        if (prevProps.quarters !== this.props.quarters) {
-            this.setState({
-                quarters: this.props.quarters,
-                matchlist: this.props.matchlist,
-                needslist: this.needslist
-            })
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if (prevProps.quarters !== this.props.quarters) {
+    //         this.setState({
+    //             quarters: this.props.quarters,
+    //             matchlist: this.props.matchlist,
+    //             needslist: this.needslist
+    //         })
+    //     }
+    // }
     render() {
 
         // whose collection are we looking at?
         const collection = this.props.collections.find(a => a.id === parseInt(this.props.match.params.collectionId)) || {}
 
-        // arr1 holds the usaId's of the quarters in their collection
+        // arr1 holds the usaId's of the quarters in this child's collection
         let arr1 = [];
         this.props.quarters.forEach(function (item) {
             arr1.push(item.usaId);
         });
-        console.log("arr1:  ", arr1);
+        console.log("the usaId's of the quarters this collection HAS:  ", arr1);
 
-        // arr2 holds an array 1 - 56 representing each unique quarter needed to complete a collection
+        // arr2 holds an array 1 - 56 representing each unique quarter's id ("usas" in database.json)
         let arr2 = this.state.matchlist;
-        console.log("arr2: ", arr2)
-
-        // this function is built to compare the collector's array of "HasQuarters" (arr1) against the matchList array of all 56 usaID; it pushes matches into an separate array.
-        function compare(arr1, arr2) {
-            const matches = [];
-
-            arr1.forEach((e1) => arr2.forEach((e2) => { if (e1 === e2) { matches.push(e1) } }
-            ));
-            return matches;
-        }
-
-        //here is where i invoke compare()  as defined above
-        let matchedStateIDs = compare(arr1, arr2);
-        console.log("matched state_id's: ", matchedStateIDs)
-
-        //this maps over the matched ID's and link them to === state_id's in the master list which was passed in via props
-        // let gotem = matchedStateIDs.map(e =>  this.props.states.find(state => state.state_id === e) ) || {}
 
         //the below function was based on: https://stackoverflow.com/questions/40537972/compare-2-arrays-and-show-unmatched-elements-from-array-1
         var missingStateIDs = arr2.filter(function (n) { return !this.has(n) }, new Set(arr1));
-        console.log("missing :", missingStateIDs);
+        console.log("these are the usaId's  NEEDED :", missingStateIDs);
 
 
 
@@ -97,7 +80,7 @@ class NeedsCard extends Component {
                 </section>
 
                 <section>
-                    
+
                 </section>
             </React.Fragment>
         )

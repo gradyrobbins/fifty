@@ -97,6 +97,7 @@ export default class ApplicationViews extends Component {
         if (this.isAuthenticated()) {
           return <CollectionsList
             {...props}
+            usas={this.state.usas}
             collections={this.state.collections}
           />
         } else {
@@ -115,12 +116,14 @@ export default class ApplicationViews extends Component {
             <hr/>
             <CollectionDetail
               {...props}
+              usas={this.state.usas}
               quarters={this.state.quarters}
               collections={this.state.collections}
               matchlist={this.state.matchlist}
               addQ={this.addQ}
               deleteQ={this.deleteQ}
               editQ={this.editQ}
+              getASpecific56={this.getASpecific56}
             />
 
           </React.Fragment>

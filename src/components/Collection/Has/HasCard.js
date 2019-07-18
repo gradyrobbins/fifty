@@ -10,7 +10,7 @@ export default class HasCard extends Component {
     }
 
     componentDidMount() {
-        console.log("this.props", this.props)
+        // console.log("this.props", this.props)
         this.setState({
             quarters: this.props.quarters,
             singleQ: this.props.singleQ

@@ -53,6 +53,8 @@ export default class CollectionDetail extends Component {
         }))
         .then(() => this.props.history.push("/collections"))
 
+    
+
 
 
 
@@ -123,6 +125,7 @@ export default class CollectionDetail extends Component {
                         history={this.props.history}
                         match={this.props.match}
                         collections={this.props.collections}
+                        getASpecific56={this.getASpecific56}
                         />
 
                 </div>

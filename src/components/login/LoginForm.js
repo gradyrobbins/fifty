@@ -39,6 +39,7 @@ export default class Login extends Component {
                 this.props.history.push(`/collections`)
             } else {
                 alert("invalid credentials")
+                this.props.history.push(`/`)
                 // document.location.href = 'http://localhost:3000/login'
             }
         })

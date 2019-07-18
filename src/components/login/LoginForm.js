@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import DataManager from '../../modules/DataManager'
 import './Login.css'
-
+import backgroundImage from './50ReadmeImg.gif'
 
 export default class Login extends Component {
 
@@ -26,7 +26,7 @@ export default class Login extends Component {
             For now, just store the email and password that
             the customer enters into local storage.
         */
-//TODO fix naming conventions/ singular/plural
+        //TODO fix naming conventions/ singular/plural
         DataManager.getAll("users").then((user) => {
             console.log(user)
             const users = user.find(user => {
@@ -39,6 +39,7 @@ export default class Login extends Component {
                 this.props.history.push(`/collections`)
             } else {
                 alert("invalid credentials")
+                this.props.history.push(`/`)
                 // document.location.href = 'http://localhost:3000/login'
             }
         })
@@ -47,10 +48,13 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div className="forms">
-                <br/>
-                <br/>
-                <br/>
+            <div className="forms" >
+                <br />
+                <img src={backgroundImage} alt="Screaming Eagle and George Washington" style={ { backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat' } }/>
+                <br />
+                <br />
                 <div className="loginForm">
                     <form onSubmit={this.handleLogin}>
                         <h1 className="h3 mb-3 font-weight-normal">Please log in</h1>
@@ -73,7 +77,7 @@ export default class Login extends Component {
                         </button>
                     </form>
                 </div>
-            </div>
+            </div >
 
         )
     }

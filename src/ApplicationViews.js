@@ -41,7 +41,7 @@ export default class ApplicationViews extends Component {
     DataManager.getASpecificQ_expand(quarterId)
       .then(singleQ => {
       newState.singleQ = singleQ
-        console.log(" single Q: ??", singleQ)
+        console.log(" single Q:  ", singleQ)
         this.setState(newState)
       })
   }
@@ -86,11 +86,9 @@ export default class ApplicationViews extends Component {
       <Route exact path="/login" component={Login} />
       <Route exact path="/learn" render={props => {
         return <React.Fragment>
-
           <Learn
           usas={this.state.usas}
           />
-
           </React.Fragment>
       }}
       />
@@ -99,10 +97,11 @@ export default class ApplicationViews extends Component {
         if (this.isAuthenticated()) {
           return <CollectionsList
             {...props}
+            usas={this.state.usas}
             collections={this.state.collections}
           />
         } else {
-          return <Redirect to="/" />
+          return <Redirect to="/login" />
         }
       }}
       />
@@ -117,12 +116,14 @@ export default class ApplicationViews extends Component {
             <hr/>
             <CollectionDetail
               {...props}
+              usas={this.state.usas}
               quarters={this.state.quarters}
               collections={this.state.collections}
               matchlist={this.state.matchlist}
               addQ={this.addQ}
               deleteQ={this.deleteQ}
               editQ={this.editQ}
+              getASpecific56={this.getASpecific56}
             />
 
           </React.Fragment>

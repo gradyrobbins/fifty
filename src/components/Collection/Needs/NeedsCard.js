@@ -1,86 +1,99 @@
 import React, { Component } from 'react'
-// import Dashboard from '../../Dashboard/Dashboard'
 import './NeedsCard.css'
 import stock_qtr from './../../img/stock_Qtr_Img.png'
-// import CollectionsList from '../../Dashboard/CollectionsList';
-// import CollectionDetail from './../CollectionDetail'
+
 
 class NeedsCard extends Component {
 
-    state={
+    state = {
         quarters: [],
-        matchlist: []
-    }
-    componentDidUpdate(prevProps) {
-       if(prevProps.quarters !== this.props.quarters) {
-           this.setState({quarters : this.props.quarters})
-       }
+        matchlist: [],
+
     }
     componentDidMount() {
-           this.setState({quarters : this.props.quarters,
-                        //  matchlist : this.props.matchlist
+        console.log("this.props", this.props)
+        this.setState({
+            quarters: this.props.quarters,
+            matchlist: this.props.matchlist,
+
+
         })
     }
-
-
+    // componentDidUpdate(prevProps) {
+    //     if (prevProps.quarters !== this.props.quarters) {
+    //         this.setState({
+    //             quarters: this.props.quarters,
+    //             matchlist: this.props.matchlist,
+    //             needslist: this.needslist
+    //         })
+    //     }
+    // }
     render() {
-        console.log("<NEEDSCARD /> props =", this.props)
-        // console.log("<NEEDSCARD /> props.history=", this.props.history)
 
+        // whose collection are we looking at?
+        const collection = this.props.collections.find(a => a.id === parseInt(this.props.match.params.collectionId)) || {}
 
-        return (
-        <React.Fragment>
-            <br/>
-        {/* <Dashboard /> */}
-            <br/>
-            <br/>
-            {/* <CollectionsList /> */}
-            <br/>
-            <br/>
-            <div>
-            <br/>
-            <h2>Needs: </h2>
-            <br/>
-            <section className="NEEDScollections">
-            <br/>
+        // arr1 holds the usaId's of the quarters in this child's collection
+        let arr1 = [];
+        this.props.quarters.forEach(function (item) {
+            arr1.push(item.usaId);
+        });
+        console.log("the usaId's of the quarters this collection HAS:  ", arr1);
 
-            {/* "Some" props are coming in. are they the right ones?
+        // arr2 holds an array 1 - 56 representing each unique quarter's id ("usas" in database.json)
+        let arr2 = this.state.matchlist;
 
-            Logic needed:  compare what this collection "HAS" against a master list of all 56 to get a list of what this collection "NEEDS"; map over this Needs array onto Needs-Card-Component */}
+        //the below function was based on: https://stackoverflow.com/questions/40537972/compare-2-arrays-and-show-unmatched-elements-from-array-1
+        var missingStateIDs = arr2.filter(function (n) { return !this.has(n) }, new Set(arr1));
+        console.log("these are the usaId's  NEEDED :", missingStateIDs);
 
-            {
-                this.props.matchlist.map(quarter =>
+        //this performs array methods on the "missingStateIds" array to gather an array of objects representing
+        let needem = missingStateIDs.map(e => this.props.usas.find(state => state.id === e)) || {}
+        // console.log("needem", needem)
 
-                    <div key={quarter} id={quarter} className="collection" >
-                        <p>Matchlist  #: {quarter} </p>
-                        <img src={stock_qtr} alt="" width="50px" className="icon--stock_Qtr_image" />
+        let bloop = [];
+        //nested loops:  Outer loop iterates over [{}, {}, {}]
+        for (let i = 0; i < needem.length; i++) {
 
-                        {/* <button key={quarter} id="add" onClick={() => {
-                            // console.log(`add button clicked `)
-                            this.props.addAQuarter(quarter)
-                            }}> Add this quarter id # {quarter}</button>
-
-                        <button type="button"
-                            className="btn btn-success"
-                            onClick={() => {
-                                console.log("bloopy bloop bloop")
-                                document.location.href='http://localhost:3000/collection/add'
-                                // this.props.addAQuarter(quarter)
-                                // this.props.history.push(`/collection/{this.props.collections/}/add`)
-                            }
-                            }>
-                                Add this Quarter
-                        </button> */}
-
-                    </div>
-
-                )
+            // console.log(needem[i])
+            // innerloop logs key/values of each {}
+            for (let prop in needem[i]) {
+                //conditional on the key we need, just the state's name.  push it into the bloop array for later use.
+                if (prop === "name") {
+                    bloop.push(needem[i][prop])
+                }
             }
 
-            </section>
+        }
+        // console.log("bloop", bloop.sort())
+        let ABC = bloop.sort();
+        console.log(ABC)
 
-             </div>
-        </React.Fragment>
+        return (
+            <React.Fragment>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div>
+                    <br />
+                    <h2> {collection.collectorsName} Needs these Quarters: </h2>
+                    <br />
+                    {/* <img src={stock_qtr} alt="bloop" height="175" width="175" /> */}
+                </div>
+
+                <section className="HAScollections">
+                    {
+                        ABC.map(quarter =>
+                            <ul key={quarter} id={quarter}  >
+                                <li> {quarter}</li>
+                            </ul>
+                        )
+                    }
+                </section>
+
+            </React.Fragment>
         )
     }
 }

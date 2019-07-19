@@ -1,6 +1,6 @@
 //from Former Nutshell project Data Managers.
 
-const remoteURL = "http://localhost:5002"
+const remoteURL = "https://state-quarters-api.herokuapp.com"
 
 export default Object.create(null, {
     get: {

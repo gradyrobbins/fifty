@@ -13,7 +13,7 @@ export default class LandingPage extends Component {
                             <button type="button"
                                 className="btn btn-success"
                                 onClick={() => {
-                                    document.location.href = 'http://localhost:3000/login'
+                                    // document.location.href = 'http://localhost:3000/login'
                                     // this.props.history.push("/login")
                                 }
                                 }>Login</button>

@@ -39,9 +39,43 @@ export default class AddAQuarterForm extends Component {
     .then(() =>this.props.history.push(`/collection/${this.props.match.params.collectionId}`))
         }
 
-render() {
-    // console.log("<Add a Quarter Form /> : this.props =", this.props)
-    const collection = this.props.collections.find(a => a.id === parseInt(this.props.match.params.collectionId)) || {}
+    // the below function found at https://www.sitepoint.com/sort-an-array-of-objects-in-javascript/
+    // used to alphabetize the dropdown list coming from this.props.usas
+    // function for dynamic sorting
+    compareValues = (key, order='asc') => {
+    return function(a, b) {
+      if(!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
+        // property doesn't exist on either object
+        return 0;
+      }
+
+      const varA = (typeof a[key] === 'string') ?
+        a[key].toUpperCase() : a[key];
+      const varB = (typeof b[key] === 'string') ?
+        b[key].toUpperCase() : b[key];
+
+      let comparison = 0;
+      if (varA > varB) {
+        comparison = 1;
+      } else if (varA < varB) {
+        comparison = -1;
+      }
+      return (
+        (order == 'desc') ? (comparison * -1) : comparison
+      );
+    };
+  }
+
+
+
+  render() {
+      // console.log("<Add a Quarter Form /> : this.props =", this.props)
+      const collection = this.props.collections.find(a => a.id === parseInt(this.props.match.params.collectionId)) || {}
+
+
+    //   const ABCorder56 = this.props.usa.sort(this.compareValues('name'));
+    //   console.log("ABC order: ", ABCorder56)
+
     return (
         <React.Fragment>
 
@@ -56,7 +90,7 @@ render() {
                         onChange={this.handleFieldChange}>
                     <option value="">Select which State quarter to add</option>
                 {
-                    this.props.usas.map(e => <option value={e.id} key={e.id} id={e.id}>{e.name}</option>)
+                    this.props.usas.sort(this.compareValues('name')).map(e => <option value={e.id} key={e.id} id={e.id}>{e.name}</option>)
                 }
                 </select>
             </div>
@@ -66,7 +100,7 @@ render() {
                 <input type="text" required={true}
                     onChange={this.handleFieldChange}
                     id="notes"
-                    placeholder="Add notes here" />
+                    placeholder=" Notes " />
             </div>
             <button type="button"
                 className="btn btn-primary"

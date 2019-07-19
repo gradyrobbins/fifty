@@ -11,7 +11,7 @@ export default class AddAQuarterForm extends Component {
         usaId: "",
         notes: "",
         collectionId: this.props.match.params.collectionId,
-        userId: Object.values(credentials)[3]
+        userId: Object.values(credentials)['id']
     }
 
     // Update state whenever an input field is edited
@@ -32,7 +32,7 @@ export default class AddAQuarterForm extends Component {
         collectionId: this.props.match.params.collectionId,
         usaId: parseInt((this.state.usaId), 10),
         notes: this.state.notes,
-        userId: Object.values(JSON.parse(localStorage.getItem('credentials')))[3]
+        userId: Object.values(JSON.parse(localStorage.getItem('credentials')))['id']
     }
     // use the addQ() and redirect the user to that same collection so they can verify that it was added
     this.props.addQ(item)

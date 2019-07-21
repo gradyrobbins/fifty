@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import "./AddAQuarterForm.css"
 
 let credentials = JSON.parse(localStorage.getItem('credentials'))
-// console.log ("bloop", Object.values(credentials)[3])
+console.log ("bloop", Object.values(credentials)['id'])
 
 
 export default class AddAQuarterForm extends Component {
@@ -11,7 +11,7 @@ export default class AddAQuarterForm extends Component {
         usaId: "",
         notes: "",
         collectionId: this.props.match.params.collectionId,
-        userId: Object.values(credentials)['id']
+        userId: Object.values(JSON.parse(localStorage.getItem('credentials')))['id']
     }
 
     // Update state whenever an input field is edited

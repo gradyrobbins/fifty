@@ -53,6 +53,8 @@ export default class HasCard extends Component {
                                     {/* <p>StateId #: {quarter.usaId} </p> */}
 
                                     <img alt="stock-qtr" src={stock_qtr} className="icon-qtr" />
+                                    <img alt="stock-qtr" src={quarter.usa.image} className="icon-qtr" />
+                                    {/* <img alt="stock-qtr" src={stock_qtr} className="icon-qtr" /> */}
 
                                     <p>Notes: {quarter.notes}</p>
 

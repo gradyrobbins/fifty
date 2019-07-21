@@ -29,7 +29,7 @@ export default class AddAQuarterForm extends Component {
     addnewQ = () => {
     //create a new object
     const item = {
-        collectionId: parseInt((this.state.usaId), 10),
+        collectionId: parseInt((this.state.collectionId), 10),
         usaId: parseInt((this.state.usaId), 10),
         notes: this.state.notes,
         userId: this.state.userId

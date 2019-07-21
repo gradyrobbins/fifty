@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import "./AddAQuarterForm.css"
 
-let credentials = JSON.parse(localStorage.getItem('credentials'))
+// let credentials = JSON.parse(localStorage.getItem('credentials'))
 // console.log ("bloop", Object.values(credentials)[3])
 
 
@@ -10,8 +10,8 @@ export default class AddAQuarterForm extends Component {
     state = {
         usaId: "",
         notes: "",
-        collectionId: this.props.match.params.collectionId,
-        userId: Object.values(credentials)[3]
+        collectionId: JSON.parse(this.props.match.params.collectionId),
+        userId: JSON.parse(localStorage.getItem('credentials'))['id']
     }
 
     // Update state whenever an input field is edited
@@ -29,10 +29,10 @@ export default class AddAQuarterForm extends Component {
     addnewQ = () => {
     //create a new object
     const item = {
-        collectionId: this.props.match.params.collectionId,
+        collectionId: parseInt((this.state.usaId), 10),
         usaId: parseInt((this.state.usaId), 10),
         notes: this.state.notes,
-        userId: Object.values(JSON.parse(localStorage.getItem('credentials')))[3]
+        userId: this.state.userId
     }
     // use the addQ() and redirect the user to that same collection so they can verify that it was added
     this.props.addQ(item)
@@ -71,7 +71,7 @@ export default class AddAQuarterForm extends Component {
   render() {
       // console.log("<Add a Quarter Form /> : this.props =", this.props)
       const collection = this.props.collections.find(a => a.id === parseInt(this.props.match.params.collectionId)) || {}
-
+    // console.log((JSON.parse(localStorage.getItem('credentials')))['id'])
 
     //   const ABCorder56 = this.props.usa.sort(this.compareValues('name'));
     //   console.log("ABC order: ", ABCorder56)

@@ -26,7 +26,7 @@ export default class Learn extends Component {
 
     this.setState({ justClicked: result })
 
-    console.log("this.state", this.state);
+    // console.log("this.state", this.state);
   };
 
   /* optional customization of filling per state and calling custom callbacks per state */

@@ -38,14 +38,14 @@ class NeedsCard extends Component {
         this.props.quarters.forEach(function (item) {
             arr1.push(item.usaId);
         });
-        console.log("the usaId's of the quarters this collection HAS:  ", arr1);
+        // console.log("the usaId's of the quarters this collection HAS:  ", arr1);
 
         // arr2 holds an array 1 - 56 representing each unique quarter's id ("usas" in database.json)
         let arr2 = this.state.matchlist;
 
         //the below function was based on: https://stackoverflow.com/questions/40537972/compare-2-arrays-and-show-unmatched-elements-from-array-1
         var missingStateIDs = arr2.filter(function (n) { return !this.has(n) }, new Set(arr1));
-        console.log("these are the usaId's  NEEDED :", missingStateIDs);
+        // console.log("these are the usaId's  NEEDED :", missingStateIDs);
 
         //this performs array methods on the "missingStateIds" array to gather an array of objects representing
         let needem = missingStateIDs.map(e => this.props.usas.find(state => state.id === e)) || {}
@@ -67,7 +67,7 @@ class NeedsCard extends Component {
         }
         // console.log("bloop", bloop.sort())
         let ABC = bloop.sort();
-        console.log(ABC)
+        // console.log(ABC)
 
         return (
             <React.Fragment>

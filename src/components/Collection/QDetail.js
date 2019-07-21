@@ -35,7 +35,7 @@ export default class QDetail extends Component {
 
     // //STAGE 2 - Do some stuff to it; PUT method takes the entire new object and overwrites the old one using the old one's id in database.json
     thingsChange = (id, editedObject) => {
-        return fetch(`http://localhost:5002/quarters/${id}`, {
+        return fetch(`https://state-quarters-api.herokuapp.com/quarters/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

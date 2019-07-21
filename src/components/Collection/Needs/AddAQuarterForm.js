@@ -10,7 +10,7 @@ export default class AddAQuarterForm extends Component {
     state = {
         usaId: "",
         notes: "",
-        collectionId: (this.props.match.params.collectionId),
+        collectionId: JSON.parse(this.props.match.params.collectionId),
         userId: JSON.parse(localStorage.getItem('credentials'))['id']
     }
 

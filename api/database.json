@@ -978,6 +978,20 @@
       "notes": "Haf'Adai",
       "userId": 1,
       "id": 25
+    },
+    {
+      "collectionId": "2",
+      "usaId": 49,
+      "notes": "aloha and mahalo",
+      "userId": 1,
+      "id": 26
+    },
+    {
+      "collectionId": 49,
+      "usaId": 49,
+      "notes": "parsed?",
+      "userId": 1,
+      "id": 27
     }
   ],
   "familyCollection": [

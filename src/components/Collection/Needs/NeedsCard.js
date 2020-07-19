@@ -80,7 +80,7 @@ class NeedsCard extends Component {
                     <br />
                     <h2> {collection.collectorsName} Needs these Quarters: </h2>
                     <br />
-                    {/* <img src={stock_qtr} alt="bloop" height="175" width="175" /> */}
+                     <img src={stock_qtr} alt="stock quarter " height="175" width="175" />
                 </div>
 
                 <section className="HAScollections">

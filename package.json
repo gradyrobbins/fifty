@@ -7,6 +7,7 @@
     "dot-prop": "^5.2.0",
     "elliptic": "^6.5.3",
     "handlebars": "^4.7.6",
+    "http-proxy": "^1.18.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",

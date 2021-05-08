@@ -20,7 +20,7 @@
     "serialize-javascript": "^3.1.0",
     "showdown": "^1.9.1",
     "sockjs": "^0.3.20",
-    "ssri": "^7.1.0",
+    "ssri": "^8.0.1",
     "y18n": "^4.0.3",
     "yargs-parser": "^19.0.4"
   },

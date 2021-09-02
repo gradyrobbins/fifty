@@ -8,7 +8,7 @@
     "elliptic": "^6.5.4",
     "handlebars": "^4.7.7",
     "http-proxy": "^1.18.1",
-    "immer": "^8.0.1",
+    "immer": "^9.0.6",
     "is-svg": "^4.2.2",
     "node-forge": "^0.10.0",
     "react": "^16.7.0",

@@ -9,7 +9,7 @@
     "handlebars": "^4.7.7",
     "http-proxy": "^1.18.1",
     "immer": "^9.0.6",
-    "is-svg": "^4.2.2",
+    "is-svg": "^4.3.0",
     "node-forge": "^1.0.0",
     "react": "^16.7.0",
     "react-dev-utils": "^11.0.4",
